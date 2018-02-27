@@ -62,3 +62,8 @@ playground.xcworkspace
 
 ## CocoaPods
 Pods/
+
+# Firebase
+
+## GoogleService
+GoogleService-Info.plist

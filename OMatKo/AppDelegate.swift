@@ -8,6 +8,33 @@
 
 import UIKit
 import CoreData
+import XCGLogger
+
+let log: XCGLogger = {
+    let log: XCGLogger = XCGLogger(identifier: "omatko.logger", includeDefaultDestinations: false)
+    
+    let systemDestination = AppleSystemLogDestination(owner: log, identifier: "omatko.logger.systemDestination")
+    systemDestination.outputLevel = .debug
+    systemDestination.showDate = false
+    systemDestination.showLogIdentifier = false
+    systemDestination.showLineNumber = true
+    systemDestination.showFunctionName = true
+    systemDestination.showFileName = true
+    systemDestination.showLevel = true
+    
+    let emojiFormatter = PrePostFixLogFormatter()
+    emojiFormatter.apply(prefix: "❌ ", postfix: nil, to: .error)
+    emojiFormatter.apply(prefix: "🔶 ", postfix: nil, to: .warning)
+    emojiFormatter.apply(prefix: "🔷 ", postfix: nil, to: .info)
+    emojiFormatter.apply(prefix: "◻️ ", postfix: nil, to: .debug)
+    systemDestination.formatters = [emojiFormatter]
+    
+    log.add(destination: systemDestination)
+    
+    log.logAppDetails()
+    
+    return log
+}()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

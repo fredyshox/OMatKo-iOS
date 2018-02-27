@@ -7,15 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DA6C12775CFD665D0294B89 /* Pods_OMatKo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A809D78965D25906CFA1BCA8 /* Pods_OMatKo.framework */; };
 		E2092A792045EB910055EBFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2092A782045EB910055EBFA /* AppDelegate.swift */; };
 		E2092A7B2045EB910055EBFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2092A7A2045EB910055EBFA /* ViewController.swift */; };
 		E2092A7E2045EB910055EBFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2092A7C2045EB910055EBFA /* Main.storyboard */; };
 		E2092A812045EB910055EBFA /* OMatKo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2092A7F2045EB910055EBFA /* OMatKo.xcdatamodeld */; };
 		E2092A832045EB910055EBFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2092A822045EB910055EBFA /* Assets.xcassets */; };
 		E2092A862045EB910055EBFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2092A842045EB910055EBFA /* LaunchScreen.storyboard */; };
+		E2092A8E2045EDCE0055EBFA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2092A8D2045EDCE0055EBFA /* GoogleService-Info.plist */; };
+		E2092A912045F0700055EBFA /* Foundation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2092A902045F0700055EBFA /* Foundation+Extensions.swift */; };
+		E2092A932045F0770055EBFA /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2092A922045F0770055EBFA /* UIKit+Extensions.swift */; };
+		E2092A962045F0FB0055EBFA /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2092A952045F0FB0055EBFA /* RoundView.swift */; };
+		E2092A982045F1090055EBFA /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2092A972045F1090055EBFA /* RoundImageView.swift */; };
+		E2092A9A2045F1270055EBFA /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2092A992045F1270055EBFA /* RoundButton.swift */; };
+		E2092A9C2045F17B0055EBFA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2092A9B2045F17B0055EBFA /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A809D78965D25906CFA1BCA8 /* Pods_OMatKo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMatKo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D435B90685675E15BB3BE708 /* Pods-OMatKo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMatKo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OMatKo/Pods-OMatKo.debug.xcconfig"; sourceTree = "<group>"; };
+		D8B6EF6350BEF71D85868ABD /* Pods-OMatKo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMatKo.release.xcconfig"; path = "Pods/Target Support Files/Pods-OMatKo/Pods-OMatKo.release.xcconfig"; sourceTree = "<group>"; };
 		E2092A752045EB910055EBFA /* OMatKo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OMatKo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2092A782045EB910055EBFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2092A7A2045EB910055EBFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +35,13 @@
 		E2092A822045EB910055EBFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2092A852045EB910055EBFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2092A872045EB910055EBFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2092A8D2045EDCE0055EBFA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E2092A902045F0700055EBFA /* Foundation+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foundation+Extensions.swift"; sourceTree = "<group>"; };
+		E2092A922045F0770055EBFA /* UIKit+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
+		E2092A952045F0FB0055EBFA /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		E2092A972045F1090055EBFA /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
+		E2092A992045F1270055EBFA /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		E2092A9B2045F17B0055EBFA /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DA6C12775CFD665D0294B89 /* Pods_OMatKo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		225C01ACD5E532810958D607 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A809D78965D25906CFA1BCA8 /* Pods_OMatKo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E2092A6C2045EB910055EBFA = {
 			isa = PBXGroup;
 			children = (
 				E2092A772045EB910055EBFA /* OMatKo */,
 				E2092A762045EB910055EBFA /* Products */,
+				F6D1F15AA50019AE6997F127 /* Pods */,
+				225C01ACD5E532810958D607 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +85,47 @@
 		E2092A772045EB910055EBFA /* OMatKo */ = {
 			isa = PBXGroup;
 			children = (
+				E2092A942045F0E20055EBFA /* Views */,
+				E2092A8F2045F0580055EBFA /* Extensions */,
 				E2092A782045EB910055EBFA /* AppDelegate.swift */,
 				E2092A7A2045EB910055EBFA /* ViewController.swift */,
+				E2092A9B2045F17B0055EBFA /* Theme.swift */,
 				E2092A7C2045EB910055EBFA /* Main.storyboard */,
 				E2092A822045EB910055EBFA /* Assets.xcassets */,
 				E2092A842045EB910055EBFA /* LaunchScreen.storyboard */,
 				E2092A872045EB910055EBFA /* Info.plist */,
 				E2092A7F2045EB910055EBFA /* OMatKo.xcdatamodeld */,
+				E2092A8D2045EDCE0055EBFA /* GoogleService-Info.plist */,
 			);
 			path = OMatKo;
+			sourceTree = "<group>";
+		};
+		E2092A8F2045F0580055EBFA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E2092A922045F0770055EBFA /* UIKit+Extensions.swift */,
+				E2092A902045F0700055EBFA /* Foundation+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E2092A942045F0E20055EBFA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E2092A992045F1270055EBFA /* RoundButton.swift */,
+				E2092A972045F1090055EBFA /* RoundImageView.swift */,
+				E2092A952045F0FB0055EBFA /* RoundView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F6D1F15AA50019AE6997F127 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D435B90685675E15BB3BE708 /* Pods-OMatKo.debug.xcconfig */,
+				D8B6EF6350BEF71D85868ABD /* Pods-OMatKo.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2092A8A2045EB910055EBFA /* Build configuration list for PBXNativeTarget "OMatKo" */;
 			buildPhases = (
+				B90C7A53BB60DAFBFACD2368 /* [CP] Check Pods Manifest.lock */,
 				E2092A712045EB910055EBFA /* Sources */,
 				E2092A722045EB910055EBFA /* Frameworks */,
 				E2092A732045EB910055EBFA /* Resources */,
+				5C4FEABD79879A67DFCCFE27 /* [CP] Embed Pods Frameworks */,
+				660ADD05058E3DBA8CC61696 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2092A862045EB910055EBFA /* LaunchScreen.storyboard in Resources */,
+				E2092A8E2045EDCE0055EBFA /* GoogleService-Info.plist in Resources */,
 				E2092A832045EB910055EBFA /* Assets.xcassets in Resources */,
 				E2092A7E2045EB910055EBFA /* Main.storyboard in Resources */,
 			);
@@ -134,13 +199,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5C4FEABD79879A67DFCCFE27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OMatKo/Pods-OMatKo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OMatKo/Pods-OMatKo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		660ADD05058E3DBA8CC61696 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OMatKo/Pods-OMatKo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B90C7A53BB60DAFBFACD2368 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OMatKo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E2092A712045EB910055EBFA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2092A9C2045F17B0055EBFA /* Theme.swift in Sources */,
+				E2092A9A2045F1270055EBFA /* RoundButton.swift in Sources */,
+				E2092A912045F0700055EBFA /* Foundation+Extensions.swift in Sources */,
+				E2092A962045F0FB0055EBFA /* RoundView.swift in Sources */,
 				E2092A812045EB910055EBFA /* OMatKo.xcdatamodeld in Sources */,
 				E2092A7B2045EB910055EBFA /* ViewController.swift in Sources */,
+				E2092A982045F1090055EBFA /* RoundImageView.swift in Sources */,
+				E2092A932045F0770055EBFA /* UIKit+Extensions.swift in Sources */,
 				E2092A792045EB910055EBFA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +413,7 @@
 		};
 		E2092A8B2045EB910055EBFA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D435B90685675E15BB3BE708 /* Pods-OMatKo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +429,7 @@
 		};
 		E2092A8C2045EB910055EBFA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8B6EF6350BEF71D85868ABD /* Pods-OMatKo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
