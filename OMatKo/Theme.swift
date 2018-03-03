@@ -9,17 +9,20 @@
 import UIKit
 
 struct Theme {
-    func applyTheme() {
-        
+    static func apply() {
+        UINavigationBar.appearance().barTintColor = UIColor.omatkoPrimary
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().barStyle = UIBarStyle.black
+        UIApplication.shared.statusBarStyle = .lightContent
     }
 }
 
 extension UIColor {
-    var omatkoPrimary: UIColor {
-        return UIColor.hexStringToUIColor(hex: "#ffffff")
+    class var omatkoPrimary: UIColor {
+        return UIColor.hexStringToUIColor(hex: "#0088AA")
     }
     
-    var omatkoSecondary: UIColor {
-        return UIColor.hexStringToUIColor(hex: "#ffffff")
+    class var omatkoSecondary: UIColor {
+        return UIColor.hexStringToUIColor(hex: "#007D9B")
     }
 }

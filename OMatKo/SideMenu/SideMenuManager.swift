@@ -69,7 +69,8 @@ class SideMenuManager: SideMenuControllerDataSource, MenuViewControllerDelegate 
     }
     
     private func createBarButtonItem() -> UIBarButtonItem {
-        let button = UIBarButtonItem(title: "Menu",
+        let btnImage = UIImage(named: "menu_bars")
+        let button = UIBarButtonItem(image: btnImage,
                                      style: .plain,
                                      target: _sideMenuController,
                                      action: #selector(SideMenuControllerAdapter.revealMenu(sender:)))
@@ -109,6 +110,7 @@ class SideMenuManager: SideMenuControllerDataSource, MenuViewControllerDelegate 
     
         let vc = viewController(forId: item.viewControllerId)
         sideMC.swapContent(forVC: vc)
+        sideMC.closeMenu(sender: nil)
     }
 
 }

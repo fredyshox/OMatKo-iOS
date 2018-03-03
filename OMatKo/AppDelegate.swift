@@ -55,13 +55,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: UIApplicationDelegate
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        // firebase
         FirebaseApp.configure()
         
-        // view deck
         self.window = UIWindow(frame: UIScreen.main.bounds)
         setUpSideMenu()
+        
+        Theme.apply()
         
         return true
     }

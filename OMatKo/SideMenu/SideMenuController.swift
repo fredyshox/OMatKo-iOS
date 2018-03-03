@@ -17,7 +17,8 @@ protocol SideMenuControllerDataSource: AnyObject {
 }
 
 @objc protocol SideMenuControllerAdapter: AnyObject {
-    @objc func revealMenu(sender: Any)
+    @objc func revealMenu(sender: Any?)
+    @objc func closeMenu(sender: Any?)
     func swapContent(forVC viewController: UIViewController)
     var container: UIViewController { get }
 }
@@ -27,8 +28,13 @@ class SideMenuController: IIViewDeckController, SideMenuControllerAdapter {
     // MARK: SideMenuControllerAdapter
     
     @objc
-    func revealMenu(sender: Any) {
+    func revealMenu(sender: Any?) {
         self.open(.left, animated: true)
+    }
+    
+    @objc
+    func closeMenu(sender: Any?) {
+        self.closeSide(true)
     }
     
     func swapContent(forVC viewController: UIViewController) {

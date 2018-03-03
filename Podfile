@@ -17,6 +17,9 @@ target 'OMatKo' do
   ## logging
   pod 'XCGLogger'
   
+  ## reactive programming
+  pod 'RxSwift', '~> 4.1.2'
+  
   ## ui
   pod 'ViewDeck', '~> 3.1.0'
 
