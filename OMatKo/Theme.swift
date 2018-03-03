@@ -7,3 +7,19 @@
 //
 
 import UIKit
+
+struct Theme {
+    func applyTheme() {
+        
+    }
+}
+
+extension UIColor {
+    var omatkoPrimary: UIColor {
+        return UIColor.hexStringToUIColor(hex: "#ffffff")
+    }
+    
+    var omatkoSecondary: UIColor {
+        return UIColor.hexStringToUIColor(hex: "#ffffff")
+    }
+}

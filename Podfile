@@ -11,7 +11,13 @@ target 'OMatKo' do
   pod 'Firebase/Auth'
   pod 'Firebase/Messaging'
   
+  ## codable
+  pod 'CodableFirebase'
+  
   ## logging
   pod 'XCGLogger'
+  
+  ## ui
+  pod 'ViewDeck', '~> 3.1.0'
 
 end

@@ -1,4 +1,5 @@
 PODS:
+  - CodableFirebase (0.0.5)
   - Firebase/Auth (4.8.2):
     - Firebase/Core
     - FirebaseAuth (= 4.4.2)
@@ -57,19 +58,23 @@ PODS:
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
   - Protobuf (3.5.0)
+  - ViewDeck (3.1.0)
   - XCGLogger (6.0.2):
     - XCGLogger/Core (= 6.0.2)
   - XCGLogger/Core (6.0.2):
     - ObjcExceptionBridging
 
 DEPENDENCIES:
+  - CodableFirebase
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Firebase/Messaging
+  - ViewDeck (~> 3.1.0)
   - XCGLogger
 
 SPEC CHECKSUMS:
+  CodableFirebase: b13321acfec878cbcda93faf84c985f4d69ec2f1
   Firebase: 7d3b8cd837ad9fcd391657734c0d56dab8e9a5a3
   FirebaseAnalytics: 388b630c15713f5dbf364071f5f3d6077fb52f4e
   FirebaseAuth: bd2738c5c1e92b108ba5f7f7335908097a4e50bb
@@ -83,8 +88,9 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
+  ViewDeck: 942d90dd23c9f97cc8038be352255378167edcca
   XCGLogger: c9601cae9a8912de34a58666ba931ed3d624dd31
 
-PODFILE CHECKSUM: 10c76f2c435f6d8793bf3d6bc07c4a4db659493d
+PODFILE CHECKSUM: 42a6e3207db6b2b56df9295471c3f2eabb9804c0
 
 COCOAPODS: 1.4.0
