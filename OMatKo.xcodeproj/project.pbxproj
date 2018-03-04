@@ -32,6 +32,8 @@
 		E251E0F72048BB3F00B07DE9 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251E0F62048BB3F00B07DE9 /* SideMenuController.swift */; };
 		E251E0FB20495D3D00B07DE9 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E251E0FA20495D3D00B07DE9 /* Map.storyboard */; };
 		E251E0FF2049640000B07DE9 /* SideMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251E0FE2049640000B07DE9 /* SideMenuManager.swift */; };
+		E251E105204B174C00B07DE9 /* MenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251E103204B174C00B07DE9 /* MenuItemTableViewCell.swift */; };
+		E251E106204B174C00B07DE9 /* MenuItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E251E104204B174C00B07DE9 /* MenuItemTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		E251E0F62048BB3F00B07DE9 /* SideMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
 		E251E0FA20495D3D00B07DE9 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		E251E0FE2049640000B07DE9 /* SideMenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuManager.swift; sourceTree = "<group>"; };
+		E251E103204B174C00B07DE9 /* MenuItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemTableViewCell.swift; sourceTree = "<group>"; };
+		E251E104204B174C00B07DE9 /* MenuItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuItemTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,8 @@
 			children = (
 				E2092A9F2045F8890055EBFA /* LectureTableViewCell.swift */,
 				E2092AA02045F8890055EBFA /* LectureTableViewCell.xib */,
+				E251E103204B174C00B07DE9 /* MenuItemTableViewCell.swift */,
+				E251E104204B174C00B07DE9 /* MenuItemTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2092A862045EB910055EBFA /* LaunchScreen.storyboard in Resources */,
+				E251E106204B174C00B07DE9 /* MenuItemTableViewCell.xib in Resources */,
 				E251E0FB20495D3D00B07DE9 /* Map.storyboard in Resources */,
 				E2092AA22045F8890055EBFA /* LectureTableViewCell.xib in Resources */,
 				E2092A8E2045EDCE0055EBFA /* GoogleService-Info.plist in Resources */,
@@ -363,6 +370,7 @@
 				E2092A9C2045F17B0055EBFA /* Theme.swift in Sources */,
 				E2092AA52045FBD30055EBFA /* Event.swift in Sources */,
 				E251E0E920487C1000B07DE9 /* EventsTableViewController.swift in Sources */,
+				E251E105204B174C00B07DE9 /* MenuItemTableViewCell.swift in Sources */,
 				E2092A9A2045F1270055EBFA /* RoundButton.swift in Sources */,
 				E2092AA12045F8890055EBFA /* LectureTableViewCell.swift in Sources */,
 				E2092A912045F0700055EBFA /* Foundation+Extensions.swift in Sources */,

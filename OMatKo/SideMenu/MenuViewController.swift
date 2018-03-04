@@ -12,47 +12,49 @@ protocol MenuViewControllerDelegate: AnyObject {
     func menu(_ menuVC: MenuViewController, didSelectItem item: MenuItem)
 }
 
-class MenuViewController: UITableViewController {
+class MenuViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.delegate = self
+            tableView.dataSource = self
+        }
+    }
     
     var menuItems: [MenuItem] = [] {
         didSet {
-            self.tableView.reloadData()
+            tableView?.reloadData()
         }
     }
     
     var delegate: MenuViewControllerDelegate?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+// MARK: - Table view data source
 
-    // MARK: - Table view data source
+extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
     
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let menuItem = menuItems[indexPath.row]
         log.info("Switching to: \(menuItem.viewControllerId)")
         self.delegate?.menu(self, didSelectItem: menuItem)
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.menuItems.count
     }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
         cell.textLabel?.text = menuItems[indexPath.row].title
-
+        
         return cell
     }
-
+    
 }
