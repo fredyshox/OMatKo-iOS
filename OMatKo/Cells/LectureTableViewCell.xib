@@ -68,7 +68,7 @@
                                     <constraint firstAttribute="height" constant="25" id="4MB-Vg-MtA"/>
                                     <constraint firstAttribute="width" secondItem="7VT-SW-lLI" secondAttribute="height" multiplier="1:1" id="s45-0h-Ufw"/>
                                 </constraints>
-                                <state key="normal" image="more_btn"/>
+                                <state key="normal" image="show_more"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -120,6 +120,6 @@
     </objects>
     <resources>
         <image name="calendar_add" width="40" height="40"/>
-        <image name="more_btn" width="40" height="40"/>
+        <image name="show_more" width="40" height="40"/>
     </resources>
 </document>

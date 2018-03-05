@@ -110,9 +110,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G9B-vb-3N8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="omatko" translatesAutoresizingMaskIntoConstraints="NO" id="G9B-vb-3N8">
                                 <rect key="frame" x="0.0" y="20" width="375" height="170"/>
-                                <color key="backgroundColor" red="0.31008013410000002" green="0.81827014590000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="uTH-lz-tlH"/>
                                 </constraints>
@@ -143,6 +143,7 @@
     <resources>
         <image name="fb_social" width="40" height="40"/>
         <image name="instagram_social" width="40" height="40"/>
+        <image name="omatko" width="400" height="102"/>
         <image name="snapchat_social" width="40" height="40"/>
     </resources>
 </document>
