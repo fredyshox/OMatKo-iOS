@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persons>
+
+	<person 
+		name = "Antonina Urbaniak"
+		position = "Koordynator główny"
+		description = "Studentka trzeciego roku Matematyki Stosowanej i drugiego Finansów i Rachunkowości, wiceprezes Koła Naukowego Inżynierii Finansowej. Tegoroczna koordynatorka główna OMatKo!!!. Wolny czas, którego zawsze jest za mało, poświęca na spotkania ze znajomymi, dobre książki oraz wizyty w kinie. Kocha malarstwo i sztukę, jest fanatyczką przecinków i ortografii. "
+		phoneNumber = "+48 668-147-028 "
+		email = "antonina_urbaniak@wp.pl"
+		imageUrl = "img_tosia" />
+		
+	<person 
+		name = "Magdalena Wolniaczyk"
+		position = "Koordynator pomocniczy ds. organizacji"
+		description = "Studentka trzeciego roku Matematyki Stosowanej. Jest członkiem Samorządu Studenckiego Wydziału Matematyki, Koła Naukowego Statystyki Matematycznej „Gauss”, a także wiceprezesem Koła Naukowego Inżynierii Finansowej. Jej pasje to taniec towarzyski, musical oraz podróżowanie i poznawanie świata."
+		phoneNumber = "+48 668-021-829"
+		email = "Magdalenawol1@o2.pl"
+		imageUrl = "img_magda" />
+		
+	<person 
+		name = "Karina Piotrowska"
+		position = "Kontakt z uczestnikami"
+		description = "Studiuje na drugim roku Matematyki Stosowanej, od początku studiów aktywnie działa w Samorządzie Studenckim swojego wydziału, dla naszych studentów organizuje spotkania z kulturą. Jeśli ma trochę czasu, często ucieka w góry, docenia dobrą książka i czas spędzony z przyjaciółmi. Jak tylko może, to stara się odwiedzać teatr."
+		phoneNumber = "+48 881-434-455"
+		email = "karina.piotrowska15@gmail.com"
+		imageUrl = "img_karina" />
+		
+	<person 
+		name = "Kamil Zawistowski"
+		position = "Aplikacja 'OMatKo!!!'"
+		description = "Student trzeciego roku Matematyki Stosowanej, pomysłodawca, opiekun i wykonawca projektu aplikacji. Prywatnie miłośnik pizzy i burgerów z Pasibusa."
+		phoneNumber = "+48 668-213-793"
+		email = "zawistowski96kamil@gmail.com"
+		imageUrl = "img_kamil" />
+
+</persons>

@@ -11,7 +11,7 @@ import ViewDeck
 
 protocol SideMenuControllerDataSource: AnyObject {
     var menuItems: [MenuItem] { get }
-    
+    var sideMenuAdapter: SideMenuControllerAdapter { get set }
     func viewController(forId id: String) -> UIViewController
     func initialMenuItem() -> MenuItem
 }

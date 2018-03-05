@@ -14,12 +14,31 @@ protocol MenuViewControllerDelegate: AnyObject {
 
 class MenuViewController: UIViewController {
     
+    // MARK: Outlets
+    
+    @IBOutlet weak var logoImageView: UIImageView!
+    
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            tableView.delegate = self
-            tableView.dataSource = self
+            setUpTableView()
         }
     }
+    
+    // MARK: Actions
+    
+    @IBAction func openSnapchat(_ sender: UIButton) {
+        log.info("Open snapchat")
+    }
+    
+    @IBAction func openFb(_ sender: UIButton) {
+        log.info("Open facebook")
+    }
+    
+    @IBAction func openInstagram(_ sender: UIButton) {
+        log.info("Open instagram")
+    }
+    
+    // MARK: Properties
     
     var menuItems: [MenuItem] = [] {
         didSet {
@@ -28,6 +47,14 @@ class MenuViewController: UIViewController {
     }
     
     var delegate: MenuViewControllerDelegate?
+    
+    func setUpTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        let nib = UINib(nibName: "MenuItemTableViewCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "menuCell")
+    }
 
 }
 
@@ -50,9 +77,13 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath) as! MenuItemTableViewCell
         
-        cell.textLabel?.text = menuItems[indexPath.row].title
+        let item = menuItems[indexPath.row]
+        cell.titleLabel.text = item.title
+        
+        let image = UIImage(named: item.iconName)?.withRenderingMode(.alwaysTemplate)
+        cell.iconImageView.image = image
         
         return cell
     }

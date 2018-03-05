@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<places>
+	<place 
+		title ="Ratusz" 
+		description = "Późnogotycki budynek na wrocławskim Rynku, jeden z najlepiej zachowanych historycznych ratuszy w Polsce, zarazem jeden z głównych zabytków architektonicznych Wrocławia. Znajduje się w nim Muzeum Sztuki Mieszczańskiej, które, wraz z całym Ratuszem, można zwiedzać od środy do soboty w godzinach 10.00-17.00, w niedzielę od 10.00-18.00. Niestety tylko w środę wstęp jest bezpłatny. W piwnicach Ratusza znajduje się Piwnica Świdnicka, jeden z najstarszych lokali gastronomicznych w Europie." 
+		latitude = "51.10955772060474" 
+		longitude = "17.03209161758423" 
+		category = "SIGHTS" />
+	
+	<place 
+		title ="Bulwar Xawerego Dunikowskiego" 
+		description = "Bulwar położony na południowym brzegu rzeki Odry, rozciągający się pomiędzy Mostem Piaskowym a Mostem Pokoju. Spacerując nim, można podziwiać najstarszą część miasta - Ostrów Tumski, widoczny po drugiej stronie rzeki. Nazwa bulwaru upamiętnia postać Xawerego Dunikowskiego (1875 -1964), polskiego rzeźbiarza, malarza i pedagoga, kierownika katedry rzeźby w Państwowej Szkole Sztuk Plastycznych we Wrocławiu." 
+		latitude = "51.112106" 
+		longitude = "17.044081" 
+		category = "SIGHTS" />
+		
+	<place 
+		title ="Panorama Racławicka" 
+		description = "To jedno z niewielu miejsc na świecie, gdzie podziwiać można relikt dziewiętnastowiecznej kultury masowej. Wielkie malowidło (15x114m), dzięki zespoleniu szczególnych zabiegów malarskich (specjalna perspektywa) i technicznych (oświetlenie, sztuczny teren, zaciemnione, kręte podejście),przenosi widza w inną rzeczywistość i inny czas. Panorama Racławicka to pierwsze i jedyne zachowane do dziś polskie dzieło tego rodzaju. Więcej na: https://www.panoramaraclawicka.pl/" 
+		latitude = "51.11013700607433" 
+		longitude = "17.04432249069214" 
+		category = "SIGHTS" />
+		
+	<place 
+		title ="Ostrów Tumski" 
+		description = "Najstarsza, zabytkowa część Wrocławia, która powstała na ówczesnej wyspie  (w języku staropolskim ostrowie). Gród na Ostrowie Tumskim, stanowiący siedzibę pierwszych Piastów, założony został prawdopodobnie w X stuleciu. Obecnie Ostrów Tumski nie jest już wyspą, ale z jednej strony prowadzi do niego znany Most Miłości z dążącą do nieskończoności liczbą kłódek zakochanych par. Warto zwiedzić Ostrów wraz ze zmierzchem, bo można wtedy “złapać” latarnika, który codziennie o zmroku zapala ręcznie uliczne latarnie." 
+		latitude = "51.11469694161975" 
+		longitude = "17.04218477010727" 
+		category = "SIGHTS" />
+		
+	<place 
+		title ="Archikatedra św. Jana Chrzciciela" 
+		description = "Rzymskokatolicki gotycki kościół parafialny, a także katedralny biskupów wrocławskich zlokalizowany na wrocławskim Ostrowie Tumskim. Pierwszy kościół powstał w tym miejscu jeszcze przed 1000 rokiem, w którym to został przebudowany przez Bolesława Chrobrego na pierwszą katedrę." 
+		latitude = "51.114178330564926" 
+		longitude = "17.04657554626465" 
+		category = "SIGHTS" />
+		
+	<place 
+		title ="Ogród Botaniczny" 
+		description = "Częścią swojego terenu pokrywa się z Ostrowem Tumskim, założony już w 1811 roku mieści około 7,5 tysiąca gatunków roślin (licząc różne ich odmiany liczba ta sięga 11,5 tysiąca) szklarniowych i gruntowych, oraz 27 pomników przyrody." 
+		latitude = "51.115875581461275" 
+		longitude = "17.04754114151001" 
+		category = "SIGHTS" />
+		
+	<place 
+		title ="Fontanna przy Hali Stulecia" 
+		description = "Multimedialna fontanna we Wrocławiu, pięknie otoczona pergolą, położona tuż przy Hali Stulecia, jest największą fontanną w Polsce i jedną z największych w Europie. Chociaż godne polecenia multimedialne pokazy rozpoczynają się tutaj dopiero od maja, to przespacerowanie się pergolą i wstąpienie do Ogrodu Japońskiego jest jednym z naszych ulubionych miejsc, z dala od ulicznego zgiełku." 
+		latitude = "51.108735931086805" 
+		longitude = "17.078912258148193" 
+		category = "SIGHTS" />
+		
+	<place 
+		title ="Ogród Japoński" 
+		description = "Ogród Japoński stał się wrocławską namiastką kultury Kraju Kwitnącej Wiśni. Ogród powstał w latach 1902-1912 na Wystawę Światową organizowaną rok później. Przygotował i urządził go Fritz von Hochberg, znany japonista." 
+		latitude = "51.10994840230002" 
+		longitude = "17.080070972442627" 
+		category = "SIGHTS" />
+	
+	<place 
+		title ="Narodowe Forum Muzyki" 
+		description = "Narodowe Forum Muzyki to nowoczesny budynek sal koncertowych w kolorze miedzi (na cześć głównego sponsora inwestycji KGHM S.A.), wykonany przy użyciu najnowszych technologii, aby maksymalnie ulepszyć doznania dźwiękowe słuchacza. (Np. warunki akustyczne Sali Głównej dostosowywane są indywidualnie do każdego repertuaru – okalające salę komory akustyczne oraz podwieszane sufity opuszczane do odpowiedniej wysokości pozwalają na regulację długości wybrzmienia dźwięku.), za budynkiem roztacza się plac i ścieżki spacerowe." 
+		latitude = "51.10706536308925" 
+		longitude = "17.02631950378418" 
+		category = "SIGHTS" />
+		
+	<place 
+		title ="Podwale-promenada" 
+		description = "Pas zieleni miejskiej położony w miejscu dawnych fortyfikacji obronnych wzdłuż Fosy Miejskiej. Spacerując nim, można podziwiać piękne zabytkowe kamienice po drugiej stronie fosy." 
+		latitude = "51.10568440444087" 
+		longitude = "17.02826678752899" 
+		category = "SIGHTS" />
+		
+	<place 
+		title ="Pałac Królewski" 
+		description = "Pałac Królewski ulokowany jest w południowej części historycznego Starego Miasta we Wrocławiu, przy ulicy Kazimierza Wielkiego, w obszarze zwanym dziś Dzielnicą Czterech Wyznań. W środku znajduje się wystawa “1000 lat Wrocławia” (wstęp wolny) od momentu założenia tu osady do czasów obecnych, a z okien można zobaczyć Wrocław z troszkę innej perspektywy." 
+		latitude = "51.107671" 
+		longitude = "17.029046" 
+		category = "SIGHTS" />
+		
+	<place 
+		title ="Synagoga Pod Białym Bocianem" 
+		description = "Jedna z dwóch czynnych synagog we Wrocławiu. Po odzyskaniu jej w 1996 roku stała się największą i główną synagogą Gminy Wyznaniowej Żydowskiej we Wrocławiu. To również prężnie rozwijający się ośrodek kultury żydowskiej, w którym odbywają się liczne wystawy, koncerty, wernisaże, występy teatralne, warsztaty oraz spotkania. Powodem tego jest dobra akustyka obiektu, jak również jego wielkość, który może pomieścić kilkaset ludzi." 
+		latitude = "51.108463" 
+		longitude = "17.025250" 
+		category = "SIGHTS" />
+		
+	<place 
+		title ="Pasaż Grunwaldzki" 
+		description = "Jedno z największych (tuż po Magnolii i Wroclavii) centrum handlowych we Wrocławiu, znajdujące się tuż przy PWr. Oprócz zakupów, jak w każdym wrocławskim centrum handlowym, można tutaj smacznie zjeść, pójść do kina czy na siłownię." 
+		latitude = "51.112629197949424" 
+		longitude = "17.059364318847656" 
+		category = "SHOPPING_AND_STATIONS" />
+		
+	<place 
+		title ="Galeria Dominikańska" 
+		description = "Popularne centrum handlowe przy samym Rynku Wrocławia." 
+		latitude = "51.108408" 
+		longitude = "17.040320" 
+		category = "SHOPPING_AND_STATIONS" />
+		
+	<place 
+		title ="Renoma" 
+		description = "Dawniej: Powszechny Dom Towarowy, znany pod skrótem PDT (PeDeT), zabytkowy dom towarowy we Wrocławiu, w którym znajdują się sklepy znanych i drogich projektantów. Szczególnie dobre są tutaj naleśniki na ostatnim piętrze. Możemy też tu znaleźć TK Maxx." 
+		latitude = "51.103629731069475" 
+		longitude = "17.03153371810913" 
+		category = "SHOPPING_AND_STATIONS" />
+		
+	<place 
+		title ="Wroclavia" 
+		description = "Otwarte pod koniec 2017 roku centrum handlowe znajdujące się przy Głównym Dworcu Autobusowym. Na terenie obiektu znajduje się ok. 200 sklepów, restauracji, kawiarni, punktów usługowych, a także kino Cinema City z 20 salami (w tym sala IMAX, 4DX i 3 sale VIP), całodobowy klub fitness, czy sala zabaw dla dzieci." 
+		latitude = "51.096813" 
+		longitude = "17.033963" 
+		category = "SHOPPING_AND_STATIONS" />
+		
+	<place 
+		title ="Sky Tower" 
+		description = "Najwyższy budynek w Polsce w kategoriach wysokość do dachu oraz wysokość do najwyżej położonego piętra. Znajduje się tu punkt widokowy, zlokalizowany na 49 pietrze, z którego można podziwiać panoramę Wrocławia. Cennik: • normalny – 18,00 zł • ulgowy – 12,00 zł. W budynku jest też galeria handlowa, pomieszczenia biurowe i apartamenty." 
+		latitude = "51.09489803482296" 
+		longitude = "17.019023895263672" 
+		category = "SHOPPING_AND_STATIONS" />
+		
+	<place 
+		title ="Dworzec Główny PKP" 
+		description = "Zabytkowy dworzec z XIX wieku, Jeden z nielicznych w Polsce dworców kolejowych, który ma halę peronową. Bilety można zakupić w automatach przed dworcem lub w kasach na dworcu. W środku znajdują się restauracje i kawiarnie." 
+		latitude = "51.09877899230192" 
+		longitude = "17.036490440368652" 
+		category = "SHOPPING_AND_STATIONS" />
+		
+	<place 
+		title ="Główny Dworzec Autobusowy" 
+		description = "Położony w podziemiach nowej galerii handlowej Wroclavia. Perony znajdują się na poziomie -2." 
+		latitude = "51.096258" 
+		longitude = "17.038007" 
+		category = "SHOPPING_AND_STATIONS" />
+		
+	<place 
+		title ="Centrum Kongresowe Politechnika Wrocławska (D20)" 
+		description = "Tutaj odbywa się konferencja przez całe 3 dni." 
+		latitude = "51.110294" 
+		longitude = "17.059905" 
+		category = "OMatKo" />
+		
+	<place 
+		title ="Kampus PWr" 
+		description = "Mieści wszystkie budynki Politechniki, w tym budynek D20 z Centrum Kongresowym, czy budynek SKS (Strefa Kultury Studenckiej) ze stołówką i kawiarnią." 
+		latitude = "51.107402176013" 
+		longitude = "17.061960697174072" 
+		category = "OMatKo" />
+		
+	<place 
+		title ="Wędrówki Pub" 
+		description = "Pub niedaleko Rynku, miejsce piątkowej integracji!" 
+		latitude = "51.104161" 
+		longitude = "17.029952" 
+		category = "OMatKo" />
+		
+	<place 
+		title ="Czasoprzestrzeń| Zajezdnia Dąbie" 
+		description = "Stara zajezdnia tramwajowa, przerobiona na surowy “klub” z małym barem w zacienionym pomieszczeniu i szerokim wyborem piw smakowych. To tutaj ma miejsce wielka impreza sobotnia!" 
+		latitude = "51.104751" 
+		longitude = "51.104751" 
+		category = "OMatKo" />
+		
+	<place 
+		title ="Teki - Miasteczko Studenckie 'Wittigowo' Politechniki Wrocławskiej" 
+		description = "Akademiki Politechniki Wrocławskiej. To właśnie tuż przy nich znajduje się Zajezdnia Dąbie. Latem - idealne miejsce na grilowanie." 
+		latitude = "51.103577" 
+		longitude = "17.085786" 
+		category = "OMatKo" />
+		
+	<place 
+		title ="Pasaż Niepolda" 
+		description = "Każdy znajdzie coś dla siebie - można usiąść w Czarnym Kocie (psychodeliczna sztuka nowoczesna), można zjeść i napić się za prawdziwie studenckie pieniądze w Głuchym Telefonie czy w Pijalni Wódki i Piwa, można tańczyć do białego rana w Lavos, Mundo 71, w Melanżu, Konqrencji lub w Insomnia Club – na piętrze Bezsenność, w piwnicy Drugie Dno – lekko zadymiony, klimatyczny klub raczej dla palących. Pasaż Niepolda polecamy raczej na głośniejsze imprezy i spotkania  z uwagi na sąsiedztwo wielu niewymienionych wyżej klubów." 
+		latitude = "51.11013363815654" 
+		longitude = "17.02514737844467" 
+		category = "ENTERTAINMENT" />
+		
+	<place 
+		title ="Pasaż Pokoyhof" 
+		description = "Siedmiokondygnacyjny budynek o zachwycającej architekturze i dziedzińcu, na którym można znaleźć między innymi klubogalerię Szajba, wyśmienitą restaurację DoJutra, Rumbar - owoce morza w towarzystwie najlepszego rumu - czy Charlotte, gdzie zjecie świeżo wypiekany chleb i pieczywo oparte na oryginalnych francuskich recepturach, na deser - kawa w Parish." 
+		latitude = "51.108437" 
+		longitude = "17.026137" 
+		category = "ENTERTAINMENT" />
+		
+	<place 
+		title ="VaffaNapoli: “Pizza urywa tyłek”" 
+		description = "Krótki czas oczekiwania, otwarte 12:00-23:45, bogate menu." 
+		latitude = "51.108414" 
+		longitude = "17.024182" 
+		category = "FOOD" />
+		
+	<place 
+		title ="Masala GrillBarr: Najbardziej prestiżowe indyjskie jedzenie, drogie"
+		description = "Otwarte 12:00-23:00, bardzo popularne wśród obcokrajowców – łączy kultury." 
+		latitude = "51.110779" 
+		longitude = "17.033870" 
+		category = "FOOD" />
+		
+	<place 
+		title ="Mango Mama: Również dobra, troszkę tańsza indyjska kuchnia" 
+		description = "Otwarte 11:00-21:00, fajne, przejrzyste i krótkie menu." 
+		latitude = "51.111185" 
+		longitude = "17.029723" 
+		category = "FOOD" />
+		
+	<place 
+		title ="Osiem Misek: kuchnia azjatycka" 
+		description = "Otwarte 12:00-22:00, niskie ceny, dokładne opisy dań (nie kupujemy „kota w worku”)." 
+		latitude = "51.109465" 
+		longitude = "17.023264" 
+		category = "FOOD" />
+		
+	<place 
+		title ="Miś: Bar mleczny - tanio, domowo, polsko" 
+		description = "Spory ruch w porze obiadowej, ale BARDZO GODNY POLECENIA (piątek do 18:00, sobota do 17:00)." 
+		latitude = "51.112582" 
+		longitude = "17.034197" 
+		category = "FOOD" />
+		
+	<place 
+		title ="FC Naleśniki: Na słodko i na słono" 
+		description = "Otwarte 11:00-22:00 (nd 21:00), dla studentów 15 proc. rabatu, w menu tylko naleśniki." 
+		latitude = "51.110980" 
+		longitude = "17.033631" 
+		category = "FOOD" />
+		
+	<place 
+		title ="Żyzna: kuchnia wegańska" 
+		description = "Otwarte 13:00-20:00, późnym popołudniem i wieczorami brakuje niektórych potraw („wszystko zjedzone”), ceny nie są najniższe, ale za to jedzenie bardzo ciekawe i smaczne." 
+		latitude = "51.111807" 
+		longitude = "17.036505" 
+		category = "FOOD" />
+		
+	<place 
+		title ="Pasibus: Wrocławskie burgery" 
+		description = "Otwarte 12:00-3:00, burgery 100% wołowiny, oryginalne dodatki, w menu również „pasifrytki” i kulki serowe. Ceny są raczej niskie w stosunku do jakości i wielkości porcji (miejsce dla miłośników wołowiny)." 
+		latitude = "51.107809" 
+		longitude = "17.032217" 
+		category = "FOOD" />
+		
+	<place 
+		title ="Vega: Bar wegański" 
+		description = "Otwarte 9:00-21:00 (nd 9:00-19:00), dobre jedzenie, ale ceny troszkę zawyżone w stosunku do jakości." 
+		latitude = "51.109815" 
+		longitude = "17.032689" 
+		category = "FOOD" />
+		
+	<place 
+		title ="Przełam Lody" 
+		description = "Otwarte 9:30-21:00, kawa, własne wypieki, lody własnej produkcji. Dosyć duży wybór deserów, ceny niskie." 
+		latitude = "51.108357" 
+		longitude = "17.068396" 
+		category = "FOOD" />
+		
+	<place 
+		title ="Baszta: wegetariańsko-wegańska tajska kuchnia" 
+		description = "Otwarte 13:00-21:00, dosyć bogata oferta zup, ceny raczej standardowe (praktycznie wszystkie dania główne za 23-25 zł)." 
+		latitude = "51.111923" 
+		longitude = "17.040235" 
+		category = "FOOD" />
+		
+	<place 
+		title ="Warzywniak: blisko, wegetariańsko" 
+		description = "Otwarte pt 11:00-20:00, sb i nd nieczynne, raczej w stylu fast-food (knysze, pizza…)" 
+		latitude = "51.111403" 
+		longitude = "17.058141" 
+		category = "FOOD" />
+		
+	<place 
+		title ="Bravo" 
+		description = "Otwarte 11:00-23:00, ceny najniższe w mieście, jakość raczej adekwatna. Na plus to, że gotowane na bieżąco, pizza i makarony – czas oczekiwania do kilkunastu minut. Szybko, raczej smacznie, ale mało wyszukane jedzenie." 
+		latitude = "51.111270" 
+		longitude = "17.058090" 
+		category = "FOOD" />
+		
+	<place 
+		title ="Pobite Gary Zupy: zdrowo, tanio, smacznie, blisko" 
+		description = "Otwarte 13:00-19:00, brak menu – codziennie gotowane inne potrawy." 
+		latitude = "51.10957792835962" 
+		longitude = "17.064337134361267" 
+		category = "FOOD" />
+		
+	<place 
+		title ="McFalafel: kebab zawsze dobry pomysł i blisko" 
+		description = "Otwarte 10:00-20:00, kebab, typowy fast-food, ale z miejscem przy stolikach." 
+		latitude = "51.11028182630719" 
+		longitude = "17.062320113182068" 
+		category = "FOOD" />
+	
+	
+</places>

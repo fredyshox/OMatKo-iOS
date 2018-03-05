@@ -25,8 +25,13 @@ class SideMenuManager: SideMenuControllerDataSource, MenuViewControllerDelegate 
     private var viewControllerDict: [String: UIViewController] = [:]
     
     private let _menuItems: [MenuItem] = [
-        MenuItem(viewControllerId: "lectureVC", title: "Lectures", iconName: "lectureIcon"),
-        MenuItem(viewControllerId: "mapVC", title: "Map", iconName: "mapIcon")
+        MenuItem(viewControllerId: "lectureVC", title: "Theoretical lectures", iconName: "book"),
+        MenuItem(viewControllerId: "invalid", title: "Science lectures", iconName: "chart"),
+        MenuItem(viewControllerId: "invalid", title: "Vote for essays", iconName: "votes"),
+        MenuItem(viewControllerId: "mapVC", title: "Map", iconName: "location"),
+        MenuItem(viewControllerId: "invalid", title: "Previous editions", iconName: "history"),
+        MenuItem(viewControllerId: "invalid", title: "Sponsors", iconName: "heart"),
+        MenuItem(viewControllerId: "contactsVC", title: "Contact", iconName: "mail")
     ]
     
     // MARK: Initialization
@@ -56,8 +61,7 @@ class SideMenuManager: SideMenuControllerDataSource, MenuViewControllerDelegate 
             let storyboard = UIStoryboard(name: "Map", bundle: nil)
             vc = storyboard.instantiateInitialViewController()
         case "lectureVC":
-            let storyboard = UIStoryboard(name: "Lectures", bundle: nil)
-            vc = storyboard.instantiateInitialViewController()
+            vc = EventsTableViewController(style: .grouped)
         default:
             vc = UIViewController()
         }
