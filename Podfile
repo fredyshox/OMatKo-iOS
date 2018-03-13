@@ -22,5 +22,7 @@ target 'OMatKo' do
   
   ## ui
   pod 'ViewDeck', '~> 3.1.0'
+  pod 'SkyFloatingLabelTextField', '~> 3.3.0'
+  pod 'IQKeyboardManagerSwift'
 
 end

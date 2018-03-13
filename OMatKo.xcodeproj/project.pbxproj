@@ -42,6 +42,9 @@
 		E2CC5282204D875600153B63 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC5281204D875600153B63 /* Place.swift */; };
 		E2CC5284204D88C800153B63 /* XMLLocalDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC5283204D88C800153B63 /* XMLLocalDataService.swift */; };
 		E2CC528A204DA7E300153B63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2CC5289204DA7E200153B63 /* Assets.xcassets */; };
+		E2F9BC6D2056EF9200D5E73B /* Votes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F9BC6C2056EF9200D5E73B /* Votes.storyboard */; };
+		E2F9BC6F2056F43F00D5E73B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9BC6E2056F43F00D5E73B /* LogInViewController.swift */; };
+		E2F9BC71205814BA00D5E73B /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9BC70205814BA00D5E73B /* VoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +87,9 @@
 		E2CC5281204D875600153B63 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		E2CC5283204D88C800153B63 /* XMLLocalDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLLocalDataService.swift; sourceTree = "<group>"; };
 		E2CC5289204DA7E200153B63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2F9BC6C2056EF9200D5E73B /* Votes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Votes.storyboard; sourceTree = "<group>"; };
+		E2F9BC6E2056F43F00D5E73B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		E2F9BC70205814BA00D5E73B /* VoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +133,6 @@
 		E2092A772045EB910055EBFA /* OMatKo */ = {
 			isa = PBXGroup;
 			children = (
-				E2CC5273204D77EF00153B63 /* New Group */,
 				E251E1002049D51B00B07DE9 /* SideMenu */,
 				E251E0F12048B98F00B07DE9 /* Storyboards */,
 				E251E0EA20487D5D00B07DE9 /* Services */,
@@ -172,6 +177,8 @@
 			children = (
 				E251E0E820487C1000B07DE9 /* EventsTableViewController.swift */,
 				E2CC527D204D83D700153B63 /* ContactsTableViewController.swift */,
+				E2F9BC6E2056F43F00D5E73B /* LogInViewController.swift */,
+				E2F9BC70205814BA00D5E73B /* VoteViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -216,6 +223,7 @@
 			children = (
 				E251E0F42048B9D000B07DE9 /* Lectures.storyboard */,
 				E251E0FA20495D3D00B07DE9 /* Map.storyboard */,
+				E2F9BC6C2056EF9200D5E73B /* Votes.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -229,13 +237,6 @@
 				E251E0E42048791400B07DE9 /* MenuViewController.swift */,
 			);
 			path = SideMenu;
-			sourceTree = "<group>";
-		};
-		E2CC5273204D77EF00153B63 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		F6D1F15AA50019AE6997F127 /* Pods */ = {
@@ -315,6 +316,7 @@
 				E251E0FB20495D3D00B07DE9 /* Map.storyboard in Resources */,
 				E2092AA22045F8890055EBFA /* LectureTableViewCell.xib in Resources */,
 				E2092A8E2045EDCE0055EBFA /* GoogleService-Info.plist in Resources */,
+				E2F9BC6D2056EF9200D5E73B /* Votes.storyboard in Resources */,
 				E2092A7E2045EB910055EBFA /* Main.storyboard in Resources */,
 				E2CC528A204DA7E300153B63 /* Assets.xcassets in Resources */,
 				E251E0F52048B9D000B07DE9 /* Lectures.storyboard in Resources */,
@@ -334,9 +336,11 @@
 				"${BUILT_PRODUCTS_DIR}/CodableFirebase/CodableFirebase.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/ViewDeck/ViewDeck.framework",
 				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -347,9 +351,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableFirebase.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewDeck.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -405,7 +411,9 @@
 				E2092AA52045FBD30055EBFA /* Event.swift in Sources */,
 				E2CC5282204D875600153B63 /* Place.swift in Sources */,
 				E251E0E920487C1000B07DE9 /* EventsTableViewController.swift in Sources */,
+				E2F9BC71205814BA00D5E73B /* VoteViewController.swift in Sources */,
 				E2CC527E204D83D700153B63 /* ContactsTableViewController.swift in Sources */,
+				E2F9BC6F2056F43F00D5E73B /* LogInViewController.swift in Sources */,
 				E2CC5278204D7BC100153B63 /* Edition.swift in Sources */,
 				E2CC5280204D86A700153B63 /* LocalDataService.swift in Sources */,
 				E251E105204B174C00B07DE9 /* MenuItemTableViewCell.swift in Sources */,

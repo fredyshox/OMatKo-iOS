@@ -27,7 +27,7 @@ class SideMenuManager: SideMenuControllerDataSource, MenuViewControllerDelegate 
     private let _menuItems: [MenuItem] = [
         MenuItem(viewControllerId: "lectureVC", title: "Theoretical lectures", iconName: "book"),
         MenuItem(viewControllerId: "invalid", title: "Science lectures", iconName: "chart"),
-        MenuItem(viewControllerId: "invalid", title: "Vote for essays", iconName: "votes"),
+        MenuItem(viewControllerId: "votesVC", title: "Vote for essays", iconName: "votes"),
         MenuItem(viewControllerId: "mapVC", title: "Map", iconName: "location"),
         MenuItem(viewControllerId: "invalid", title: "Previous editions", iconName: "history"),
         MenuItem(viewControllerId: "invalid", title: "Sponsors", iconName: "heart"),
@@ -62,6 +62,9 @@ class SideMenuManager: SideMenuControllerDataSource, MenuViewControllerDelegate 
             vc = storyboard.instantiateInitialViewController()
         case "lectureVC":
             vc = EventsTableViewController(style: .grouped)
+        case "votesVC":
+            let storyboard = UIStoryboard(name: "Votes", bundle: nil)
+            vc = storyboard.instantiateInitialViewController()
         default:
             vc = UIViewController()
         }

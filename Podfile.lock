@@ -48,6 +48,7 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
   - GTMSessionFetcher/Core (1.1.13)
+  - IQKeyboardManagerSwift (5.0.7)
   - leveldb-library (1.20)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -59,6 +60,7 @@ PODS:
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
   - Protobuf (3.5.0)
   - RxSwift (4.1.2)
+  - SkyFloatingLabelTextField (3.3.0)
   - ViewDeck (3.1.0)
   - XCGLogger (6.0.2):
     - XCGLogger/Core (= 6.0.2)
@@ -71,7 +73,9 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Messaging
+  - IQKeyboardManagerSwift
   - RxSwift (~> 4.1.2)
+  - SkyFloatingLabelTextField (~> 3.3.0)
   - ViewDeck (~> 3.1.0)
   - XCGLogger
 
@@ -86,14 +90,16 @@ SPEC CHECKSUMS:
   FirebaseMessaging: dfdcd307c2382290a1e297a81d0f18370f5b1bcd
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMSessionFetcher: 5bb1eae636127de695590f50e7d248483eb891e6
+  IQKeyboardManagerSwift: 30fb3a61de1af53a95e02b80fb54ed0a19d5ede5
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
   RxSwift: e49536837d9901277638493ea537394d4b55f570
+  SkyFloatingLabelTextField: 771be94beca6868a6cea187f70c965ebd81d2f93
   ViewDeck: 942d90dd23c9f97cc8038be352255378167edcca
   XCGLogger: c9601cae9a8912de34a58666ba931ed3d624dd31
 
-PODFILE CHECKSUM: c8facc047d9b625b30791cd115efdf28d1c71c7c
+PODFILE CHECKSUM: eaaf8ef296af319df505bbbc6ba4425eea56113e
 
 COCOAPODS: 1.4.0

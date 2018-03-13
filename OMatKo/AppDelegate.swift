@@ -11,6 +11,7 @@ import CoreData
 import XCGLogger
 import Firebase
 import ViewDeck
+import IQKeyboardManagerSwift
 
 let log: XCGLogger = {
     let log: XCGLogger = XCGLogger(identifier: "omatko.logger", includeDefaultDestinations: false)
@@ -57,7 +58,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         
+        // IQKeyboardManager
+        IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
+        
         self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window!.backgroundColor = UIColor.omatkoPrimary
         setUpSideMenu()
         
         Theme.apply()
