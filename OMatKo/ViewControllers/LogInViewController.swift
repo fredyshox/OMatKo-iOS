@@ -20,6 +20,7 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Log in"
         
         emailTextField.tag = LogInViewController.emailTextFieldTag
         emailTextField.delegate = self
@@ -74,7 +75,8 @@ class LogInViewController: UIViewController {
             }
             
             log.info("Logged in as: \(user.uid)")
-            let vc = UIViewController()
+            let storyboard = UIStoryboard(name: "Votes", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "votesVC")
             self.navigationController?.setViewControllers([vc], animated: true)
         }
     }

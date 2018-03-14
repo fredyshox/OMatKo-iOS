@@ -26,11 +26,13 @@ class VoteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Voting"
         
         pickerTextField.inputView = pickerView
         pickerTextField.delegate = self
         voteButton.isEnabled = false
         
+        self.navigationItem.hidesBackButton = true
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log out",
                                                                      style: .done,
                                                                      target: self,

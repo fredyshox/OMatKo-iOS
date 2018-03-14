@@ -42,6 +42,7 @@
 		E2CC5282204D875600153B63 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC5281204D875600153B63 /* Place.swift */; };
 		E2CC5284204D88C800153B63 /* XMLLocalDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC5283204D88C800153B63 /* XMLLocalDataService.swift */; };
 		E2CC528A204DA7E300153B63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2CC5289204DA7E200153B63 /* Assets.xcassets */; };
+		E2ED7E592059E51600972BED /* OMKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED7E582059E51600972BED /* OMKViewController.swift */; };
 		E2F9BC6D2056EF9200D5E73B /* Votes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F9BC6C2056EF9200D5E73B /* Votes.storyboard */; };
 		E2F9BC6F2056F43F00D5E73B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9BC6E2056F43F00D5E73B /* LogInViewController.swift */; };
 		E2F9BC71205814BA00D5E73B /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9BC70205814BA00D5E73B /* VoteViewController.swift */; };
@@ -87,6 +88,7 @@
 		E2CC5281204D875600153B63 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		E2CC5283204D88C800153B63 /* XMLLocalDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLLocalDataService.swift; sourceTree = "<group>"; };
 		E2CC5289204DA7E200153B63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2ED7E582059E51600972BED /* OMKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMKViewController.swift; sourceTree = "<group>"; };
 		E2F9BC6C2056EF9200D5E73B /* Votes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Votes.storyboard; sourceTree = "<group>"; };
 		E2F9BC6E2056F43F00D5E73B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		E2F9BC70205814BA00D5E73B /* VoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				E2CC527D204D83D700153B63 /* ContactsTableViewController.swift */,
 				E2F9BC6E2056F43F00D5E73B /* LogInViewController.swift */,
 				E2F9BC70205814BA00D5E73B /* VoteViewController.swift */,
+				E2ED7E582059E51600972BED /* OMKViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				E2CC5280204D86A700153B63 /* LocalDataService.swift in Sources */,
 				E251E105204B174C00B07DE9 /* MenuItemTableViewCell.swift in Sources */,
 				E2092A9A2045F1270055EBFA /* RoundButton.swift in Sources */,
+				E2ED7E592059E51600972BED /* OMKViewController.swift in Sources */,
 				E2092AA12045F8890055EBFA /* LectureTableViewCell.swift in Sources */,
 				E2CC5284204D88C800153B63 /* XMLLocalDataService.swift in Sources */,
 				E2092A912045F0700055EBFA /* Foundation+Extensions.swift in Sources */,

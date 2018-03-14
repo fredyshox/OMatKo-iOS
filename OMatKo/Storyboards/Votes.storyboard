@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Ts-4d-nus">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ofx-Iz-cuQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,7 +14,7 @@
         <!--Log In View Controller-->
         <scene sceneID="jS4-gg-B89">
             <objects>
-                <viewController id="Ofx-Iz-cuQ" customClass="LogInViewController" customModule="OMatKo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="Ofx-Iz-cuQ" customClass="LogInViewController" customModule="OMatKo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PEF-4b-dRJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,6 +137,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="CIf-Af-ny1" id="M8g-LO-mv0"/>
                         <outlet property="passwordTextField" destination="zTK-QA-pMC" id="WhB-85-cCV"/>
+                        <segue destination="2Ts-4d-nus" kind="show" identifier="showVotes" id="M0V-pQ-Oxj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3WP-IP-c8h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -146,7 +147,7 @@
         <!--Vote View Controller-->
         <scene sceneID="7US-kI-Yba">
             <objects>
-                <viewController id="2Ts-4d-nus" customClass="VoteViewController" customModule="OMatKo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="votesVC" id="2Ts-4d-nus" customClass="VoteViewController" customModule="OMatKo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZEg-Fd-CVJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,9 +177,6 @@
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <state key="normal" title="Vote">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="disabled">
-                                            <color key="titleColor" white="0.66666666666666663" alpha="0.75053510273972601" colorSpace="calibratedWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
