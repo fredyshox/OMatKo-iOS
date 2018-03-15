@@ -66,6 +66,7 @@ PODS:
     - XCGLogger/Core (= 6.0.2)
   - XCGLogger/Core (6.0.2):
     - ObjcExceptionBridging
+  - XLPagerTabStrip (8.0.0)
 
 DEPENDENCIES:
   - CodableFirebase
@@ -78,6 +79,7 @@ DEPENDENCIES:
   - SkyFloatingLabelTextField (~> 3.3.0)
   - ViewDeck (~> 3.1.0)
   - XCGLogger
+  - XLPagerTabStrip (~> 8.0)
 
 SPEC CHECKSUMS:
   CodableFirebase: b13321acfec878cbcda93faf84c985f4d69ec2f1
@@ -99,7 +101,8 @@ SPEC CHECKSUMS:
   SkyFloatingLabelTextField: 771be94beca6868a6cea187f70c965ebd81d2f93
   ViewDeck: 942d90dd23c9f97cc8038be352255378167edcca
   XCGLogger: c9601cae9a8912de34a58666ba931ed3d624dd31
+  XLPagerTabStrip: d1ab378af0923320ec0b5eab11d7b2f803d31261
 
-PODFILE CHECKSUM: eaaf8ef296af319df505bbbc6ba4425eea56113e
+PODFILE CHECKSUM: dec4a31f7bafebef68ed7b99dc907c043a4fbf36
 
 COCOAPODS: 1.4.0

@@ -24,5 +24,6 @@ target 'OMatKo' do
   pod 'ViewDeck', '~> 3.1.0'
   pod 'SkyFloatingLabelTextField', '~> 3.3.0'
   pod 'IQKeyboardManagerSwift'
+  pod 'XLPagerTabStrip', '~> 8.0'
 
 end
