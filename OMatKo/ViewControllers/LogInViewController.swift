@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import SkyFloatingLabelTextField
 
-class LogInViewController: UIViewController {
+class LogInViewController: OMKViewController {
 
     @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var passwordTextField: SkyFloatingLabelTextField!

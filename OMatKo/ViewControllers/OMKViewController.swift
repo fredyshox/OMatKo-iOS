@@ -8,27 +8,47 @@
 
 import UIKit
 
-class OMKViewController: UIViewController {
+@objc protocol OMKMenu: AnyObject {
+    @objc func revealSideMenu(sender: Any?)
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        self.navigationItem.leftBarButtonItem = createBarButtonItem()
-    }
-
-    @objc
-    func revealMenu(sender: Any?) {
-        (self.viewDeckController as? SideMenuControllerAdapter)?.revealMenu(sender: sender)
-    }
+extension OMKMenu where Self: UIViewController  {
     
-    private func createBarButtonItem() -> UIBarButtonItem {
+    func createMenuButton() -> UIBarButtonItem {
         let btnImage = UIImage(named: "menu_bars")
         let button = UIBarButtonItem(image: btnImage,
                                      style: .plain,
                                      target: self,
-                                     action: #selector(revealMenu(sender:)))
+                                     action: #selector(revealSideMenu(sender:)))
         
         return button
     }
+}
 
+class OMKViewController: UIViewController, OMKMenu{
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.navigationItem.leftBarButtonItem = createMenuButton()
+    }
+    
+    @objc func revealSideMenu(sender: Any?) {
+        (self.viewDeckController as? SideMenuControllerAdapter)?.revealMenu(sender: sender)
+    }
+    
+}
+
+class OMKTableViewController: UITableViewController, OMKMenu {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.navigationItem.leftBarButtonItem = createMenuButton()
+    }
+    
+    @objc func revealSideMenu(sender: Any?) {
+        (self.viewDeckController as? SideMenuControllerAdapter)?.revealMenu(sender: sender)
+    }
+    
 }

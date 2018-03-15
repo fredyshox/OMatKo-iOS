@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContactsTableViewController: UITableViewController {
+class ContactsTableViewController: OMKTableViewController {
     
     // MARK: Initialization
     

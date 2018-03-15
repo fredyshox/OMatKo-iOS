@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EventsTableViewController: UITableViewController {
+class EventsTableViewController: OMKTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

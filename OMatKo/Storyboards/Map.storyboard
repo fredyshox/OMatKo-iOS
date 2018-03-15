@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="hFv-t5-pAn">
             <objects>
-                <viewController id="Kvi-Ca-5Se" sceneMemberID="viewController">
+                <viewController id="Kvi-Ca-5Se" customClass="OMKViewController" customModule="OMatKo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ToX-Bv-BCb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

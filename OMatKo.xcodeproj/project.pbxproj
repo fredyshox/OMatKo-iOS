@@ -43,6 +43,7 @@
 		E2CC5284204D88C800153B63 /* XMLLocalDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC5283204D88C800153B63 /* XMLLocalDataService.swift */; };
 		E2CC528A204DA7E300153B63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2CC5289204DA7E200153B63 /* Assets.xcassets */; };
 		E2ED7E592059E51600972BED /* OMKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED7E582059E51600972BED /* OMKViewController.swift */; };
+		E2ED7E5B2059E82400972BED /* OMKNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED7E5A2059E82400972BED /* OMKNavigationController.swift */; };
 		E2F9BC6D2056EF9200D5E73B /* Votes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F9BC6C2056EF9200D5E73B /* Votes.storyboard */; };
 		E2F9BC6F2056F43F00D5E73B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9BC6E2056F43F00D5E73B /* LogInViewController.swift */; };
 		E2F9BC71205814BA00D5E73B /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9BC70205814BA00D5E73B /* VoteViewController.swift */; };
@@ -89,6 +90,7 @@
 		E2CC5283204D88C800153B63 /* XMLLocalDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLLocalDataService.swift; sourceTree = "<group>"; };
 		E2CC5289204DA7E200153B63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2ED7E582059E51600972BED /* OMKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMKViewController.swift; sourceTree = "<group>"; };
+		E2ED7E5A2059E82400972BED /* OMKNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMKNavigationController.swift; sourceTree = "<group>"; };
 		E2F9BC6C2056EF9200D5E73B /* Votes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Votes.storyboard; sourceTree = "<group>"; };
 		E2F9BC6E2056F43F00D5E73B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		E2F9BC70205814BA00D5E73B /* VoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				E2F9BC6E2056F43F00D5E73B /* LogInViewController.swift */,
 				E2F9BC70205814BA00D5E73B /* VoteViewController.swift */,
 				E2ED7E582059E51600972BED /* OMKViewController.swift */,
+				E2ED7E5A2059E82400972BED /* OMKNavigationController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				E251E0F72048BB3F00B07DE9 /* SideMenuController.swift in Sources */,
 				E2092A812045EB910055EBFA /* OMatKo.xcdatamodeld in Sources */,
 				E251E0EE20487F2600B07DE9 /* FirebaseDataService.swift in Sources */,
+				E2ED7E5B2059E82400972BED /* OMKNavigationController.swift in Sources */,
 				E251E0FF2049640000B07DE9 /* SideMenuManager.swift in Sources */,
 				E251E0F02048B25100B07DE9 /* MenuItem.swift in Sources */,
 				E251E0E52048791400B07DE9 /* MenuViewController.swift in Sources */,

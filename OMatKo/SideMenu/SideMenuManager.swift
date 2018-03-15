@@ -63,26 +63,18 @@ class SideMenuManager: SideMenuControllerDataSource, MenuViewControllerDelegate 
         case "lectureVC":
             vc = EventsTableViewController(style: .grouped)
         case "votesVC":
-            let storyboard = UIStoryboard(name: "Votes", bundle: nil)
-            vc = storyboard.instantiateInitialViewController()
+            vc = OMKNavigationController()
         default:
-            vc = UIViewController()
+            vc = OMKViewController()
         }
         
-        vc = vc ?? UIViewController()
-        vc.navigationItem.leftBarButtonItem = createBarButtonItem()
+        vc = vc ?? OMKViewController()
         
-        return UINavigationController(rootViewController: vc)
-    }
-    
-    private func createBarButtonItem() -> UIBarButtonItem {
-        let btnImage = UIImage(named: "menu_bars")
-        let button = UIBarButtonItem(image: btnImage,
-                                     style: .plain,
-                                     target: _sideMenuController,
-                                     action: #selector(SideMenuControllerAdapter.revealMenu(sender:)))
-        
-        return button
+        if let _ = vc as? UINavigationController {
+            return vc
+        } else {
+            return UINavigationController(rootViewController: vc)
+        }
     }
     
     // MARK: MainViewControllerDataSource

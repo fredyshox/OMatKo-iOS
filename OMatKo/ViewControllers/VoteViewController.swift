@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import FirebaseAuth
 
-class VoteViewController: UIViewController {
+class VoteViewController: OMKViewController {
     
     var lectureCodes: [String] = ["Code1", "Code2", "Code3"]
     
@@ -41,7 +42,11 @@ class VoteViewController: UIViewController {
     
     @objc
     func logOut(sender: Any?) {
-        log.info("Attempt to log out")
+        do {
+            try Auth.auth().signOut()
+        } catch let err {
+            log.error("Unable to sing out. \(err.localizedDescription)")
+        }
     }
     
     @IBAction func vote(_ sender: Any) {
