@@ -10,15 +10,7 @@ import UIKit
 
 class ContactsTableViewController: OMKTableViewController {
     
-    // MARK: Initialization
-    
-    init() {
-        super.init(style: .plain)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("Not implemented")
-    }
+    static let contactCellHeight: CGFloat = 320.0
     
     // MARK: VC Lifecycle
 
@@ -55,8 +47,20 @@ class ContactsTableViewController: OMKTableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath) as! ContactTableViewCell
 
         cell.contactImageView.backgroundColor = UIColor.omatkoSecondary
+        
+        // cell test
+        let longDesc = "Long long Long long Long long Long long Long long Long long Long long Long long Description"
+        cell.descriptionLabel.text = (indexPath.row % 2 != 0) ? longDesc : "Shot description"
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return ContactsTableViewController.contactCellHeight
     }
     
 }

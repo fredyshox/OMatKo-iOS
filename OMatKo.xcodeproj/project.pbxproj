@@ -187,11 +187,11 @@
 			children = (
 				E251E0E820487C1000B07DE9 /* EventsTableViewController.swift */,
 				E2CC527D204D83D700153B63 /* ContactsTableViewController.swift */,
+				E2ED7E62205BF35E00972BED /* PlacesTableViewController.swift */,
 				E2F9BC6E2056F43F00D5E73B /* LogInViewController.swift */,
 				E2F9BC70205814BA00D5E73B /* VoteViewController.swift */,
 				E2ED7E582059E51600972BED /* OMKViewController.swift */,
 				E2ED7E5A2059E82400972BED /* OMKNavigationController.swift */,
-				E2ED7E62205BF35E00972BED /* PlacesTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";

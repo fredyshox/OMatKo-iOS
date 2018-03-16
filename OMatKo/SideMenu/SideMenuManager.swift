@@ -58,9 +58,11 @@ class SideMenuManager: SideMenuControllerDataSource, MenuViewControllerDelegate 
         var vc: UIViewController!
         switch id {
         case "mapVC":
-            vc = PlacesTableViewController(style: .grouped)
+            vc = PlacesTableViewController(style: .plain)
         case "lectureVC":
-            vc = EventsTableViewController(style: .grouped)
+            vc = EventsTableViewController(style: .plain)
+        case "contactsVC":
+            vc = ContactsTableViewController(style: .plain)
         case "votesVC":
             vc = OMKNavigationController()
         default:

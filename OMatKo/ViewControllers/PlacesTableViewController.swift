@@ -9,6 +9,10 @@
 import UIKit
 
 class PlacesTableViewController: OMKTableViewController {
+    
+    static let placeCellHeight: CGFloat = 92.0
+    
+    // MARK: ViewController lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +37,11 @@ class PlacesTableViewController: OMKTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "placeCell", for: indexPath) as! PlaceTableViewCell
         
+        // cell test
         let longDesc = "Long long Long long Long long Long long Long long Long long Long long Long long Description"
         cell.descriptionLabel.text = (indexPath.row % 2 != 0) ? longDesc : "Shot description"
         cell.titleLabel.text = (indexPath.row % 2 == 0) ? longDesc : "Short title"
-
+        
         return cell
     }
     
@@ -45,7 +50,7 @@ class PlacesTableViewController: OMKTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 92.0
+        return PlacesTableViewController.placeCellHeight
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -9,6 +9,11 @@
 import UIKit
 
 class EventsTableViewController: OMKTableViewController {
+    
+    // estimated row height
+    static let lectureCellHeight: CGFloat = 123.0
+    
+    // MARK: ViewController lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +40,10 @@ class EventsTableViewController: OMKTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "lectureCell", for: indexPath) as! LectureTableViewCell
         
-        // cell setup
+        // cell test
+        let longDesc = "Long long Long long Long long Long long Long long Long long Long long Long long Description"
+        cell.descriptionLabel.text = (indexPath.row % 2 != 0) ? longDesc : "Shot description"
+        cell.titleLabel.text = (indexPath.row % 2 == 0) ? longDesc : "Short title"
 
         return cell
     }
@@ -49,7 +57,7 @@ class EventsTableViewController: OMKTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 126.0
+        return EventsTableViewController.lectureCellHeight
     }
     
 }
