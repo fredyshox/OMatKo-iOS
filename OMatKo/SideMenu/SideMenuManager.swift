@@ -58,8 +58,7 @@ class SideMenuManager: SideMenuControllerDataSource, MenuViewControllerDelegate 
         var vc: UIViewController!
         switch id {
         case "mapVC":
-            let storyboard = UIStoryboard(name: "Map", bundle: nil)
-            vc = storyboard.instantiateInitialViewController()
+            vc = PlacesTableViewController(style: .grouped)
         case "lectureVC":
             vc = EventsTableViewController(style: .grouped)
         case "votesVC":
