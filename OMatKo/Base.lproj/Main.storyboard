@@ -110,23 +110,36 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="omatko" translatesAutoresizingMaskIntoConstraints="NO" id="G9B-vb-3N8">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s8P-Eb-J51">
                                 <rect key="frame" x="0.0" y="20" width="375" height="170"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="omatko" translatesAutoresizingMaskIntoConstraints="NO" id="G9B-vb-3N8">
+                                        <rect key="frame" x="16" y="0.0" width="343" height="170"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="uTH-lz-tlH"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="uTH-lz-tlH"/>
+                                    <constraint firstItem="G9B-vb-3N8" firstAttribute="leading" secondItem="s8P-Eb-J51" secondAttribute="leading" constant="16" id="Hoc-NC-16V"/>
+                                    <constraint firstAttribute="trailing" secondItem="G9B-vb-3N8" secondAttribute="trailing" constant="16" id="MyI-MN-rN5"/>
+                                    <constraint firstAttribute="height" constant="170" id="QdB-0A-waI"/>
+                                    <constraint firstItem="G9B-vb-3N8" firstAttribute="top" secondItem="s8P-Eb-J51" secondAttribute="top" id="WkE-HD-vUB"/>
+                                    <constraint firstAttribute="bottom" secondItem="G9B-vb-3N8" secondAttribute="bottom" id="kHO-dk-wjw"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Q49-nF-avh" firstAttribute="leading" secondItem="0XQ-1K-XIP" secondAttribute="leading" id="EfC-Vh-0Ra"/>
                             <constraint firstItem="0XQ-1K-XIP" firstAttribute="trailing" secondItem="Q49-nF-avh" secondAttribute="trailing" id="Fb2-J9-gmH"/>
-                            <constraint firstItem="G9B-vb-3N8" firstAttribute="leading" secondItem="0XQ-1K-XIP" secondAttribute="leading" id="M3A-5s-D2Y"/>
-                            <constraint firstItem="0XQ-1K-XIP" firstAttribute="top" secondItem="G9B-vb-3N8" secondAttribute="top" id="VHN-R8-pYR"/>
-                            <constraint firstItem="0XQ-1K-XIP" firstAttribute="trailing" secondItem="G9B-vb-3N8" secondAttribute="trailing" id="equ-74-NAd"/>
-                            <constraint firstItem="Q49-nF-avh" firstAttribute="top" secondItem="G9B-vb-3N8" secondAttribute="bottom" id="jl1-ib-VqE"/>
+                            <constraint firstItem="Q49-nF-avh" firstAttribute="top" secondItem="s8P-Eb-J51" secondAttribute="bottom" id="Mqp-Jk-8JJ"/>
+                            <constraint firstItem="0XQ-1K-XIP" firstAttribute="trailing" secondItem="s8P-Eb-J51" secondAttribute="trailing" id="VsL-HZ-eYV"/>
+                            <constraint firstItem="s8P-Eb-J51" firstAttribute="top" secondItem="0XQ-1K-XIP" secondAttribute="top" id="adS-Ef-HMY"/>
                             <constraint firstItem="0XQ-1K-XIP" firstAttribute="bottom" secondItem="Q49-nF-avh" secondAttribute="bottom" id="pCn-vW-COI"/>
+                            <constraint firstItem="s8P-Eb-J51" firstAttribute="leading" secondItem="0XQ-1K-XIP" secondAttribute="leading" id="yuG-3W-8JZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0XQ-1K-XIP"/>
                     </view>
