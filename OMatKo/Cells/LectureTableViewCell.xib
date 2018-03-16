@@ -21,31 +21,31 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iD7-Yh-bbL" customClass="RoundView" customModule="OMatKo" customModuleProvider="target">
-                        <rect key="frame" x="8" y="8" width="345" height="105.5"/>
+                        <rect key="frame" x="0.0" y="8" width="0.0" height="105.5"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FR0-7J-wE6">
-                                <rect key="frame" x="20" y="12" width="276" height="81.5"/>
+                                <rect key="frame" x="0.0" y="12" width="0.0" height="81.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8e-0u-fnd">
-                                        <rect key="frame" x="0.0" y="0.0" width="276" height="21.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="21.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00 AM - 00:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OhI-xR-CW6">
-                                        <rect key="frame" x="0.0" y="25.5" width="276" height="16"/>
+                                        <rect key="frame" x="0.0" y="25.5" width="0.0" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speaker Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58b-xI-CKe">
-                                        <rect key="frame" x="0.0" y="45.5" width="276" height="16"/>
+                                        <rect key="frame" x="0.0" y="45.5" width="0.0" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llH-AL-udK">
-                                        <rect key="frame" x="0.0" y="65.5" width="276" height="16"/>
+                                        <rect key="frame" x="0.0" y="65.5" width="0.0" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -53,7 +53,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlT-HH-7cn">
-                                <rect key="frame" x="308" y="12" width="25" height="25"/>
+                                <rect key="frame" x="0.0" y="12" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="6LL-Hx-BZL"/>
                                     <constraint firstAttribute="width" secondItem="mlT-HH-7cn" secondAttribute="height" multiplier="1:1" id="VpJ-I3-TyP"/>
@@ -63,7 +63,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VT-SW-lLI">
-                                <rect key="frame" x="308" y="68.5" width="25" height="25"/>
+                                <rect key="frame" x="0.0" y="68.5" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="4MB-Vg-MtA"/>
                                     <constraint firstAttribute="width" secondItem="7VT-SW-lLI" secondAttribute="height" multiplier="1:1" id="s45-0h-Ufw"/>
@@ -91,10 +91,10 @@
                                 <real key="value" value="0.10000000000000001"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="value" red="0.0" green="0.53333333329999999" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                <real key="value" value="7"/>
+                                <real key="value" value="3"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>

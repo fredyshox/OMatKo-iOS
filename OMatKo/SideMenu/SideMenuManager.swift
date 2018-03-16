@@ -60,7 +60,8 @@ class SideMenuManager: SideMenuControllerDataSource, MenuViewControllerDelegate 
         case "mapVC":
             vc = PlacesTableViewController(style: .plain)
         case "lectureVC":
-            vc = LecturesTableViewController(style: .plain)
+            let storyboard = UIStoryboard(name: "Lectures", bundle: nil)
+            vc = storyboard.instantiateInitialViewController()
         case "contactsVC":
             vc = ContactsTableViewController(style: .plain)
         case "editionsVC":

@@ -7,17 +7,32 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
 class LecturesTableViewController: OMKTableViewController {
     
     // estimated row height
     static let lectureCellHeight: CGFloat = 123.0
     
+    var lectures: Any!
+    
+    // MARK: Initialization
+    
+    init(title: String, data: Any) {
+        super.init(style: .plain)
+        
+        self.title = title
+        self.lectures = data
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     // MARK: ViewController lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Lectures"
 
         // register cell nib
         let nib = UINib(nibName: "LectureTableViewCell", bundle: nil)
@@ -61,3 +76,10 @@ class LecturesTableViewController: OMKTableViewController {
     }
     
 }
+
+extension LecturesTableViewController: IndicatorInfoProvider {
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: self.title)
+    }
+}
+
