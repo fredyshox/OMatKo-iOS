@@ -25,4 +25,8 @@ extension UIColor {
     class var omatkoSecondary: UIColor {
         return UIColor.hexStringToUIColor(hex: "#007D9B")
     }
+    
+    class var omatkoLightBackground: UIColor {
+        return UIColor.hexStringToUIColor(hex: "#EBF7F9")
+    }
 }

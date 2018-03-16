@@ -30,6 +30,7 @@ class OMKViewController: UIViewController, OMKMenu{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor.omatkoLightBackground
         self.navigationItem.leftBarButtonItem = createMenuButton()
     }
     
@@ -44,6 +45,7 @@ class OMKTableViewController: UITableViewController, OMKMenu {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.backgroundColor = UIColor.omatkoLightBackground
         self.navigationItem.leftBarButtonItem = createMenuButton()
     }
     

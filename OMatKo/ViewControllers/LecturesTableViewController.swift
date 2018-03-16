@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EventsTableViewController: OMKTableViewController {
+class LecturesTableViewController: OMKTableViewController {
     
     // estimated row height
     static let lectureCellHeight: CGFloat = 123.0
@@ -57,7 +57,7 @@ class EventsTableViewController: OMKTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return EventsTableViewController.lectureCellHeight
+        return LecturesTableViewController.lectureCellHeight
     }
     
 }

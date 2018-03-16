@@ -21,10 +21,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kef-20-S4T" customClass="RoundView" customModule="OMatKo" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="8" width="0.0" height="75.5"/>
+                        <rect key="frame" x="8" y="8" width="362" height="75.5"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u89-tO-wO8">
-                                <rect key="frame" x="0.0" y="12" width="25" height="25"/>
+                                <rect key="frame" x="325" y="12" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="Cf9-bb-T3I"/>
                                     <constraint firstAttribute="width" secondItem="u89-tO-wO8" secondAttribute="height" multiplier="1:1" id="j2A-48-cQ8"/>
@@ -32,16 +32,16 @@
                                 <state key="normal" image="location"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="UqO-Qj-UTR">
-                                <rect key="frame" x="0.0" y="12" width="0.0" height="51.5"/>
+                                <rect key="frame" x="20" y="12" width="293" height="51.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEh-K4-Aev">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="21.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="21.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jb2-JM-CB7">
-                                        <rect key="frame" x="0.0" y="35.5" width="0.0" height="16"/>
+                                        <rect key="frame" x="0.0" y="35.5" width="293" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
