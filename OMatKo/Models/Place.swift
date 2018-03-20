@@ -11,7 +11,7 @@ import Foundation
 /**
  * Represents location
  */
-struct Place: Codable {
+struct Place: Codable, BaseModel {
     let title: String
     let description: String
     let latitude: Double
@@ -34,6 +34,8 @@ struct Place: Codable {
         self.category = category
     }
     
+    // MARK: BaseModel
+    
     init?(dict: [String: Any]) {
         guard let title = dict["title"] as? String,
               let description = dict["description"] as? String,
@@ -48,5 +50,9 @@ struct Place: Codable {
         }
         
         self.init(title: title, description: description, latitude: latitude, longitude: longitude, category: category)
+    }
+    
+    static var modelName: String {
+        return "place"
     }
 }

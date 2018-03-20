@@ -11,7 +11,7 @@ import Foundation
 /**
  * Represents previous editions of conference.
  */
-struct Edition: Codable {
+struct Edition: Codable, BaseModel {
     let title: String
     let description: String
     let imageUrl: String
@@ -22,6 +22,8 @@ struct Edition: Codable {
         self.imageUrl = imageUrl
     }
     
+    // MARK: BaseModel
+    
     init?(dict: [String: Any]) {
         guard let title = dict["title"] as? String,
               let description = dict["description"] as? String,
@@ -31,5 +33,9 @@ struct Edition: Codable {
         }
         
         self.init(title: title, description: description, imageUrl: imageUrl)
+    }
+    
+    static var modelName: String {
+        return "edition"
     }
 }

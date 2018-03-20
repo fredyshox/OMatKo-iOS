@@ -11,7 +11,7 @@ import Foundation
 /**
  * Represents contact information for conference contributor
  */
-struct Contact: Codable {
+struct Contact: Codable, BaseModel {
     let name: String
     let position: String
     let description: String
@@ -28,6 +28,8 @@ struct Contact: Codable {
         self.imageUrl = imageUrl
     }
     
+    // MARK: BaseModel
+    
     init?(dict: [String: Any]) {
         guard let name = dict["name"] as? String,
               let position = dict["position"] as? String,
@@ -40,5 +42,9 @@ struct Contact: Codable {
         }
         
         self.init(name: name, position: position, description: description, phoneNumber: phoneNumber, email: email, imageUrl: imageUrl)
+    }
+    
+    static var modelName: String {
+        return "person"
     }
 }
