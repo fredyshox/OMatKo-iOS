@@ -15,4 +15,21 @@ struct Edition: Codable {
     let title: String
     let description: String
     let imageUrl: String
+    
+    init(title: String, description: String, imageUrl: String) {
+        self.title = title
+        self.description = description
+        self.imageUrl = imageUrl
+    }
+    
+    init?(dict: [String: Any]) {
+        guard let title = dict["title"] as? String,
+              let description = dict["description"] as? String,
+              let imageUrl = dict["imageUrl"] as? String
+        else {
+            return nil
+        }
+        
+        self.init(title: title, description: description, imageUrl: imageUrl)
+    }
 }
