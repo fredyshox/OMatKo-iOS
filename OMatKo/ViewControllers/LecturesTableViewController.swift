@@ -7,12 +7,32 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
-class EventsTableViewController: OMKTableViewController {
+class LecturesTableViewController: OMKTableViewController {
+    
+    // estimated row height
+    static let lectureCellHeight: CGFloat = 123.0
+    
+    var lectures: Any!
+    
+    // MARK: Initialization
+    
+    init(title: String, data: Any) {
+        super.init(style: .plain)
+        
+        self.title = title
+        self.lectures = data
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    // MARK: ViewController lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Lectures"
 
         // register cell nib
         let nib = UINib(nibName: "LectureTableViewCell", bundle: nil)
@@ -35,7 +55,10 @@ class EventsTableViewController: OMKTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "lectureCell", for: indexPath) as! LectureTableViewCell
         
-        // cell setup
+        // cell test
+        let longDesc = "Long long Long long Long long Long long Long long Long long Long long Long long Description"
+        cell.descriptionLabel.text = (indexPath.row % 2 != 0) ? longDesc : "Shot description"
+        cell.titleLabel.text = (indexPath.row % 2 == 0) ? longDesc : "Short title"
 
         return cell
     }
@@ -49,7 +72,14 @@ class EventsTableViewController: OMKTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 126.0
+        return LecturesTableViewController.lectureCellHeight
     }
     
 }
+
+extension LecturesTableViewController: IndicatorInfoProvider {
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: self.title)
+    }
+}
+

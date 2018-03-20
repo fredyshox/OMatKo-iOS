@@ -1,36 +1,27 @@
 //
-//  ContactsTableViewController.swift
+//  PlacesTableViewController.swift
 //  OMatKo
 //
-//  Created by Kacper Raczy on 05.03.2018.
+//  Created by Kacper Raczy on 16.03.2018.
 //  Copyright © 2018 Kacper Raczy. All rights reserved.
 //
 
 import UIKit
 
-class ContactsTableViewController: OMKTableViewController {
+class PlacesTableViewController: OMKTableViewController {
     
-    static let contactCellHeight: CGFloat = 320.0
+    static let placeCellHeight: CGFloat = 92.0
     
-    // MARK: VC Lifecycle
+    // MARK: ViewController lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setUpTableView()
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func setUpTableView() {
-        self.tableView.allowsSelection = false
+        // tableView setup
         self.tableView.separatorStyle = .none
         
-        let nib = UINib(nibName: "ContactTableViewCell", bundle: nil)
-        self.tableView.register(nib, forCellReuseIdentifier: "contactCell")
+        let nib = UINib(nibName: "PlaceTableViewCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "placeCell")
     }
 
     // MARK: - Table view data source
@@ -40,18 +31,17 @@ class ContactsTableViewController: OMKTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath) as! ContactTableViewCell
-
-        cell.contactImageView.backgroundColor = UIColor.omatkoSecondary
+        let cell = tableView.dequeueReusableCell(withIdentifier: "placeCell", for: indexPath) as! PlaceTableViewCell
         
         // cell test
         let longDesc = "Long long Long long Long long Long long Long long Long long Long long Long long Description"
         cell.descriptionLabel.text = (indexPath.row % 2 != 0) ? longDesc : "Shot description"
-
+        cell.titleLabel.text = (indexPath.row % 2 == 0) ? longDesc : "Short title"
+        
         return cell
     }
     
@@ -60,7 +50,11 @@ class ContactsTableViewController: OMKTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return ContactsTableViewController.contactCellHeight
+        return PlacesTableViewController.placeCellHeight
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
 }

@@ -23,7 +23,7 @@
 		E2092AA22045F8890055EBFA /* LectureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2092AA02045F8890055EBFA /* LectureTableViewCell.xib */; };
 		E2092AA52045FBD30055EBFA /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2092AA42045FBD30055EBFA /* Event.swift */; };
 		E251E0E52048791400B07DE9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251E0E42048791400B07DE9 /* MenuViewController.swift */; };
-		E251E0E920487C1000B07DE9 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251E0E820487C1000B07DE9 /* EventsTableViewController.swift */; };
+		E251E0E920487C1000B07DE9 /* LecturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251E0E820487C1000B07DE9 /* LecturesTableViewController.swift */; };
 		E251E0EC20487D6800B07DE9 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251E0EB20487D6800B07DE9 /* DataService.swift */; };
 		E251E0EE20487F2600B07DE9 /* FirebaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251E0ED20487F2600B07DE9 /* FirebaseDataService.swift */; };
 		E251E0F02048B25100B07DE9 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251E0EF2048B25100B07DE9 /* MenuItem.swift */; };
@@ -44,6 +44,12 @@
 		E2CC528A204DA7E300153B63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2CC5289204DA7E200153B63 /* Assets.xcassets */; };
 		E2ED7E592059E51600972BED /* OMKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED7E582059E51600972BED /* OMKViewController.swift */; };
 		E2ED7E5B2059E82400972BED /* OMKNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED7E5A2059E82400972BED /* OMKNavigationController.swift */; };
+		E2ED7E60205AF63A00972BED /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED7E5E205AF63A00972BED /* PlaceTableViewCell.swift */; };
+		E2ED7E61205AF63A00972BED /* PlaceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2ED7E5F205AF63A00972BED /* PlaceTableViewCell.xib */; };
+		E2ED7E63205BF35E00972BED /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED7E62205BF35E00972BED /* PlacesTableViewController.swift */; };
+		E2ED7E65205C29AA00972BED /* Editions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2ED7E64205C29AA00972BED /* Editions.storyboard */; };
+		E2ED7E67205C2DD300972BED /* EditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED7E66205C2DD300972BED /* EditionViewController.swift */; };
+		E2ED7E69205C3DC500972BED /* LecturesPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED7E68205C3DC500972BED /* LecturesPagerTabStripViewController.swift */; };
 		E2F9BC6D2056EF9200D5E73B /* Votes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F9BC6C2056EF9200D5E73B /* Votes.storyboard */; };
 		E2F9BC6F2056F43F00D5E73B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9BC6E2056F43F00D5E73B /* LogInViewController.swift */; };
 		E2F9BC71205814BA00D5E73B /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9BC70205814BA00D5E73B /* VoteViewController.swift */; };
@@ -70,7 +76,7 @@
 		E2092AA02045F8890055EBFA /* LectureTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LectureTableViewCell.xib; sourceTree = "<group>"; };
 		E2092AA42045FBD30055EBFA /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		E251E0E42048791400B07DE9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		E251E0E820487C1000B07DE9 /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		E251E0E820487C1000B07DE9 /* LecturesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesTableViewController.swift; sourceTree = "<group>"; };
 		E251E0EB20487D6800B07DE9 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		E251E0ED20487F2600B07DE9 /* FirebaseDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDataService.swift; sourceTree = "<group>"; };
 		E251E0EF2048B25100B07DE9 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
@@ -91,6 +97,12 @@
 		E2CC5289204DA7E200153B63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2ED7E582059E51600972BED /* OMKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMKViewController.swift; sourceTree = "<group>"; };
 		E2ED7E5A2059E82400972BED /* OMKNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMKNavigationController.swift; sourceTree = "<group>"; };
+		E2ED7E5E205AF63A00972BED /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
+		E2ED7E5F205AF63A00972BED /* PlaceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceTableViewCell.xib; sourceTree = "<group>"; };
+		E2ED7E62205BF35E00972BED /* PlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
+		E2ED7E64205C29AA00972BED /* Editions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Editions.storyboard; sourceTree = "<group>"; };
+		E2ED7E66205C2DD300972BED /* EditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditionViewController.swift; sourceTree = "<group>"; };
+		E2ED7E68205C3DC500972BED /* LecturesPagerTabStripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		E2F9BC6C2056EF9200D5E73B /* Votes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Votes.storyboard; sourceTree = "<group>"; };
 		E2F9BC6E2056F43F00D5E73B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		E2F9BC70205814BA00D5E73B /* VoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
@@ -179,12 +191,15 @@
 		E2092A9D2045F3110055EBFA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E251E0E820487C1000B07DE9 /* EventsTableViewController.swift */,
+				E251E0E820487C1000B07DE9 /* LecturesTableViewController.swift */,
 				E2CC527D204D83D700153B63 /* ContactsTableViewController.swift */,
+				E2ED7E62205BF35E00972BED /* PlacesTableViewController.swift */,
 				E2F9BC6E2056F43F00D5E73B /* LogInViewController.swift */,
 				E2F9BC70205814BA00D5E73B /* VoteViewController.swift */,
 				E2ED7E582059E51600972BED /* OMKViewController.swift */,
 				E2ED7E5A2059E82400972BED /* OMKNavigationController.swift */,
+				E2ED7E66205C2DD300972BED /* EditionViewController.swift */,
+				E2ED7E68205C3DC500972BED /* LecturesPagerTabStripViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -198,6 +213,8 @@
 				E251E104204B174C00B07DE9 /* MenuItemTableViewCell.xib */,
 				E2CC5279204D7D5100153B63 /* ContactTableViewCell.swift */,
 				E2CC527A204D7D5100153B63 /* ContactTableViewCell.xib */,
+				E2ED7E5E205AF63A00972BED /* PlaceTableViewCell.swift */,
+				E2ED7E5F205AF63A00972BED /* PlaceTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -230,6 +247,7 @@
 				E251E0F42048B9D000B07DE9 /* Lectures.storyboard */,
 				E251E0FA20495D3D00B07DE9 /* Map.storyboard */,
 				E2F9BC6C2056EF9200D5E73B /* Votes.storyboard */,
+				E2ED7E64205C29AA00972BED /* Editions.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -317,9 +335,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2CC527C204D7D5200153B63 /* ContactTableViewCell.xib in Resources */,
+				E2ED7E65205C29AA00972BED /* Editions.storyboard in Resources */,
 				E2092A862045EB910055EBFA /* LaunchScreen.storyboard in Resources */,
 				E251E106204B174C00B07DE9 /* MenuItemTableViewCell.xib in Resources */,
 				E251E0FB20495D3D00B07DE9 /* Map.storyboard in Resources */,
+				E2ED7E61205AF63A00972BED /* PlaceTableViewCell.xib in Resources */,
 				E2092AA22045F8890055EBFA /* LectureTableViewCell.xib in Resources */,
 				E2092A8E2045EDCE0055EBFA /* GoogleService-Info.plist in Resources */,
 				E2F9BC6D2056EF9200D5E73B /* Votes.storyboard in Resources */,
@@ -415,16 +435,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2092A9C2045F17B0055EBFA /* Theme.swift in Sources */,
+				E2ED7E67205C2DD300972BED /* EditionViewController.swift in Sources */,
 				E2CC5276204D7A7300153B63 /* Contact.swift in Sources */,
 				E2092AA52045FBD30055EBFA /* Event.swift in Sources */,
 				E2CC5282204D875600153B63 /* Place.swift in Sources */,
-				E251E0E920487C1000B07DE9 /* EventsTableViewController.swift in Sources */,
+				E251E0E920487C1000B07DE9 /* LecturesTableViewController.swift in Sources */,
 				E2F9BC71205814BA00D5E73B /* VoteViewController.swift in Sources */,
 				E2CC527E204D83D700153B63 /* ContactsTableViewController.swift in Sources */,
 				E2F9BC6F2056F43F00D5E73B /* LogInViewController.swift in Sources */,
 				E2CC5278204D7BC100153B63 /* Edition.swift in Sources */,
 				E2CC5280204D86A700153B63 /* LocalDataService.swift in Sources */,
 				E251E105204B174C00B07DE9 /* MenuItemTableViewCell.swift in Sources */,
+				E2ED7E69205C3DC500972BED /* LecturesPagerTabStripViewController.swift in Sources */,
 				E2092A9A2045F1270055EBFA /* RoundButton.swift in Sources */,
 				E2ED7E592059E51600972BED /* OMKViewController.swift in Sources */,
 				E2092AA12045F8890055EBFA /* LectureTableViewCell.swift in Sources */,
@@ -441,8 +463,10 @@
 				E2092A982045F1090055EBFA /* RoundImageView.swift in Sources */,
 				E251E0EC20487D6800B07DE9 /* DataService.swift in Sources */,
 				E2CC527B204D7D5200153B63 /* ContactTableViewCell.swift in Sources */,
+				E2ED7E63205BF35E00972BED /* PlacesTableViewController.swift in Sources */,
 				E2092A932045F0770055EBFA /* UIKit+Extensions.swift in Sources */,
 				E2092A792045EB910055EBFA /* AppDelegate.swift in Sources */,
+				E2ED7E60205AF63A00972BED /* PlaceTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

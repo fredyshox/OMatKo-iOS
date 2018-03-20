@@ -29,7 +29,7 @@ class SideMenuManager: SideMenuControllerDataSource, MenuViewControllerDelegate 
         MenuItem(viewControllerId: "invalid", title: "Science lectures", iconName: "chart"),
         MenuItem(viewControllerId: "votesVC", title: "Vote for essays", iconName: "votes"),
         MenuItem(viewControllerId: "mapVC", title: "Map", iconName: "location"),
-        MenuItem(viewControllerId: "invalid", title: "Previous editions", iconName: "history"),
+        MenuItem(viewControllerId: "editionsVC", title: "Previous editions", iconName: "history"),
         MenuItem(viewControllerId: "invalid", title: "Sponsors", iconName: "heart"),
         MenuItem(viewControllerId: "contactsVC", title: "Contact", iconName: "mail")
     ]
@@ -58,10 +58,15 @@ class SideMenuManager: SideMenuControllerDataSource, MenuViewControllerDelegate 
         var vc: UIViewController!
         switch id {
         case "mapVC":
-            let storyboard = UIStoryboard(name: "Map", bundle: nil)
-            vc = storyboard.instantiateInitialViewController()
+            vc = PlacesTableViewController(style: .plain)
         case "lectureVC":
-            vc = EventsTableViewController(style: .grouped)
+            let storyboard = UIStoryboard(name: "Lectures", bundle: nil)
+            vc = storyboard.instantiateInitialViewController()
+        case "contactsVC":
+            vc = ContactsTableViewController(style: .plain)
+        case "editionsVC":
+            let storyboard = UIStoryboard(name: "Editions", bundle: nil)
+            vc = storyboard.instantiateViewController(withIdentifier: "editionVC")
         case "votesVC":
             vc = OMKNavigationController()
         default:
