@@ -24,6 +24,10 @@ struct Place: Codable, BaseModel {
         case entertainment = "ENTERTAINMENT"
         case food = "FOOD"
         case conference = "OMatKo"
+        
+        static var allValues: [PlaceCategory] {
+            return [sights, shopping, entertainment, food, conference]
+        }
     }
     
     init(title: String, description: String, latitude: Double, longitude: Double, category: PlaceCategory) {

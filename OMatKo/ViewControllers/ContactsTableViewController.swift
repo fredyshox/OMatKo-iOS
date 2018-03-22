@@ -7,10 +7,19 @@
 //
 
 import UIKit
+import RxSwift
 
 class ContactsTableViewController: OMKTableViewController {
     
     static let contactCellHeight: CGFloat = 320.0
+    
+    var contacts: [Contact] = [] {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
+    
+    let disposeBag: DisposeBag = DisposeBag()
     
     // MARK: VC Lifecycle
 
@@ -18,6 +27,20 @@ class ContactsTableViewController: OMKTableViewController {
         super.viewDidLoad()
         
         setUpTableView()
+
+        localDataService
+            .fetchContacts()
+            .subscribe({ (event) in
+                switch event {
+                case .next(let contact):
+                    self.contacts.append(contact)
+                case .error(let error):
+                    log.error("Error: \(error.localizedDescription)")
+                case .completed:
+                    log.info("Completed.")
+                }
+            })
+            .disposed(by: disposeBag)
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,7 +63,7 @@ class ContactsTableViewController: OMKTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return contacts.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,9 +71,12 @@ class ContactsTableViewController: OMKTableViewController {
 
         cell.contactImageView.backgroundColor = UIColor.omatkoSecondary
         
-        // cell test
-        let longDesc = "Long long Long long Long long Long long Long long Long long Long long Long long Description"
-        cell.descriptionLabel.text = (indexPath.row % 2 != 0) ? longDesc : "Shot description"
+        let contact = contacts[indexPath.row]
+        cell.nameLabel.text = contact.name
+        cell.emailLabel.text = contact.email
+        cell.phoneLabel.text = contact.phoneNumber
+        cell.positionLabel.text = contact.position
+        cell.descriptionLabel.text = contact.description
 
         return cell
     }
