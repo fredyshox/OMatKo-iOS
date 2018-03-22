@@ -60,9 +60,7 @@ class PlacesPagerTabStripViewController: ButtonBarPagerTabStripViewController, O
     
     func notifyViewControllers() {
         for vc in viewControllers {
-            log.warning("sth")
             if let pvc = vc as? PlacesTableViewController {
-                log.warning("sth2")
                 pvc.places = self.places.filter({ (place) -> Bool in
                     return place.category == pvc.placeCategory
                 })

@@ -77,8 +77,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Uwy-Pt-Aqh"/>
                     <connections>
-                        <outlet property="buttonBarView" destination="Wym-Ms-bhf" id="ntV-q3-RCk"/>
-                        <outlet property="containerView" destination="Mp1-NU-43z" id="Pc8-CY-syA"/>
+                        <outlet property="buttonBarView" destination="Wym-Ms-bhf" id="553-iI-tfY"/>
+                        <outlet property="containerView" destination="Mp1-NU-43z" id="2tO-TP-XYS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvD-9Q-vi4" userLabel="First Responder" sceneMemberID="firstResponder"/>
