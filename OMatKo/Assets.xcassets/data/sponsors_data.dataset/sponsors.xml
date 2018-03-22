@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<items>
+
+	<sponsor
+	    name = "McKinsey &amp; &amp; Company"
+    	description = ""
+	    title = "Główny sponsor"
+	    imageId = "img_mck" />,
+	
+	<sponsor 
+	    name = "Aviva"
+	    description = "Aviva należy do największych grup ubezpieczeniowych w Europie. Jest liderem na swoim macierzystym rynku brytyjskim, gdzie działa już ponad 320 lat. Aviva to blisko 30 tys. pracowników, którzy obsługują 33 miliony klientów w 16 krajach Europy i Azji oraz w Kanadzie. Działalność w Polsce rozpoczęła w 1992 roku. Od tego czasu firmie zaufało już ponad 3,5 mln osób. W tym roku będziecie mieli okazję spotkać Avivę na naszej konferencji i porozmawiać z przedstawicielami firmy, która wspiera nasze wydarzenie jako Sponsor." 
+	    title = "Sponsor"
+	    imageId = "img_aviva" />,
+	
+	<supporting_company 
+		name = "Wolfram"
+		imageId = "img_wolfram"
+		description = ""
+		title = "" />,
+		
+	<supporting_company 
+		name = "European Mathematical Society Publishing House"
+		imageId = "img_european_mathematical_society" 
+		description = ""
+		title = "" />,
+		
+	<supporting_company 
+		name = "PWN"
+		imageId = "img_pwn"
+		description = ""
+		title = "" />,
+	
+	<supporting_company 
+		name = "KRUK S.A."
+		imageId = "img_kruk" 
+		description = ""
+		title = "" />,
+		
+	<supporting_company 
+		name = "Smarter Poland"
+		imageId = "img_smarterpoland" 
+		description = ""
+		title = "" />,
+
+	<supporting_company 
+		name = "GiS"
+		imageId = "img_gis" 
+		description = ""
+		title = "" />,
+		
+	<sponsorship 
+		name = "Polska Akademia Nauk"
+		imageId = "img_pan" 
+		description = ""
+		title = "" />,
+		
+	<sponsorship 
+		name = "Ministerstwo Nauki i Szkolnictwa Wyższego"
+		imageId = "img_mnisw" 
+		description = ""
+		title = "" />,
+    
+    <sponsorship 
+		name = "Rektor Politechniki Wrocławskiej, prof. dr hab. inż. Cezary Madryas"
+		imageId = "img_pwr"
+		description = ""
+		title = "" />,
+		
+	<sponsorship 
+		name = "Dziekan Wydziału Matematyki, prof. dr hab. Krzysztof Stempak"
+		imageId = "img_wmat" 
+		description = ""
+		title = "" />,
+	<sponsorship 
+		name = "Prezydent Wrocławia, Rafał Dutkiewicz"
+		imageId = "img_prezydent" 
+		description = ""
+		title = "" />,
+		
+	<sponsorship 
+		name = "Marszałek Województwa Dolnośląskiego, Cezary Przybylski"
+		imageId = "img_marszalek" 
+		description = ""
+		title = "" />,
+		
+	<sponsorship 
+		name = "Wojewoda Dolnośląski, Paweł Hreniak"
+		imageId = "img_wojewoda" 
+		description = ""
+		title = "" />,
+		
+	<sponsorship 
+		name = "Przewodniczący Sejmiku Województwa Dolnośląskiego"
+		imageId = "" 
+		description = ""
+		title = "" />,
+		
+	<sponsorship 
+		name = "Polskie Towarzystwo Matematyczne"
+		imageId = "img_ptm" 
+		description = ""
+		title = "" />,
+		
+	<media 
+		name = "Delta"
+		imageId = "img_delta" 
+		description = ""
+		title = "" />,
+		
+	<media 
+		name = "DlaStudenta"
+		imageId = "" 
+		description = ""
+		title = "" />,
+	
+	<media 
+		name = "Żak"
+		imageId = "" 
+		description = ""
+		title = "" />,
+	
+	<media 
+		name = "TV Styk"
+		imageId = "" 
+		description = ""
+		title = "" />,
+	
+	<media 
+		name = "Akademickie Radio Luz"
+		imageId = "img_luz" 
+		description = ""
+		title = "" />,
+		
+	<organizer 
+		name = "Politechnika Wrocławska"
+		imageId = "img_pwr" 
+		description = ""
+		title = "" />,
+		
+	<organizer 
+		name = "Wydział Matematyki"
+		imageId = "img_wmat"
+		description = ""
+		title = "" />,
+	
+	<organizer 
+		name = "Koło Naukowe Inżynierii Finansowej"
+		imageId = "img_knif" 
+		description = ""
+		title = "" />,
+		
+	<organizer 
+		name = "Koło Naukowe Statystyki Matematycznej 'Gauss'"
+		imageId = "img_gauss" 
+		description = ""
+		title = "" />,
+	
+	<organizer 
+		name = "Koło Naukowe Matematyki"
+		imageId = "img_knm" 
+		description = ""
+		title = "" />,
+		
+	<organizer 
+		name = "Koło Naukowe Matematyki Przemysłowej"
+		imageId = "img_knmp" 
+		description = ""
+		title = "" />,
+	
+	<organizer 
+		name = "Fundacja Manus"
+		imageId = "" 
+		description = ""
+		title = "" />
+</items>

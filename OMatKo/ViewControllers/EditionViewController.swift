@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
 class EditionViewController: OMKViewController {
 
@@ -14,15 +15,37 @@ class EditionViewController: OMKViewController {
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    var edition: Edition? {
+        didSet {
+            if isViewLoaded && edition != nil {
+                updateUI(with: edition!)
+            }
+        }
     }
     
+    func setUp(with pagerItem: PagerItem<Edition>) {
+        self.title = pagerItem.title
+        self.edition = pagerItem.data
+    }
+    
+    func updateUI(with edition: Edition) {
+        self.yearLabel.text = "2XX4"
+        self.monthLabel.text = edition.title
+        self.descriptionLabel.text = edition.description
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if let edition = edition {
+            updateUI(with: edition)
+        }
+    }
+    
+}
+
+extension EditionViewController: IndicatorInfoProvider {
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: self.title)
+    }
 }

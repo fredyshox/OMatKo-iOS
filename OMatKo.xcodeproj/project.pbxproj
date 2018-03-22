@@ -33,6 +33,8 @@
 		E251E0FF2049640000B07DE9 /* SideMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251E0FE2049640000B07DE9 /* SideMenuManager.swift */; };
 		E251E105204B174C00B07DE9 /* MenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251E103204B174C00B07DE9 /* MenuItemTableViewCell.swift */; };
 		E251E106204B174C00B07DE9 /* MenuItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E251E104204B174C00B07DE9 /* MenuItemTableViewCell.xib */; };
+		E25A800520643A6200CDCECA /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A800420643A6200CDCECA /* Sponsor.swift */; };
+		E25A800720643D9900CDCECA /* EditionsPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A800620643D9900CDCECA /* EditionsPagerTabStripViewController.swift */; };
 		E25AA2F2206322DE003ED248 /* PlacesPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25AA2F1206322DE003ED248 /* PlacesPagerTabStripViewController.swift */; };
 		E27085482061590A0075A32D /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27085472061590A0075A32D /* BaseModel.swift */; };
 		E2CC5276204D7A7300153B63 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC5275204D7A7300153B63 /* Contact.swift */; };
@@ -88,6 +90,8 @@
 		E251E0FE2049640000B07DE9 /* SideMenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuManager.swift; sourceTree = "<group>"; };
 		E251E103204B174C00B07DE9 /* MenuItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemTableViewCell.swift; sourceTree = "<group>"; };
 		E251E104204B174C00B07DE9 /* MenuItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuItemTableViewCell.xib; sourceTree = "<group>"; };
+		E25A800420643A6200CDCECA /* Sponsor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sponsor.swift; sourceTree = "<group>"; };
+		E25A800620643D9900CDCECA /* EditionsPagerTabStripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditionsPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		E25AA2F1206322DE003ED248 /* PlacesPagerTabStripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		E27085472061590A0075A32D /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		E2CC5275204D7A7300153B63 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 				E2ED7E66205C2DD300972BED /* EditionViewController.swift */,
 				E2ED7E68205C3DC500972BED /* LecturesPagerTabStripViewController.swift */,
 				E25AA2F1206322DE003ED248 /* PlacesPagerTabStripViewController.swift */,
+				E25A800620643D9900CDCECA /* EditionsPagerTabStripViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 				E2CC5275204D7A7300153B63 /* Contact.swift */,
 				E2CC5277204D7BC100153B63 /* Edition.swift */,
 				E2CC5281204D875600153B63 /* Place.swift */,
+				E25A800420643A6200CDCECA /* Sponsor.swift */,
 				E27085472061590A0075A32D /* BaseModel.swift */,
 			);
 			path = Models;
@@ -442,6 +448,7 @@
 			files = (
 				E2092A9C2045F17B0055EBFA /* Theme.swift in Sources */,
 				E2ED7E67205C2DD300972BED /* EditionViewController.swift in Sources */,
+				E25A800720643D9900CDCECA /* EditionsPagerTabStripViewController.swift in Sources */,
 				E2CC5276204D7A7300153B63 /* Contact.swift in Sources */,
 				E2092AA52045FBD30055EBFA /* Event.swift in Sources */,
 				E2CC5282204D875600153B63 /* Place.swift in Sources */,
@@ -452,6 +459,7 @@
 				E2CC5278204D7BC100153B63 /* Edition.swift in Sources */,
 				E2CC5280204D86A700153B63 /* LocalDataService.swift in Sources */,
 				E251E105204B174C00B07DE9 /* MenuItemTableViewCell.swift in Sources */,
+				E25A800520643A6200CDCECA /* Sponsor.swift in Sources */,
 				E2ED7E69205C3DC500972BED /* LecturesPagerTabStripViewController.swift in Sources */,
 				E2092A9A2045F1270055EBFA /* RoundButton.swift in Sources */,
 				E2ED7E592059E51600972BED /* OMKViewController.swift in Sources */,

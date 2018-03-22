@@ -26,4 +26,5 @@ protocol LocalDataService {
     func fetchContacts() -> Observable<Contact>
     func fetchEditions() -> Observable<Edition>
     func fetchPlaces() -> Observable<Place>
+    func fetchSponsors() -> Observable<Sponsor>
 }

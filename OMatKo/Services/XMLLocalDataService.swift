@@ -30,6 +30,7 @@ class XMLDeserialization<T: BaseModel>: NSObject, XMLParserDelegate{
     }
     
     // MARK: XMLParserDelegate
+    
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         if elementName == T.modelName {
             if let item = T.init(dict: attributeDict) {
@@ -53,7 +54,7 @@ class XMLLocalDataService: LocalDataService {
     
     func fetchPlaces() -> Observable<Place> {
         return Observable<Place>.create({ (observer) -> Disposable in
-            let fileName = "places"
+            let fileName = "places_data"
             var deserializer: XMLDeserialization<Place>?
             
             if let asset = NSDataAsset(name: fileName) {
@@ -82,7 +83,7 @@ class XMLLocalDataService: LocalDataService {
     
     func fetchContacts() -> Observable<Contact> {
         return Observable<Contact>.create({ (observer) -> Disposable in
-            let fileName = "contacts"
+            let fileName = "contacts_data"
             var deserializer: XMLDeserialization<Contact>?
             if let asset = NSDataAsset(name: fileName) {
                 deserializer = XMLDeserialization<Contact>(data: asset.data, callback: { (item) in
@@ -110,12 +111,41 @@ class XMLLocalDataService: LocalDataService {
     
     func fetchEditions() -> Observable<Edition> {
         return Observable<Edition>.create({ (observer) -> Disposable in
-            let fileName = "history"
+            let fileName = "history_data"
             var deserializer: XMLDeserialization<Edition>?
             
             if let asset = NSDataAsset(name: fileName) {
                 deserializer = XMLDeserialization<Edition>(data: asset.data, callback: { (item) in
                     observer.onNext(item)
+                }, completion: { (completed, err) in
+                    if completed {
+                        observer.onCompleted()
+                    }
+                    
+                    if err != nil {
+                        observer.onError(err!)
+                    }
+                })
+                
+                deserializer!.parse()
+            } else {
+                observer.onError(LocalDataServiceError.fileNotFound(fileName))
+            }
+            
+            return Disposables.create {
+                deserializer = nil
+            }
+        })
+    }
+    
+    func fetchSponsors() -> Observable<Sponsor> {
+        return Observable<Sponsor>.create({ (observer) -> Disposable in
+            let fileName = "sponsors_data"
+            var deserializer: XMLDeserialization<Sponsor>?
+            
+            if let asset = NSDataAsset(name: fileName) {
+                deserializer = XMLDeserialization<Sponsor>(data: asset.data, callback: { (item) in
+                    
                 }, completion: { (completed, err) in
                     if completed {
                         observer.onCompleted()

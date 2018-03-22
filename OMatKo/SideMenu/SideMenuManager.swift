@@ -67,7 +67,7 @@ class SideMenuManager: SideMenuControllerDataSource, MenuViewControllerDelegate 
             vc = ContactsTableViewController(style: .plain)
         case "editionsVC":
             let storyboard = UIStoryboard(name: "Editions", bundle: nil)
-            vc = storyboard.instantiateViewController(withIdentifier: "editionVC")
+            vc = storyboard.instantiateInitialViewController()
         case "votesVC":
             vc = OMKNavigationController()
         default:
