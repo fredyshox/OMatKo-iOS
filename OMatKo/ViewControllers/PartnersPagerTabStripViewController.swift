@@ -37,6 +37,7 @@ class PartnersPagerTabStripViewController: ButtonBarPagerTabStripViewController,
         
         setUpNavBar()
         title = "Sponsors"
+        loadPagerItems()
         
         super.viewDidLoad()
     }

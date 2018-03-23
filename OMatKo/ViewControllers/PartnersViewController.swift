@@ -31,7 +31,7 @@ class PartnersViewController: OMKViewController {
 
 }
 
-extension SponsorsViewController: UITableViewDataSource, UITableViewDelegate {
+extension PartnersViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -53,7 +53,7 @@ extension SponsorsViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-extension SponsorsViewController: IndicatorInfoProvider {
+extension PartnersViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: self.title)
     }
