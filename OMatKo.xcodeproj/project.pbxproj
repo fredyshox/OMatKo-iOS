@@ -40,6 +40,8 @@
 		E25A800F206478DA00CDCECA /* Partners.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25A800E206478DA00CDCECA /* Partners.storyboard */; };
 		E25AA2F2206322DE003ED248 /* PlacesPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25AA2F1206322DE003ED248 /* PlacesPagerTabStripViewController.swift */; };
 		E27085482061590A0075A32D /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27085472061590A0075A32D /* BaseModel.swift */; };
+		E2BF77B820647F8C00D3AD07 /* PartnerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BF77B620647F8C00D3AD07 /* PartnerTableViewCell.swift */; };
+		E2BF77B920647F8C00D3AD07 /* PartnerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2BF77B720647F8C00D3AD07 /* PartnerTableViewCell.xib */; };
 		E2CC5276204D7A7300153B63 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC5275204D7A7300153B63 /* Contact.swift */; };
 		E2CC5278204D7BC100153B63 /* Edition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC5277204D7BC100153B63 /* Edition.swift */; };
 		E2CC527B204D7D5200153B63 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC5279204D7D5100153B63 /* ContactTableViewCell.swift */; };
@@ -100,6 +102,8 @@
 		E25A800E206478DA00CDCECA /* Partners.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Partners.storyboard; sourceTree = "<group>"; };
 		E25AA2F1206322DE003ED248 /* PlacesPagerTabStripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		E27085472061590A0075A32D /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		E2BF77B620647F8C00D3AD07 /* PartnerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerTableViewCell.swift; sourceTree = "<group>"; };
+		E2BF77B720647F8C00D3AD07 /* PartnerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartnerTableViewCell.xib; sourceTree = "<group>"; };
 		E2CC5275204D7A7300153B63 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		E2CC5277204D7BC100153B63 /* Edition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edition.swift; sourceTree = "<group>"; };
 		E2CC5279204D7D5100153B63 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
@@ -233,6 +237,8 @@
 				E2CC527A204D7D5100153B63 /* ContactTableViewCell.xib */,
 				E2ED7E5E205AF63A00972BED /* PlaceTableViewCell.swift */,
 				E2ED7E5F205AF63A00972BED /* PlaceTableViewCell.xib */,
+				E2BF77B620647F8C00D3AD07 /* PartnerTableViewCell.swift */,
+				E2BF77B720647F8C00D3AD07 /* PartnerTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -359,6 +365,7 @@
 				E2ED7E65205C29AA00972BED /* Editions.storyboard in Resources */,
 				E2092A862045EB910055EBFA /* LaunchScreen.storyboard in Resources */,
 				E251E106204B174C00B07DE9 /* MenuItemTableViewCell.xib in Resources */,
+				E2BF77B920647F8C00D3AD07 /* PartnerTableViewCell.xib in Resources */,
 				E251E0FB20495D3D00B07DE9 /* Map.storyboard in Resources */,
 				E2ED7E61205AF63A00972BED /* PlaceTableViewCell.xib in Resources */,
 				E2092AA22045F8890055EBFA /* LectureTableViewCell.xib in Resources */,
@@ -484,6 +491,7 @@
 				E251E0EE20487F2600B07DE9 /* FirebaseDataService.swift in Sources */,
 				E2ED7E5B2059E82400972BED /* OMKNavigationController.swift in Sources */,
 				E251E0FF2049640000B07DE9 /* SideMenuManager.swift in Sources */,
+				E2BF77B820647F8C00D3AD07 /* PartnerTableViewCell.swift in Sources */,
 				E251E0F02048B25100B07DE9 /* MenuItem.swift in Sources */,
 				E251E0E52048791400B07DE9 /* MenuViewController.swift in Sources */,
 				E2092A982045F1090055EBFA /* RoundImageView.swift in Sources */,
