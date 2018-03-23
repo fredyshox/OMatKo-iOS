@@ -35,6 +35,9 @@
 		E251E106204B174C00B07DE9 /* MenuItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E251E104204B174C00B07DE9 /* MenuItemTableViewCell.xib */; };
 		E25A800520643A6200CDCECA /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A800420643A6200CDCECA /* Sponsor.swift */; };
 		E25A800720643D9900CDCECA /* EditionsPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A800620643D9900CDCECA /* EditionsPagerTabStripViewController.swift */; };
+		E25A8009206451F000CDCECA /* PartnersPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A8008206451F000CDCECA /* PartnersPagerTabStripViewController.swift */; };
+		E25A800D206478AA00CDCECA /* PartnersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A800C206478AA00CDCECA /* PartnersViewController.swift */; };
+		E25A800F206478DA00CDCECA /* Partners.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25A800E206478DA00CDCECA /* Partners.storyboard */; };
 		E25AA2F2206322DE003ED248 /* PlacesPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25AA2F1206322DE003ED248 /* PlacesPagerTabStripViewController.swift */; };
 		E27085482061590A0075A32D /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27085472061590A0075A32D /* BaseModel.swift */; };
 		E2CC5276204D7A7300153B63 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC5275204D7A7300153B63 /* Contact.swift */; };
@@ -92,6 +95,9 @@
 		E251E104204B174C00B07DE9 /* MenuItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuItemTableViewCell.xib; sourceTree = "<group>"; };
 		E25A800420643A6200CDCECA /* Sponsor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sponsor.swift; sourceTree = "<group>"; };
 		E25A800620643D9900CDCECA /* EditionsPagerTabStripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditionsPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		E25A8008206451F000CDCECA /* PartnersPagerTabStripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnersPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		E25A800C206478AA00CDCECA /* PartnersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnersViewController.swift; sourceTree = "<group>"; };
+		E25A800E206478DA00CDCECA /* Partners.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Partners.storyboard; sourceTree = "<group>"; };
 		E25AA2F1206322DE003ED248 /* PlacesPagerTabStripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		E27085472061590A0075A32D /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		E2CC5275204D7A7300153B63 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -201,15 +207,17 @@
 			children = (
 				E251E0E820487C1000B07DE9 /* LecturesTableViewController.swift */,
 				E2CC527D204D83D700153B63 /* ContactsTableViewController.swift */,
+				E25A800C206478AA00CDCECA /* PartnersViewController.swift */,
 				E2ED7E62205BF35E00972BED /* PlacesTableViewController.swift */,
+				E2ED7E66205C2DD300972BED /* EditionViewController.swift */,
 				E2F9BC6E2056F43F00D5E73B /* LogInViewController.swift */,
 				E2F9BC70205814BA00D5E73B /* VoteViewController.swift */,
 				E2ED7E582059E51600972BED /* OMKViewController.swift */,
 				E2ED7E5A2059E82400972BED /* OMKNavigationController.swift */,
-				E2ED7E66205C2DD300972BED /* EditionViewController.swift */,
 				E2ED7E68205C3DC500972BED /* LecturesPagerTabStripViewController.swift */,
 				E25AA2F1206322DE003ED248 /* PlacesPagerTabStripViewController.swift */,
 				E25A800620643D9900CDCECA /* EditionsPagerTabStripViewController.swift */,
+				E25A8008206451F000CDCECA /* PartnersPagerTabStripViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -260,6 +268,7 @@
 				E251E0FA20495D3D00B07DE9 /* Map.storyboard */,
 				E2F9BC6C2056EF9200D5E73B /* Votes.storyboard */,
 				E2ED7E64205C29AA00972BED /* Editions.storyboard */,
+				E25A800E206478DA00CDCECA /* Partners.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -357,6 +366,7 @@
 				E2F9BC6D2056EF9200D5E73B /* Votes.storyboard in Resources */,
 				E2092A7E2045EB910055EBFA /* Main.storyboard in Resources */,
 				E2CC528A204DA7E300153B63 /* Assets.xcassets in Resources */,
+				E25A800F206478DA00CDCECA /* Partners.storyboard in Resources */,
 				E251E0F52048B9D000B07DE9 /* Lectures.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,8 +458,10 @@
 			files = (
 				E2092A9C2045F17B0055EBFA /* Theme.swift in Sources */,
 				E2ED7E67205C2DD300972BED /* EditionViewController.swift in Sources */,
+				E25A8009206451F000CDCECA /* PartnersPagerTabStripViewController.swift in Sources */,
 				E25A800720643D9900CDCECA /* EditionsPagerTabStripViewController.swift in Sources */,
 				E2CC5276204D7A7300153B63 /* Contact.swift in Sources */,
+				E25A800D206478AA00CDCECA /* PartnersViewController.swift in Sources */,
 				E2092AA52045FBD30055EBFA /* Event.swift in Sources */,
 				E2CC5282204D875600153B63 /* Place.swift in Sources */,
 				E251E0E920487C1000B07DE9 /* LecturesTableViewController.swift in Sources */,

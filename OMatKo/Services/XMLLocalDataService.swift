@@ -13,6 +13,8 @@ class XMLDeserialization<T: BaseModel>: NSObject, XMLParserDelegate{
     private let completion: (Bool, Error?) -> ()
     private let parser: XMLParser
     
+    var customHandler: ((String, [String: String]) -> T?)?
+    
     init(data: Data, callback: @escaping (T) -> (), completion: @escaping (Bool, Error?) -> ()) {
         self.callback = callback
         self.completion = completion
@@ -32,9 +34,15 @@ class XMLDeserialization<T: BaseModel>: NSObject, XMLParserDelegate{
     // MARK: XMLParserDelegate
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
-        if elementName == T.modelName {
-            if let item = T.init(dict: attributeDict) {
-                 callback(item)
+        if customHandler != nil {
+            if let item = customHandler!(elementName, attributeDict) {
+                callback(item)
+            }
+        } else {
+            if elementName == T.modelName {
+                if let item = T.init(dict: attributeDict) {
+                    callback(item)
+                }
             }
         }
     }
@@ -145,7 +153,7 @@ class XMLLocalDataService: LocalDataService {
             
             if let asset = NSDataAsset(name: fileName) {
                 deserializer = XMLDeserialization<Sponsor>(data: asset.data, callback: { (item) in
-                    
+                    observer.onNext(item)
                 }, completion: { (completed, err) in
                     if completed {
                         observer.onCompleted()
@@ -155,6 +163,20 @@ class XMLLocalDataService: LocalDataService {
                         observer.onError(err!)
                     }
                 })
+                
+                let categoryStringArr = Sponsor.Category.allValues.map({ (category) -> String in
+                    return category.rawValue
+                })
+                
+                deserializer!.customHandler = { (elementName, attrDict) in
+                    if categoryStringArr.contains(elementName) {
+                        var mutableAttrDict = attrDict
+                        mutableAttrDict["category"] = elementName
+                        return Sponsor(dict: mutableAttrDict)
+                    } else {
+                        return nil
+                    }
+                }
                 
                 deserializer!.parse()
             } else {
