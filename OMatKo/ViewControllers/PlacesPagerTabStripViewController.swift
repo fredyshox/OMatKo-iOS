@@ -66,6 +66,9 @@ class PlacesPagerTabStripViewController: ButtonBarPagerTabStripViewController, O
                 })
             }
         }
+        
+        self.reloadPagerTabStripView()
+        self.buttonBarView.moveTo(index: 0, animated: false, swipeDirection: .left, pagerScroll: .yes)
     }
     
     func setUpNavBar() {

@@ -96,7 +96,7 @@
                 <outlet property="nameLabel" destination="Qb0-fk-be5" id="dAP-Z4-K3n"/>
                 <outlet property="titleLabel" destination="kMt-XB-UiL" id="gyB-DR-joP"/>
             </connections>
-            <point key="canvasLocation" x="52.5" y="200"/>
+            <point key="canvasLocation" x="52.5" y="199.5"/>
         </tableViewCell>
     </objects>
 </document>

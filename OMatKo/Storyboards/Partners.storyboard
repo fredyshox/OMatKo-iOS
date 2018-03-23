@@ -32,9 +32,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bih-1m-Yw1"/>
                     </view>
-                    <connections>
-                        <outlet property="tableView" destination="WzI-v9-pzf" id="4j6-iP-K7G"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ISe-hv-nDy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,7 +45,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPc-ew-HOo">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPc-ew-HOo">
                                 <rect key="frame" x="0.0" y="114" width="375" height="553"/>
                             </scrollView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Tsw-yU-Zel" customClass="ButtonBarView" customModule="XLPagerTabStrip">

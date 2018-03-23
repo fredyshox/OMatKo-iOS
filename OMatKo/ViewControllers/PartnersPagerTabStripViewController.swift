@@ -34,12 +34,12 @@ class PartnersPagerTabStripViewController: ButtonBarPagerTabStripViewController,
         settings.style.selectedBarBackgroundColor = UIColor.omatkoIndicator
         settings.style.selectedBarHeight = 2.0
         settings.style.buttonBarItemFont = UIFont.systemFont(ofSize: 16.0, weight: .semibold)
-        
+        settings.style.buttonBarHeight = 50
         setUpNavBar()
         title = "Sponsors"
-        loadPagerItems()
-        
         super.viewDidLoad()
+
+        loadPagerItems()
     }
     
     func loadPagerItems() {
@@ -59,7 +59,15 @@ class PartnersPagerTabStripViewController: ButtonBarPagerTabStripViewController,
     }
     
     func notifyViewControllers() {
-        
+        for vc in viewControllers {
+            if let pvc = vc as? PartnersViewController {
+                pvc.sponsors = self.sponsors.filter({ (sponsor) -> Bool in
+                    return sponsor.category == pvc.category
+                })
+            }
+        }
+        self.reloadPagerTabStripView()
+       self.buttonBarView.moveTo(index: 0, animated: false, swipeDirection: .left, pagerScroll: .yes)
     }
     
     private lazy var _viewControllers: [UIViewController] = {
@@ -67,10 +75,9 @@ class PartnersPagerTabStripViewController: ButtonBarPagerTabStripViewController,
         let storyboard = UIStoryboard(name: "Partners", bundle: nil)
         
         for item in pagerItems {
-            let vc = storyboard.instantiateViewController(withIdentifier: "partnersVC")
+            let vc = PartnersViewController(pagerItem: item)
             vcArr.append(vc)
         }
-        
         
         return vcArr
     }()
@@ -80,7 +87,7 @@ class PartnersPagerTabStripViewController: ButtonBarPagerTabStripViewController,
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        return viewControllers
+        return _viewControllers
     }
     
     func setUpNavBar() {

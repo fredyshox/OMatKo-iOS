@@ -31,7 +31,7 @@ class EditionsPagerTabStripViewController: ButtonBarPagerTabStripViewController,
         
         super.viewDidLoad()
         
-        self.loadPagerItems()
+        loadPagerItems()
     }
     
     func loadPagerItems() {
