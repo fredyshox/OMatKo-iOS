@@ -39,6 +39,8 @@ let log: XCGLogger = {
     return log
 }()
 
+var localDataService: LocalDataService = XMLLocalDataService()
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

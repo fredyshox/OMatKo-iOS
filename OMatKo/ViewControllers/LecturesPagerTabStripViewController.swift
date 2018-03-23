@@ -9,14 +9,14 @@
 import UIKit
 import XLPagerTabStrip
 
-struct PagerItem {
+struct PagerItem<T> {
     var title: String
-    var data: Any
+    var data: T
 }
 
 class LecturesPagerTabStripViewController: ButtonBarPagerTabStripViewController, OMKMenu {
     
-    let pagerItems: [PagerItem] = [
+    let pagerItems: [PagerItem<String>] = [
         PagerItem(title: "Friday", data: "D"),
         PagerItem(title: "Saturday", data: "T"),
         PagerItem(title: "Sunday", data: "F")

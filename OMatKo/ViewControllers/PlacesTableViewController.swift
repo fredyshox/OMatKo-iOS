@@ -7,10 +7,29 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
 class PlacesTableViewController: OMKTableViewController {
     
     static let placeCellHeight: CGFloat = 92.0
+    
+    var places: [Place] = [] {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
+    
+    var placeCategory: Place.PlaceCategory!
+    
+    init(pagerItem: PagerItem<Place.PlaceCategory>) {
+        super.init(style: .plain)
+        self.placeCategory = pagerItem.data
+        self.title = pagerItem.title
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     // MARK: ViewController lifecycle
 
@@ -18,6 +37,11 @@ class PlacesTableViewController: OMKTableViewController {
         super.viewDidLoad()
 
         // tableView setup
+        setUpTableView()
+    }
+    
+    func setUpTableView() {
+        self.tableView.allowsSelection = false
         self.tableView.separatorStyle = .none
         
         let nib = UINib(nibName: "PlaceTableViewCell", bundle: nil)
@@ -31,16 +55,16 @@ class PlacesTableViewController: OMKTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return places.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "placeCell", for: indexPath) as! PlaceTableViewCell
         
-        // cell test
-        let longDesc = "Long long Long long Long long Long long Long long Long long Long long Long long Description"
-        cell.descriptionLabel.text = (indexPath.row % 2 != 0) ? longDesc : "Shot description"
-        cell.titleLabel.text = (indexPath.row % 2 == 0) ? longDesc : "Short title"
+        let place = places[indexPath.row]
+        
+        cell.titleLabel.text = place.title
+        cell.descriptionLabel.text = place.description
         
         return cell
     }
@@ -57,4 +81,10 @@ class PlacesTableViewController: OMKTableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
+}
+
+extension PlacesTableViewController: IndicatorInfoProvider {
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: self.title)
+    }
 }

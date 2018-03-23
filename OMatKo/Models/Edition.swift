@@ -11,8 +11,31 @@ import Foundation
 /**
  * Represents previous editions of conference.
  */
-struct Edition: Codable {
+struct Edition: Codable, BaseModel {
     let title: String
     let description: String
     let imageUrl: String
+    
+    init(title: String, description: String, imageUrl: String) {
+        self.title = title
+        self.description = description
+        self.imageUrl = imageUrl
+    }
+    
+    // MARK: BaseModel
+    
+    init?(dict: [String: Any]) {
+        guard let title = dict["title"] as? String,
+              let description = dict["description"] as? String,
+              let imageUrl = dict["imageUrl"] as? String
+        else {
+            return nil
+        }
+        
+        self.init(title: title, description: description, imageUrl: imageUrl)
+    }
+    
+    static var modelName: String {
+        return "edition"
+    }
 }
