@@ -37,6 +37,8 @@ class PlacesPagerTabStripViewController: ButtonBarPagerTabStripViewController, O
         
         setUpNavBar()
         title = "Places"
+        view.backgroundColor = UIColor.omatkoLightBackground
+        
         super.viewDidLoad()
         
         loadPagerItems()

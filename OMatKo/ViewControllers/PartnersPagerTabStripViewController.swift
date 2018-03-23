@@ -35,8 +35,11 @@ class PartnersPagerTabStripViewController: ButtonBarPagerTabStripViewController,
         settings.style.selectedBarHeight = 2.0
         settings.style.buttonBarItemFont = UIFont.systemFont(ofSize: 16.0, weight: .semibold)
         settings.style.buttonBarHeight = 50
+        
         setUpNavBar()
         title = "Sponsors"
+        view.backgroundColor = UIColor.omatkoLightBackground
+        
         super.viewDidLoad()
 
         loadPagerItems()
