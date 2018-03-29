@@ -21,8 +21,9 @@ struct Sponsor: Codable, BaseModel {
         case supportingCompany = "supporting_company"
         case media = "media"
         case organizer = "organizer"
+        case sponsorship = "sponsorship"
         
-        static var allValues: [Category] = [sponsor, supportingCompany, media, organizer]
+        static var allValues: [Category] = [sponsor, supportingCompany, media, organizer, sponsorship]
     }
     
     init(name: String, title: String, description: String, imageUrl: String, category: Category) {

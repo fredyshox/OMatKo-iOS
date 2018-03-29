@@ -28,10 +28,11 @@ class EditionsPagerTabStripViewController: ButtonBarPagerTabStripViewController,
         
         setUpNavBar()
         title = "Editions"
+        view.backgroundColor = UIColor.omatkoLightBackground
         
         super.viewDidLoad()
         
-        self.loadPagerItems()
+        loadPagerItems()
     }
     
     func loadPagerItems() {

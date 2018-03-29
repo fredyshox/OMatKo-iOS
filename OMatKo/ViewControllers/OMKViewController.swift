@@ -25,7 +25,7 @@ extension OMKMenu where Self: UIViewController  {
     }
 }
 
-class OMKViewController: UIViewController, OMKMenu{
+class OMKViewController: UIViewController, OMKMenu {
 
     override func viewDidLoad() {
         super.viewDidLoad()

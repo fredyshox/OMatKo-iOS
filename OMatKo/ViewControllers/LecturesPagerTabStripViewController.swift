@@ -32,6 +32,8 @@ class LecturesPagerTabStripViewController: ButtonBarPagerTabStripViewController,
         
         setUpNavBar()
         title = "Theoretical Lectures"
+        view.backgroundColor = UIColor.omatkoLightBackground
+        
         super.viewDidLoad()
     }
     

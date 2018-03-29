@@ -68,8 +68,6 @@ class ContactsTableViewController: OMKTableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath) as! ContactTableViewCell
-
-        cell.contactImageView.backgroundColor = UIColor.omatkoSecondary
         
         let contact = contacts[indexPath.row]
         cell.nameLabel.text = contact.name
@@ -77,6 +75,7 @@ class ContactsTableViewController: OMKTableViewController {
         cell.phoneLabel.text = contact.phoneNumber
         cell.positionLabel.text = contact.position
         cell.descriptionLabel.text = contact.description
+        cell.contactImageView.image = UIImage(named: contact.imageUrl)
 
         return cell
     }

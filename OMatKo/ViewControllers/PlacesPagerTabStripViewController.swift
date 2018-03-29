@@ -37,6 +37,8 @@ class PlacesPagerTabStripViewController: ButtonBarPagerTabStripViewController, O
         
         setUpNavBar()
         title = "Places"
+        view.backgroundColor = UIColor.omatkoLightBackground
+        
         super.viewDidLoad()
         
         loadPagerItems()
@@ -66,6 +68,9 @@ class PlacesPagerTabStripViewController: ButtonBarPagerTabStripViewController, O
                 })
             }
         }
+        
+        self.reloadPagerTabStripView()
+        self.buttonBarView.moveTo(index: 0, animated: false, swipeDirection: .left, pagerScroll: .yes)
     }
     
     func setUpNavBar() {

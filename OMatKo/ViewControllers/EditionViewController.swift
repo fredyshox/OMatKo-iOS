@@ -14,6 +14,10 @@ class EditionViewController: OMKViewController {
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var imageView: RoundImageView!
+    // Image View to Description Label constraint
+    // change constant to 0 when image view is hidden
+    @IBOutlet weak var iv2dlConstraint: NSLayoutConstraint!
     
     var edition: Edition? {
         didSet {
@@ -32,6 +36,26 @@ class EditionViewController: OMKViewController {
         self.yearLabel.text = "2XX4"
         self.monthLabel.text = edition.title
         self.descriptionLabel.text = edition.description
+        if edition.imageUrl.isEmpty {
+            self.imageView.isHidden = true
+            self.imageView.image = nil
+        } else {
+            self.imageView.isHidden = false
+            DispatchQueue.global(qos: .userInitiated).async {
+                do {
+                    if let url = URL(string: edition.imageUrl) {
+                        let data = try Data(contentsOf: url)
+                        let image = UIImage(data: data)
+                        DispatchQueue.main.async {
+                            self.imageView.image = image
+                        }
+                    }
+                } catch let err {
+                    log.error("Unable to load image: \(err.localizedDescription)")
+                    //change image
+                }
+            }
+        }
     }
     
     override func viewDidLoad() {
