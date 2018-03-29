@@ -64,6 +64,7 @@ class PartnerTableViewCell: UITableViewCell {
                         tl2dlConstraint.constant = 0.0
                     }
                 }
+                self.layoutIfNeeded()
             }
         }
     }

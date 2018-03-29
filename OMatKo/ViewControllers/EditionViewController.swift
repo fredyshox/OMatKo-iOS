@@ -36,6 +36,26 @@ class EditionViewController: OMKViewController {
         self.yearLabel.text = "2XX4"
         self.monthLabel.text = edition.title
         self.descriptionLabel.text = edition.description
+        if edition.imageUrl.isEmpty {
+            self.imageView.isHidden = true
+            self.imageView.image = nil
+        } else {
+            self.imageView.isHidden = false
+            DispatchQueue.global(qos: .userInitiated).async {
+                do {
+                    if let url = URL(string: edition.imageUrl) {
+                        let data = try Data(contentsOf: url)
+                        let image = UIImage(data: data)
+                        DispatchQueue.main.async {
+                            self.imageView.image = image
+                        }
+                    }
+                } catch let err {
+                    log.error("Unable to load image: \(err.localizedDescription)")
+                    //change image
+                }
+            }
+        }
     }
     
     override func viewDidLoad() {
