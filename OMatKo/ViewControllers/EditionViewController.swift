@@ -14,6 +14,10 @@ class EditionViewController: OMKViewController {
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var imageView: RoundImageView!
+    // Image View to Description Label constraint
+    // change constant to 0 when image view is hidden
+    @IBOutlet weak var iv2dlConstraint: NSLayoutConstraint!
     
     var edition: Edition? {
         didSet {

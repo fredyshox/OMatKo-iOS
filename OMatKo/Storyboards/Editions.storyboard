@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIh-hK-KJZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="322"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvN-48-l9N" customClass="RoundView" customModule="OMatKo" customModuleProvider="target">
                                                 <rect key="frame" x="93" y="32" width="189.5" height="107"/>
@@ -65,32 +66,64 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLW-DB-Eay" customClass="RoundView" customModule="OMatKo" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="171" width="359" height="131"/>
+                                                <rect key="frame" x="8" y="171" width="359" height="383"/>
                                                 <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWg-Ew-54d">
+                                                        <rect key="frame" x="20" y="12" width="319" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                        <color key="textColor" red="0.0" green="0.53333333329999999" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3g-Ww-sBL">
-                                                        <rect key="frame" x="20" y="12" width="319" height="107.5"/>
+                                                        <rect key="frame" x="20" y="35" width="319" height="107.5"/>
                                                         <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Wa-m3-Xgw" customClass="RoundImageView" customModule="OMatKo" customModuleProvider="target">
+                                                        <rect key="frame" x="20" y="158.5" width="319" height="212.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="7Wa-m3-Xgw" secondAttribute="height" multiplier="3:2" id="7j3-hL-6Ua"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="13"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="K3g-Ww-sBL" firstAttribute="top" secondItem="WLW-DB-Eay" secondAttribute="top" constant="12" id="Cgj-yf-Yz0"/>
-                                                    <constraint firstAttribute="bottom" secondItem="K3g-Ww-sBL" secondAttribute="bottom" constant="12" id="Dtg-jh-lrE"/>
+                                                    <constraint firstAttribute="bottom" secondItem="7Wa-m3-Xgw" secondAttribute="bottom" constant="12" id="2Be-sn-zMD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="uWg-Ew-54d" secondAttribute="trailing" constant="20" symbolic="YES" id="3fQ-Ma-zuu"/>
                                                     <constraint firstAttribute="trailing" secondItem="K3g-Ww-sBL" secondAttribute="trailing" constant="20" symbolic="YES" id="S4X-B6-VLZ"/>
+                                                    <constraint firstItem="7Wa-m3-Xgw" firstAttribute="trailing" secondItem="K3g-Ww-sBL" secondAttribute="trailing" id="aLz-Ca-kdU"/>
+                                                    <constraint firstItem="7Wa-m3-Xgw" firstAttribute="leading" secondItem="K3g-Ww-sBL" secondAttribute="leading" id="kYS-2K-wTi"/>
                                                     <constraint firstItem="K3g-Ww-sBL" firstAttribute="leading" secondItem="WLW-DB-Eay" secondAttribute="leading" constant="20" symbolic="YES" id="m1a-6m-9vs"/>
+                                                    <constraint firstItem="uWg-Ew-54d" firstAttribute="leading" secondItem="WLW-DB-Eay" secondAttribute="leading" constant="20" symbolic="YES" id="uC6-Bo-Z7c"/>
+                                                    <constraint firstItem="K3g-Ww-sBL" firstAttribute="top" secondItem="uWg-Ew-54d" secondAttribute="bottom" constant="6" id="uhJ-qg-uzn"/>
+                                                    <constraint firstItem="7Wa-m3-Xgw" firstAttribute="top" secondItem="K3g-Ww-sBL" secondAttribute="bottom" constant="16" id="ujB-Gq-9jD"/>
+                                                    <constraint firstItem="uWg-Ew-54d" firstAttribute="top" secondItem="WLW-DB-Eay" secondAttribute="top" constant="12" id="xES-SG-ej6"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="17"/>
+                                                        <real key="value" value="13"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                        <real key="value" value="0.0"/>
+                                                        <real key="value" value="0.10000000000000001"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                        <real key="value" value="0.0"/>
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" red="0.0" green="0.53333333329999999" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
@@ -129,6 +162,8 @@
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="K3g-Ww-sBL" id="AdG-lX-WgK"/>
+                        <outlet property="imageView" destination="7Wa-m3-Xgw" id="XEF-hz-rxg"/>
+                        <outlet property="iv2dlConstraint" destination="ujB-Gq-9jD" id="009-CO-co0"/>
                         <outlet property="monthLabel" destination="0mp-jA-ASe" id="qYS-tQ-SDm"/>
                         <outlet property="yearLabel" destination="it7-FD-VpY" id="B3j-2w-De7"/>
                     </connections>

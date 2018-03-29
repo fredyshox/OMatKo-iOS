@@ -63,6 +63,12 @@ class PartnersViewController: OMKTableViewController {
         cell.titleLabel.text = sponsor.title
         cell.descriptionLabel.text = sponsor.description
         
+        if sponsor.imageUrl.isEmpty {
+            cell.setLogoImage(image: nil)
+        } else {
+            cell.setLogoImage(image: UIImage(named: sponsor.imageUrl))
+        }
+        
         return cell
     }
     
