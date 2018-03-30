@@ -10,6 +10,8 @@ import UIKit
 
 class MenuItemTableViewCell: UITableViewCell {
     
+    static var defaultHeight: CGFloat = 44.0
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
 
