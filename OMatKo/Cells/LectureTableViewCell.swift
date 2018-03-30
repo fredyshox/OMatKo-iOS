@@ -14,16 +14,20 @@ class LectureTableViewCell: UITableViewCell {
     @IBOutlet weak var speakerLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var scheduleLabel: UILabel!
+    @IBOutlet weak var moreImageView: UIImageView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    weak var delegate: LectureTableViewCellDelegate?
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
+    @IBAction func addToCalendar(_ sender: Any) {
+        self.delegate?.calendarButtonClicked(self)
+    }
+    
+}
+
+protocol LectureTableViewCellDelegate: AnyObject {
+    func calendarButtonClicked(_ cell: LectureTableViewCell)
 }

@@ -61,27 +61,29 @@
                                 <state key="normal" image="calendar_add">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addToCalendar:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8OM-vK-sVd"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VT-SW-lLI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="show_more" translatesAutoresizingMaskIntoConstraints="NO" id="yzf-Na-0gk">
                                 <rect key="frame" x="0.0" y="68.5" width="25" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="4MB-Vg-MtA"/>
-                                    <constraint firstAttribute="width" secondItem="7VT-SW-lLI" secondAttribute="height" multiplier="1:1" id="s45-0h-Ufw"/>
+                                    <constraint firstAttribute="width" secondItem="yzf-Na-0gk" secondAttribute="height" multiplier="1:1" id="Kbq-lr-OXO"/>
+                                    <constraint firstAttribute="height" constant="25" id="rDp-Mh-cuC"/>
                                 </constraints>
-                                <state key="normal" image="show_more"/>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="mlT-HH-7cn" secondAttribute="trailing" constant="12" id="8oc-jx-0ed"/>
+                            <constraint firstAttribute="bottom" secondItem="yzf-Na-0gk" secondAttribute="bottom" constant="12" id="A9h-ux-OiR"/>
                             <constraint firstAttribute="bottom" secondItem="FR0-7J-wE6" secondAttribute="bottom" constant="12" id="DZ2-8a-JUo"/>
+                            <constraint firstItem="yzf-Na-0gk" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mlT-HH-7cn" secondAttribute="bottom" constant="8" symbolic="YES" id="NDN-WY-ua8"/>
                             <constraint firstItem="FR0-7J-wE6" firstAttribute="leading" secondItem="iD7-Yh-bbL" secondAttribute="leading" constant="20" symbolic="YES" id="QtO-hq-wte"/>
                             <constraint firstItem="mlT-HH-7cn" firstAttribute="leading" secondItem="FR0-7J-wE6" secondAttribute="trailing" constant="12" id="bXS-Kn-ijF"/>
                             <constraint firstItem="mlT-HH-7cn" firstAttribute="top" secondItem="iD7-Yh-bbL" secondAttribute="top" constant="12" id="c5e-uA-jjT"/>
-                            <constraint firstItem="7VT-SW-lLI" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mlT-HH-7cn" secondAttribute="bottom" constant="8" symbolic="YES" id="mX5-pS-cbq"/>
-                            <constraint firstAttribute="trailing" secondItem="7VT-SW-lLI" secondAttribute="trailing" constant="12" id="uAC-tA-lbR"/>
+                            <constraint firstAttribute="trailing" secondItem="yzf-Na-0gk" secondAttribute="trailing" constant="12" id="ceW-rs-qwi"/>
                             <constraint firstItem="FR0-7J-wE6" firstAttribute="top" secondItem="iD7-Yh-bbL" secondAttribute="top" constant="12" id="umR-62-VRR"/>
-                            <constraint firstAttribute="bottom" secondItem="7VT-SW-lLI" secondAttribute="bottom" constant="12" id="zfo-1B-3Vf"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -111,6 +113,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="descriptionLabel" destination="llH-AL-udK" id="b1t-BK-H6l"/>
+                <outlet property="moreImageView" destination="yzf-Na-0gk" id="dCA-JN-uOn"/>
                 <outlet property="scheduleLabel" destination="OhI-xR-CW6" id="dMb-St-tFQ"/>
                 <outlet property="speakerLabel" destination="58b-xI-CKe" id="24q-cf-17g"/>
                 <outlet property="titleLabel" destination="O8e-0u-fnd" id="seX-xc-jF5"/>
