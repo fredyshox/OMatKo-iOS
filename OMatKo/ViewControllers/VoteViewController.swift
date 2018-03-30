@@ -8,10 +8,17 @@
 
 import UIKit
 import FirebaseAuth
+import RxSwift
 
 class VoteViewController: OMKViewController {
     
-    var lectureCodes: [String] = ["Code1", "Code2", "Code3"]
+    var lectureCodes: [String] = [] {
+        didSet {
+            pickerView.reloadAllComponents()
+        }
+    }
+    
+    let disposeBag: DisposeBag = DisposeBag()
     
     @IBOutlet weak var pickerTextField: UITextField!
     @IBOutlet weak var rateSegmentedControl: UISegmentedControl!
@@ -38,6 +45,27 @@ class VoteViewController: OMKViewController {
                                                                      style: .done,
                                                                      target: self,
                                                                      action: #selector(logOut(sender:)))
+        
+        loadLectureCodes()
+    }
+    
+    func loadLectureCodes() {
+        AppDelegate.dataService.events
+            .asObservable()
+            .subscribe(onNext: { (events) in
+                self.pickerTextField.text?.removeAll()
+                self.lectureCodes = events.map({ (event) -> String in
+                    return event.id
+                })
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func errorAlert() -> UIAlertController {
+        let errorAlert = UIAlertController(title: "Error", message: "Unable to send vote.", preferredStyle: .alert)
+        errorAlert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        
+        return errorAlert
     }
     
     @objc
@@ -50,10 +78,25 @@ class VoteViewController: OMKViewController {
     }
     
     @IBAction func vote(_ sender: Any) {
-        let rating = rateSegmentedControl.selectedSegmentIndex
+        let rating = rateSegmentedControl.selectedSegmentIndex + 1
         let code = pickerTextField.text ?? ""
         
-        log.info("Attempt to vote: \(code) mark: \(rating)")
+        let voteAlert = UIAlertController(title: "Confirmation",
+                                            message: "Are you sure you want to rate lecture \(code) for \(rating)?",
+                                            preferredStyle: .alert)
+        voteAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (_) in
+            log.info("Attempt to vote: \(code) mark: \(rating)")
+            
+            do {
+                try AppDelegate.dataService.vote(forEventWithId: code, mark: rating)
+            } catch let err {
+                log.error("Error: \(err.localizedDescription)")
+                self.present(self.errorAlert(), animated: true, completion: nil)
+            }
+        }))
+        voteAlert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        
+        self.present(voteAlert, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -83,10 +126,13 @@ extension VoteViewController: UIPickerViewDataSource, UIPickerViewDelegate, UITe
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField.text == nil {
             self.voteButton.isEnabled = false
-            log.info("Disabled")
+            log.info("Vote button disabled")
+        } else if textField.text!.isEmpty {
+            self.voteButton.isEnabled = false
+            log.info("Vote button disabled")
         } else {
             self.voteButton.isEnabled = true
-            log.info("Enabled")
+            log.info("Vote button enabled")
         }
     }
     

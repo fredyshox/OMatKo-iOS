@@ -83,7 +83,7 @@ class FirebaseDataService: DataService {
             throw DataServiceError.authentication
         }
         
-        let ref = votesRef.child("\(eventId)\\\(user.uid)")
+        let ref = votesRef.child("\(eventId)").child("\(user.uid)")
         ref.setValue(mark)
     }
     
