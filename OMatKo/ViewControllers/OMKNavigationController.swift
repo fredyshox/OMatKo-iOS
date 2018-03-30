@@ -18,12 +18,21 @@ class OMKNavigationController: UINavigationController {
 
     // MARK: Properties
     
-    private var authState: AuthState = .signedOut // default value
+    private var authState: AuthState = .signedOut
     
     // MARK: Initialization
     
     init() {
-        super.init(rootViewController: createLoginVC())
+        let authState = Auth.auth().currentUser == nil ? AuthState.signedOut : AuthState.signedIn
+        var rootVC: UIViewController
+        if authState == .signedOut {
+           rootVC = OMKNavigationController.createLoginVC()
+        } else {
+           rootVC = OMKNavigationController.createVotesVC()
+        }
+        
+        super.init(rootViewController: rootVC)
+        self.authState = authState
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -36,12 +45,12 @@ class OMKNavigationController: UINavigationController {
     
     // MARK: ViewController factory
     
-    private func createLoginVC() -> UIViewController {
+    private static func createLoginVC() -> UIViewController {
         let storyboard = UIStoryboard(name: "Votes", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: "loginVC")
     }
     
-    private func createVotesVC() -> UIViewController {
+    private static func createVotesVC() -> UIViewController {
         let storyboard = UIStoryboard(name: "Votes", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: "votesVC")
     }
@@ -60,12 +69,12 @@ class OMKNavigationController: UINavigationController {
         Auth.auth().addStateDidChangeListener { (auth, user) in
             if user != nil {
                 if self.authState != .signedIn {
-                    self.setViewControllers([self.createVotesVC()], animated: true)
+                    self.setViewControllers([OMKNavigationController.createVotesVC()], animated: true)
                     self.authState = .signedIn
                 }
             } else {
                 if self.authState != .signedOut {
-                    self.setViewControllers([self.createLoginVC()], animated: true)
+                    self.setViewControllers([OMKNavigationController.createLoginVC()], animated: true)
                     self.authState = .signedOut
                 }
             }

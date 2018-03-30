@@ -11,9 +11,6 @@ target 'OMatKo' do
   pod 'Firebase/Auth'
   pod 'Firebase/Messaging'
   
-  ## codable
-  pod 'CodableFirebase'
-  
   ## logging
   pod 'XCGLogger'
   

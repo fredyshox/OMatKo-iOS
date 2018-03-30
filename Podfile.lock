@@ -1,5 +1,4 @@
 PODS:
-  - CodableFirebase (0.0.5)
   - Firebase/Auth (4.8.2):
     - Firebase/Core
     - FirebaseAuth (= 4.4.2)
@@ -69,7 +68,6 @@ PODS:
   - XLPagerTabStrip (8.0.0)
 
 DEPENDENCIES:
-  - CodableFirebase
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -82,7 +80,6 @@ DEPENDENCIES:
   - XLPagerTabStrip (~> 8.0)
 
 SPEC CHECKSUMS:
-  CodableFirebase: b13321acfec878cbcda93faf84c985f4d69ec2f1
   Firebase: 7d3b8cd837ad9fcd391657734c0d56dab8e9a5a3
   FirebaseAnalytics: 388b630c15713f5dbf364071f5f3d6077fb52f4e
   FirebaseAuth: bd2738c5c1e92b108ba5f7f7335908097a4e50bb
@@ -103,6 +100,6 @@ SPEC CHECKSUMS:
   XCGLogger: c9601cae9a8912de34a58666ba931ed3d624dd31
   XLPagerTabStrip: d1ab378af0923320ec0b5eab11d7b2f803d31261
 
-PODFILE CHECKSUM: dec4a31f7bafebef68ed7b99dc907c043a4fbf36
+PODFILE CHECKSUM: 4663b3e4aa0a1de78e6d56ed47c788cd8b2afa46
 
 COCOAPODS: 1.4.0

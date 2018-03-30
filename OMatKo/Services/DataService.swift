@@ -11,4 +11,11 @@ import RxSwift
 
 protocol DataService {
     var events: Variable<[Event]> { get }
+    func vote(forEventWithId eventId: String, mark: Int) throws
+}
+
+enum DataServiceError: Error {
+    case serialization
+    case authentication
+    case undefined
 }

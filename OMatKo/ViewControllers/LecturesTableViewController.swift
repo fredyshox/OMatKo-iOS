@@ -14,15 +14,21 @@ class LecturesTableViewController: OMKTableViewController {
     // estimated row height
     static let lectureCellHeight: CGFloat = 123.0
     
-    var lectures: Any!
+    var lectures: [Event] = [] {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
+    
+    var conferenceDay: Event.ConferenceDay!
     
     // MARK: Initialization
     
-    init(title: String, data: Any) {
+    init(pagerItem: PagerItem<Event.ConferenceDay>) {
         super.init(style: .plain)
         
-        self.title = title
-        self.lectures = data
+        self.title = pagerItem.title
+        self.conferenceDay = pagerItem.data
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -49,16 +55,15 @@ class LecturesTableViewController: OMKTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return self.lectures.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "lectureCell", for: indexPath) as! LectureTableViewCell
         
-        // cell test
-        let longDesc = "Long long Long long Long long Long long Long long Long long Long long Long long Description"
-        cell.descriptionLabel.text = (indexPath.row % 2 != 0) ? longDesc : "Shot description"
-        cell.titleLabel.text = (indexPath.row % 2 == 0) ? longDesc : "Short title"
+        let lecture = lectures[indexPath.row]
+        cell.descriptionLabel.text = lecture.eventDescription
+        cell.titleLabel.text = lecture.title
 
         return cell
     }
