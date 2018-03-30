@@ -8,7 +8,6 @@
 
 import RxSwift
 import Firebase
-import CodableFirebase
 
 class FirebaseDataService: DataService {
     
@@ -17,31 +16,29 @@ class FirebaseDataService: DataService {
     // MARK: DataService protocol
     
     var events: Variable<[Event]> {
-        return Variable<[Event]>([])
+        return _events
     }
-    
-    // MARK: Encoders & Decoders
-    
-    private let decoder: FirebaseDecoder = FirebaseDecoder()
-    private let encoder: FirebaseEncoder = FirebaseEncoder()
     
     // MARK: Firebase database references
     private let ref: DatabaseReference = Database.database().reference()
     private let eventsRef: DatabaseReference = Database.database().reference(withPath: "events")
+    private let votesRef: DatabaseReference = Database.database().reference(withPath: "results")
     
-    // MARK: Initialization
+    // MARK: RX
     
     private let disposeBag = DisposeBag()
     
+    // MARK: Initialization
+    
     func start() {
-        self.fetchEvents().subscribe(onNext: { [weak self] newEvents in
-            self?.events.value.removeAll()
-            self?.events.value.append(contentsOf: newEvents)
+        self.fetchEvents().subscribe(onNext: { newEvents in
+            self._events.value.removeAll()
+            self._events.value.append(contentsOf: newEvents)
         }).disposed(by: disposeBag)
     }
     
     // MARK: Fetch/Send Methods
-
+    
     func fetchEvents() -> Observable<[Event]> {
         return Observable<[Event]>.create({ (observer) -> Disposable in
             let obs = self.eventsRef.observe(.value, with: { (snapshot) in
@@ -50,13 +47,13 @@ class FirebaseDataService: DataService {
                 }
                 
                 var events: [Event] = []
-                
                 for childSnap in snapshot.children {
-                    do {
-                        let model = try self.decoder.decode(Event.self, from: childSnap)
+                    if  let snap = childSnap as? DataSnapshot,
+                        let dict = self.prepareEventDict(snap: snap),
+                        let model = Event(dict: dict) {
                         events.append(model)
-                    } catch let err {
-                        log.error("Unable to deserialie event: \(err.localizedDescription)")
+                    } else {
+                        observer.onError(DataServiceError.serialization)
                     }
                 }
                 
@@ -67,6 +64,38 @@ class FirebaseDataService: DataService {
                 self.eventsRef.removeObserver(withHandle: obs)
             }
         })
+    }
+    
+    
+    /**
+     Returns observable map [<eventId>:<mark>]
+     */
+    func fetchVotes() -> Observable<[String: Int]> {
+        return Observable<[String: Int]>.create({ (observer) -> Disposable in
+            
+            
+            return Disposables.create()
+        })
+    }
+    
+    func vote(forEventWithId eventId: String, mark: Int) throws {
+        guard let user = Auth.auth().currentUser else {
+            throw DataServiceError.authentication
+        }
+        
+        let ref = votesRef.child("\(eventId)\\\(user.uid)")
+        ref.setValue(mark)
+    }
+    
+    // MARK: Utility
+    
+    private func prepareEventDict(snap: DataSnapshot) -> [String: Any]? {
+        if var dict = snap.value as? [String: Any] {
+            dict[Event.CodingKeys.id.stringValue] = snap.key
+            return dict
+        }
+        
+        return nil
     }
     
 }

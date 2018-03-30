@@ -41,6 +41,7 @@ let log: XCGLogger = {
 
 var localDataService: LocalDataService = XMLLocalDataService()
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -55,10 +56,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
     }
     
+    private lazy var _dataService: DataService = {
+        let service = FirebaseDataService()
+        service.start()
+        
+        return service
+    }()
+    
+    static var dataService: DataService {
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        return delegate._dataService
+    }
+    
     // MARK: UIApplicationDelegate
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        Database.database().isPersistenceEnabled = true
+        
+        _ = _dataService
         
         // IQKeyboardManager
         IQKeyboardManager.sharedManager().enable = true

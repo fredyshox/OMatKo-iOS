@@ -26,7 +26,7 @@ class SideMenuManager: SideMenuControllerDataSource, MenuViewControllerDelegate 
     
     private let _menuItems: [MenuItem] = [
         MenuItem(viewControllerId: "lectureVC", title: "Theoretical lectures", iconName: "book"),
-        MenuItem(viewControllerId: "invalid", title: "Science lectures", iconName: "chart"),
+        MenuItem(viewControllerId: "popLectureVC", title: "Science lectures", iconName: "chart"),
         MenuItem(viewControllerId: "votesVC", title: "Vote for essays", iconName: "votes"),
         MenuItem(viewControllerId: "mapVC", title: "Map", iconName: "location"),
         MenuItem(viewControllerId: "editionsVC", title: "Previous editions", iconName: "history"),
@@ -62,7 +62,14 @@ class SideMenuManager: SideMenuControllerDataSource, MenuViewControllerDelegate 
             vc = storyboard.instantiateInitialViewController()
         case "lectureVC":
             let storyboard = UIStoryboard(name: "Lectures", bundle: nil)
-            vc = storyboard.instantiateInitialViewController()
+            let pagerVC = storyboard.instantiateViewController(withIdentifier: "lecturePagerVC") as! LecturesPagerTabStripViewController
+            pagerVC.lectureCategory = .theoretical
+            vc = pagerVC
+        case "popLectureVC":
+            let storyboard = UIStoryboard(name: "Lectures", bundle: nil)
+            let pagerVC = storyboard.instantiateViewController(withIdentifier: "lecturePagerVC") as! LecturesPagerTabStripViewController
+            pagerVC.lectureCategory = .popularScience
+            vc = pagerVC
         case "contactsVC":
             vc = ContactsTableViewController(style: .plain)
         case "editionsVC":
