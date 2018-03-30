@@ -41,7 +41,7 @@ class PlacesTableViewController: OMKTableViewController {
     }
     
     func setUpTableView() {
-        self.tableView.allowsSelection = false
+        //self.tableView.allowsSelection = false
         self.tableView.separatorStyle = .none
         
         let nib = UINib(nibName: "PlaceTableViewCell", bundle: nil)
@@ -78,6 +78,12 @@ class PlacesTableViewController: OMKTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let place = self.places[indexPath.row]
+        if let pinTitle = place.title.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+           let url = URL(string: "http://maps.apple.com/?q=\(pinTitle)&ll=\(place.latitude),\(place.longitude)") {
+            UIApplication.shared.open(url)
+        }
+        
         tableView.deselectRow(at: indexPath, animated: true)
     }
 

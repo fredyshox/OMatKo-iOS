@@ -10,18 +10,25 @@ import UIKit
 
 class PlaceTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var backgroundRoundView: RoundView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        if highlighted {
+            self.backgroundRoundView.backgroundColor = UIColor.hexStringToUIColor(hex: "#e4e4e4")
+        } else {
+            self.backgroundRoundView.backgroundColor = UIColor.white
+        }
     }
     
 }

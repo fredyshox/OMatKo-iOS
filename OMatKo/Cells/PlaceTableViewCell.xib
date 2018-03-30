@@ -85,6 +85,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="backgroundRoundView" destination="Kef-20-S4T" id="a7A-Ho-y0y"/>
                 <outlet property="descriptionLabel" destination="Jb2-JM-CB7" id="dSq-i1-Hlo"/>
                 <outlet property="titleLabel" destination="dEh-K4-Aev" id="22Z-Eu-LES"/>
             </connections>
