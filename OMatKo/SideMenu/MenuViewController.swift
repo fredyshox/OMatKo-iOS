@@ -27,15 +27,30 @@ class MenuViewController: UIViewController {
     // MARK: Actions
     
     @IBAction func openSnapchat(_ sender: UIButton) {
-        log.info("Open snapchat")
+        let snapUrl = URL(string: "snapchat://add/omatkopwr")
+        if snapUrl != nil && UIApplication.shared.canOpenURL(snapUrl!){
+            UIApplication.shared.open(snapUrl!)
+        } else if let url = URL(string: "https://snapchat.com/add/omatkopwr") {
+            UIApplication.shared.open(url)
+        }
     }
     
     @IBAction func openFb(_ sender: UIButton) {
-        log.info("Open facebook")
+        let fbUrl = URL(string: "fb://page/269551433187258")
+        if fbUrl != nil && UIApplication.shared.canOpenURL(fbUrl!) {
+            UIApplication.shared.open(fbUrl!)
+        } else if let url = URL(string: "https://www.facebook.com/omatkopwr"){
+            UIApplication.shared.open(url)
+        }
     }
     
     @IBAction func openInstagram(_ sender: UIButton) {
-        log.info("Open instagram")
+        let instaUrl = URL(string: "instagram://user?username=USERNAME")
+        if instaUrl != nil && UIApplication.shared.canOpenURL(instaUrl!) {
+            UIApplication.shared.open(instaUrl!)
+        } else if let url = URL(string: "https://instagram.com/_u/omatko.pwr") {
+            UIApplication.shared.open(url)
+        }
     }
     
     // MARK: Properties
