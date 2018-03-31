@@ -12,23 +12,29 @@ class XMLDeserialization<T: BaseModel>: NSObject, XMLParserDelegate{
     private let callback: (T) -> ()
     private let completion: (Bool, Error?) -> ()
     private let parser: XMLParser
+    private let queue: DispatchQueue
     
     var customHandler: ((String, [String: String]) -> T?)?
     
-    init(data: Data, callback: @escaping (T) -> (), completion: @escaping (Bool, Error?) -> ()) {
+    init(data: Data, callback: @escaping (T) -> (), completion: @escaping (Bool, Error?) -> (), queue: DispatchQueue = DispatchQueue.main) {
         self.callback = callback
         self.completion = completion
         self.parser = XMLParser(data: data)
+        self.queue = queue
         super.init()
     }
     
     deinit {
-        parser.abortParsing()
+        queue.sync {
+            parser.abortParsing()
+        }
     }
     
     func parse() {
-        parser.delegate = self
-        parser.parse()
+        queue.sync {
+            parser.delegate = self
+            parser.parse()
+        }
     }
     
     // MARK: XMLParserDelegate
@@ -58,29 +64,36 @@ class XMLDeserialization<T: BaseModel>: NSObject, XMLParserDelegate{
 
 class XMLLocalDataService: LocalDataService {
     
+    private let queue: DispatchQueue = DispatchQueue(label: "com.raczy.XMLLocalDataServiceQueue", qos: .userInitiated)
+    
     // MARK: LocalDataService
     
     func fetchPlaces() -> Observable<Place> {
         return Observable<Place>.create({ (observer) -> Disposable in
+            
             let fileName = "places_data"
             var deserializer: XMLDeserialization<Place>?
             
             if let asset = NSDataAsset(name: fileName) {
                 deserializer = XMLDeserialization<Place>(data: asset.data, callback: { (item) in
-                    observer.onNext(item)
+                    DispatchQueue.main.async { observer.onNext(item) }
                 }, completion: { (completed, err) in
-                    if completed {
-                        observer.onCompleted()
+                    DispatchQueue.main.async {
+                        if completed {
+                            observer.onCompleted()
+                        }
+                            
+                        if err != nil {
+                            observer.onError(err!)
+                        }
                     }
+                }, queue: self.queue)
                     
-                    if err != nil {
-                        observer.onError(err!)
-                    }
-                })
-                
                 deserializer!.parse()
             } else {
-                observer.onError(LocalDataServiceError.fileNotFound(fileName))
+                DispatchQueue.main.async {
+                    observer.onError(LocalDataServiceError.fileNotFound(fileName))
+                }
             }
             
             return Disposables.create {
@@ -93,22 +106,27 @@ class XMLLocalDataService: LocalDataService {
         return Observable<Contact>.create({ (observer) -> Disposable in
             let fileName = "contacts_data"
             var deserializer: XMLDeserialization<Contact>?
+            
             if let asset = NSDataAsset(name: fileName) {
                 deserializer = XMLDeserialization<Contact>(data: asset.data, callback: { (item) in
-                    observer.onNext(item)
+                    DispatchQueue.main.async { observer.onNext(item) }
                 }, completion: { (completed, err) in
-                    if completed {
-                        observer.onCompleted()
+                    DispatchQueue.main.async {
+                        if completed {
+                            observer.onCompleted()
+                        }
+                            
+                        if err != nil {
+                            observer.onError(err!)
+                        }
                     }
+                }, queue: self.queue)
                     
-                    if err != nil {
-                        observer.onError(err!)
-                    }
-                })
-                
                 deserializer!.parse()
             } else {
-                observer.onError(LocalDataServiceError.fileNotFound(fileName))
+                DispatchQueue.main.async {
+                    observer.onError(LocalDataServiceError.fileNotFound(fileName))
+                }
             }
             
             return Disposables.create {
@@ -124,20 +142,24 @@ class XMLLocalDataService: LocalDataService {
             
             if let asset = NSDataAsset(name: fileName) {
                 deserializer = XMLDeserialization<Edition>(data: asset.data, callback: { (item) in
-                    observer.onNext(item)
+                    DispatchQueue.main.async { observer.onNext(item) }
                 }, completion: { (completed, err) in
-                    if completed {
-                        observer.onCompleted()
+                    DispatchQueue.main.async {
+                        if completed {
+                            observer.onCompleted()
+                        }
+                            
+                        if err != nil {
+                            observer.onError(err!)
+                        }
                     }
+                }, queue: self.queue)
                     
-                    if err != nil {
-                        observer.onError(err!)
-                    }
-                })
-                
                 deserializer!.parse()
             } else {
-                observer.onError(LocalDataServiceError.fileNotFound(fileName))
+                DispatchQueue.main.async {
+                    observer.onError(LocalDataServiceError.fileNotFound(fileName))
+                }
             }
             
             return Disposables.create {
@@ -153,21 +175,23 @@ class XMLLocalDataService: LocalDataService {
             
             if let asset = NSDataAsset(name: fileName) {
                 deserializer = XMLDeserialization<Sponsor>(data: asset.data, callback: { (item) in
-                    observer.onNext(item)
+                    DispatchQueue.main.async { observer.onNext(item) }
                 }, completion: { (completed, err) in
-                    if completed {
-                        observer.onCompleted()
+                    DispatchQueue.main.async {
+                        if completed {
+                            observer.onCompleted()
+                        }
+                        
+                        if err != nil {
+                            observer.onError(err!)
+                        }
                     }
+                }, queue: self.queue)
                     
-                    if err != nil {
-                        observer.onError(err!)
-                    }
-                })
-                
                 let categoryStringArr = Sponsor.Category.allValues.map({ (category) -> String in
                     return category.rawValue
                 })
-                
+                    
                 deserializer!.customHandler = { (elementName, attrDict) in
                     if categoryStringArr.contains(elementName) {
                         var mutableAttrDict = attrDict
@@ -177,10 +201,10 @@ class XMLLocalDataService: LocalDataService {
                         return nil
                     }
                 }
-                
+                    
                 deserializer!.parse()
             } else {
-                observer.onError(LocalDataServiceError.fileNotFound(fileName))
+                DispatchQueue.main.async { observer.onError(LocalDataServiceError.fileNotFound(fileName)) }
             }
             
             return Disposables.create {
