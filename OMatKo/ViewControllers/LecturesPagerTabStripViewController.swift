@@ -18,7 +18,15 @@ struct PagerItem<T> {
 class LecturesPagerTabStripViewController: ButtonBarPagerTabStripViewController, OMKMenu {
     
     // Set this before using
-    var lectureCategory: Event.Category!
+    var lectureCategory: Event.Category! {
+        didSet {
+            if lectureCategory == .theoretical {
+                self.title = NSLocalizedString("Theoretical lectures", comment: "")
+            } else {
+                self.title = NSLocalizedString("Popular science lectures", comment: "")
+            }
+        }
+    }
     
     let pagerItems: [PagerItem<Event.ConferenceDay>] = [
         PagerItem(title: "Friday", data: Event.ConferenceDay.friday),
@@ -38,7 +46,6 @@ class LecturesPagerTabStripViewController: ButtonBarPagerTabStripViewController,
         settings.style.buttonBarItemFont = UIFont.systemFont(ofSize: 16.0, weight: .semibold)
         
         setUpNavBar()
-        title = "Theoretical Lectures"
         view.backgroundColor = UIColor.omatkoLightBackground
         
         

@@ -20,7 +20,6 @@ class LogInViewController: OMKViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Log in"
         
         emailTextField.tag = LogInViewController.emailTextFieldTag
         emailTextField.delegate = self
@@ -32,8 +31,12 @@ class LogInViewController: OMKViewController {
     }
     
     func displayAlert() {
-        let alert = UIAlertController(title: "Error", message: "Email and password don't match.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        let title = NSLocalizedString("Error", comment: "")
+        let message = NSLocalizedString("Email and password don't match.", comment: "")
+        let ok = NSLocalizedString("OK", comment: "")
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: ok, style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     
@@ -44,12 +47,12 @@ class LogInViewController: OMKViewController {
         let password = passwordTextField.text ?? ""
         
         if email.isEmpty {
-            emailTextField.errorMessage = "Invalid email"
+            emailTextField.errorMessage = NSLocalizedString("Invalid email", comment: "")
             result = false
         }
         
         if password.isEmpty {
-            passwordTextField.errorMessage = "Invalid password"
+            passwordTextField.errorMessage = NSLocalizedString("Invalid password", comment: "")
             result = false
         }
         
@@ -89,7 +92,7 @@ extension LogInViewController: UITextFieldDelegate {
             if textField.tag == LogInViewController.emailTextFieldTag {
                 if let emailTextField = textField as? SkyFloatingLabelTextField {
                     if text.count < 3 || !text.contains("@") {
-                        emailTextField.errorMessage = "Invalid email"
+                        emailTextField.errorMessage = NSLocalizedString("Invalid email", comment: "")
                     } else {
                         emailTextField.errorMessage = ""
                     }

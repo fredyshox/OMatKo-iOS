@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  OMatKo
+
+  Created by Kacper Raczy on 01.04.2018.
+  Copyright © 2018 Kacper Raczy. All rights reserved.
+*/
+
+"Theoretical lectures" = "Theoretical lectures";
+"Popular science lectures" = "Popular science lectures";
+"Vote for essays" = "Vote for essays";
+"Map" = "Map";
+"Previous editions" = "Previous editions";
+"Sponsors" = "Sponsors";
+"Contact" = "Contact";
+
+"Error" = "Error";
+"Email and password don't match." = "Email and password don't match.";
+"Unable to send vote." = "Unable to send vote.";
+"OK" = "OK";
+"Invalid email" = "Invalid email";
+"Invalid password" = "Invalid password";
+"Confirmation" = "Confirmation";
+"Are you sure you want to rate lecture %s for %d?" = "Are you sure you want to rate lecture %s for %d?";
+"Yes" = "Yes";
+"No" = "No";

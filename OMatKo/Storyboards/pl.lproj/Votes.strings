@@ -1,0 +1,33 @@
+
+/* Class = "UIButton"; normalTitle = "Vote"; ObjectID = "75Z-Em-qza"; */
+"75Z-Em-qza.normalTitle" = "Zagłosuj";
+
+/* Class = "UITextField"; placeholder = "email"; ObjectID = "CIf-Af-ny1"; */
+"CIf-Af-ny1.placeholder" = "email";
+
+/* Class = "UITextField"; placeholder = "Lecture code"; ObjectID = "iqX-YT-dT3"; */
+"iqX-YT-dT3.placeholder" = "Kod wykładu";
+
+/* Class = "UISegmentedControl"; r8q-kk-EAy.segmentTitles[0] = "1"; ObjectID = "r8q-kk-EAy"; */
+"r8q-kk-EAy.segmentTitles[0]" = "1";
+
+/* Class = "UISegmentedControl"; r8q-kk-EAy.segmentTitles[1] = "2"; ObjectID = "r8q-kk-EAy"; */
+"r8q-kk-EAy.segmentTitles[1]" = "2";
+
+/* Class = "UISegmentedControl"; r8q-kk-EAy.segmentTitles[2] = "3"; ObjectID = "r8q-kk-EAy"; */
+"r8q-kk-EAy.segmentTitles[2]" = "3";
+
+/* Class = "UISegmentedControl"; r8q-kk-EAy.segmentTitles[3] = "4"; ObjectID = "r8q-kk-EAy"; */
+"r8q-kk-EAy.segmentTitles[3]" = "4";
+
+/* Class = "UISegmentedControl"; r8q-kk-EAy.segmentTitles[4] = "5"; ObjectID = "r8q-kk-EAy"; */
+"r8q-kk-EAy.segmentTitles[4]" = "5";
+
+/* Class = "UIButton"; normalTitle = "Log in"; ObjectID = "sqF-52-Wws"; */
+"sqF-52-Wws.normalTitle" = "Zaloguj";
+
+/* Class = "UIBarButtonItem"; title = "Log out"; ObjectID = "vWC-e8-TkR"; */
+"vWC-e8-TkR.title" = "Wyloguj";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "zTK-QA-pMC"; */
+"zTK-QA-pMC.placeholder" = "hasło";

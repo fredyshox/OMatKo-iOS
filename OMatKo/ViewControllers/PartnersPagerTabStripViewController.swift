@@ -37,7 +37,7 @@ class PartnersPagerTabStripViewController: ButtonBarPagerTabStripViewController,
         settings.style.buttonBarHeight = 50
         
         setUpNavBar()
-        title = "Sponsors"
+        title = NSLocalizedString("Sponsors", comment: "")
         view.backgroundColor = UIColor.omatkoLightBackground
         
         super.viewDidLoad()

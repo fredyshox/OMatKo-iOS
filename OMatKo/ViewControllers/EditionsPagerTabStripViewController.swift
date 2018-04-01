@@ -27,7 +27,7 @@ class EditionsPagerTabStripViewController: ButtonBarPagerTabStripViewController,
         settings.style.buttonBarItemFont = UIFont.systemFont(ofSize: 16.0, weight: .semibold)
         
         setUpNavBar()
-        title = "Editions"
+        title = NSLocalizedString("Previous editions", comment: "")
         view.backgroundColor = UIColor.omatkoLightBackground
         
         super.viewDidLoad()

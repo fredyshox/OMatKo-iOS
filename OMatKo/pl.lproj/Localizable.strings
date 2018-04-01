@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  OMatKo
+
+  Created by Kacper Raczy on 01.04.2018.
+  Copyright © 2018 Kacper Raczy. All rights reserved.
+*/
+
+"Theoretical lectures" = "Wykłady teoretyczne";
+"Popular science lectures" = "Wykłady popularnonaukowe";
+"Vote for essays" = "Ocenianie referatów";
+"Map" = "Mapa Wrocławia";
+"Previous editions" = "Poprzednie edycje";
+"Sponsors" = "Nasi sponsorzy";
+"Contact" = "Kontakt";
+
+"Error" = "Błąd";
+"Email and password don't match." = "Błędny email lub hasło.";
+"Unable to send vote." = "Nie można wysłać oceny.";
+"OK" = "OK";
+"Invalid email" = "Błędny adres email";
+"Invalid password" = "Błędne hasło";
+"Confirmation" = "Potwierdzenie";
+"Are you sure you want to rate lecture %s for %d?" = "Czy napewno chcesz ocenić wykład %s oceną %d?";
+"Yes" = "Tak";
+"No" = "Nie";

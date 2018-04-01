@@ -238,6 +238,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0e7-r8-gek"/>
                     </view>
+                    <navigationItem key="navigationItem" id="bEX-cI-f8a">
+                        <barButtonItem key="rightBarButtonItem" title="Log out" style="done" id="vWC-e8-TkR">
+                            <connections>
+                                <action selector="logOut:" destination="2Ts-4d-nus" id="eBS-BE-5zr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="pickerTextField" destination="iqX-YT-dT3" id="Ssm-cx-I9O"/>
                         <outlet property="rateSegmentedControl" destination="r8q-kk-EAy" id="i2W-OK-LUb"/>

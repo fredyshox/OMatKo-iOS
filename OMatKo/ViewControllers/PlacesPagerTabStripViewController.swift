@@ -36,7 +36,7 @@ class PlacesPagerTabStripViewController: ButtonBarPagerTabStripViewController, O
         settings.style.buttonBarItemFont = UIFont.systemFont(ofSize: 16.0, weight: .semibold)
         
         setUpNavBar()
-        title = "Places"
+        title = NSLocalizedString("Map", comment: "")
         view.backgroundColor = UIColor.omatkoLightBackground
         
         super.viewDidLoad()

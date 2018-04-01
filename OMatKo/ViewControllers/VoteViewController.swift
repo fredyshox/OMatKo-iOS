@@ -34,17 +34,12 @@ class VoteViewController: OMKViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Voting"
         
         pickerTextField.inputView = pickerView
         pickerTextField.delegate = self
         voteButton.isEnabled = false
         
         self.navigationItem.hidesBackButton = true
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log out",
-                                                                     style: .done,
-                                                                     target: self,
-                                                                     action: #selector(logOut(sender:)))
         
         loadLectureCodes()
     }
@@ -62,14 +57,17 @@ class VoteViewController: OMKViewController {
     }
     
     func errorAlert() -> UIAlertController {
-        let errorAlert = UIAlertController(title: "Error", message: "Unable to send vote.", preferredStyle: .alert)
-        errorAlert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        let title = NSLocalizedString("Error", comment: "")
+        let message = NSLocalizedString("Unable to send vote.", comment: "")
+        let ok = NSLocalizedString("OK", comment: "")
+        
+        let errorAlert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        errorAlert.addAction(UIAlertAction(title: ok, style: .cancel, handler: nil))
         
         return errorAlert
     }
     
-    @objc
-    func logOut(sender: Any?) {
+    @IBAction func logOut(_ sender: Any) {
         do {
             try Auth.auth().signOut()
         } catch let err {
@@ -80,11 +78,12 @@ class VoteViewController: OMKViewController {
     @IBAction func vote(_ sender: Any) {
         let rating = rateSegmentedControl.selectedSegmentIndex + 1
         let code = pickerTextField.text ?? ""
+        let message = String(format: NSLocalizedString("Are you sure you want to rate lecture %s for %d?", comment: ""), code, rating)
         
-        let voteAlert = UIAlertController(title: "Confirmation",
-                                            message: "Are you sure you want to rate lecture \(code) for \(rating)?",
+        let voteAlert = UIAlertController(title: NSLocalizedString("Confirmation", comment: ""),
+                                            message: message,
                                             preferredStyle: .alert)
-        voteAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (_) in
+        voteAlert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: ""), style: .default, handler: { (_) in
             log.info("Attempt to vote: \(code) mark: \(rating)")
             
             do {
@@ -94,7 +93,7 @@ class VoteViewController: OMKViewController {
                 self.present(self.errorAlert(), animated: true, completion: nil)
             }
         }))
-        voteAlert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        voteAlert.addAction(UIAlertAction(title: NSLocalizedString("No", comment: ""), style: .cancel, handler: nil))
         
         self.present(voteAlert, animated: true, completion: nil)
     }

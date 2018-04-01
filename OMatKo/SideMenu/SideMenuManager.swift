@@ -25,13 +25,13 @@ class SideMenuManager: SideMenuControllerDataSource, MenuViewControllerDelegate 
     private var viewControllerDict: [String: UIViewController] = [:]
     
     private let _menuItems: [MenuItem] = [
-        MenuItem(viewControllerId: "lectureVC", title: "Theoretical lectures", iconName: "book"),
-        MenuItem(viewControllerId: "popLectureVC", title: "Science lectures", iconName: "chart"),
-        MenuItem(viewControllerId: "votesVC", title: "Vote for essays", iconName: "votes"),
-        MenuItem(viewControllerId: "mapVC", title: "Map", iconName: "location"),
-        MenuItem(viewControllerId: "editionsVC", title: "Previous editions", iconName: "history"),
-        MenuItem(viewControllerId: "partnersVC", title: "Sponsors", iconName: "heart"),
-        MenuItem(viewControllerId: "contactsVC", title: "Contact", iconName: "mail")
+        MenuItem(viewControllerId: "lectureVC", title: NSLocalizedString("Theoretical lectures", comment: ""), iconName: "book"),
+        MenuItem(viewControllerId: "popLectureVC", title: NSLocalizedString("Popular science lectures", comment: ""), iconName: "chart"),
+        MenuItem(viewControllerId: "votesVC", title: NSLocalizedString("Vote for essays", comment: ""), iconName: "votes"),
+        MenuItem(viewControllerId: "mapVC", title: NSLocalizedString("Map", comment: ""), iconName: "location"),
+        MenuItem(viewControllerId: "editionsVC", title: NSLocalizedString("Previous editions", comment: ""), iconName: "history"),
+        MenuItem(viewControllerId: "partnersVC", title: NSLocalizedString("Sponsors", comment: ""), iconName: "heart"),
+        MenuItem(viewControllerId: "contactsVC", title: NSLocalizedString("Contact", comment: ""), iconName: "mail")
     ]
     
     // MARK: Initialization
