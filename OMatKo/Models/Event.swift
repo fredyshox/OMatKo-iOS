@@ -14,10 +14,16 @@ import CoreData
  */
 class Event: Codable {
     
-    enum ConferenceDay: String, Codable {
+    enum ConferenceDay: String, Codable, Localizable {
         case friday = "FRIDAY"
         case saturday = "SATURDAY"
         case sunday = "SUNDAY"
+        
+        static var allValues: [ConferenceDay] = [friday, saturday, sunday]
+        
+        var localizedTitle: String {
+            return NSLocalizedString(self.rawValue, comment: "")
+        }
     }
     
     enum Category: String, Codable {

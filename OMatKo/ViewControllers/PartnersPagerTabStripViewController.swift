@@ -16,7 +16,7 @@ class PartnersPagerTabStripViewController: ButtonBarPagerTabStripViewController,
         var result: [PagerItem<Sponsor.Category>] = []
         
         for category in Sponsor.Category.allValues {
-            let item = PagerItem<Sponsor.Category>(title: category.rawValue, data: category)
+            let item = PagerItem<Sponsor.Category>(title: category.localizedTitle, data: category)
             result.append(item)
         }
         

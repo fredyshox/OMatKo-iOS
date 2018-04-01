@@ -28,11 +28,16 @@ class LecturesPagerTabStripViewController: ButtonBarPagerTabStripViewController,
         }
     }
     
-    let pagerItems: [PagerItem<Event.ConferenceDay>] = [
-        PagerItem(title: "Friday", data: Event.ConferenceDay.friday),
-        PagerItem(title: "Saturday", data: Event.ConferenceDay.saturday),
-        PagerItem(title: "Sunday", data: Event.ConferenceDay.sunday)
-    ]
+    let pagerItems: [PagerItem<Event.ConferenceDay>] = {
+        var result: [PagerItem<Event.ConferenceDay>] = []
+        
+        for day in Event.ConferenceDay.allValues {
+            let item = PagerItem<Event.ConferenceDay>(title: day.localizedTitle, data: day)
+            result.append(item)
+        }
+        
+        return result
+    }()
     
     let disposeBag: DisposeBag = DisposeBag()
     

@@ -15,3 +15,7 @@ protocol BaseModel {
     init?(dict: [String: Any])
     static var modelName: String { get }
 }
+
+protocol Localizable {
+    var localizedTitle: String { get }
+}

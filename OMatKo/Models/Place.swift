@@ -18,7 +18,7 @@ struct Place: Codable, BaseModel {
     let longitude: Double
     let category: PlaceCategory
     
-    enum PlaceCategory: String, Codable {
+    enum PlaceCategory: String, Codable, Localizable {
         case sights = "SIGHTS"
         case shopping = "SHOPPING_AND_STATIONS"
         case entertainment = "ENTERTAINMENT"
@@ -27,6 +27,10 @@ struct Place: Codable, BaseModel {
         
         static var allValues: [PlaceCategory] {
             return [sights, shopping, entertainment, food, conference]
+        }
+        
+        var localizedTitle: String {
+            return NSLocalizedString(self.rawValue, comment: "")
         }
     }
     

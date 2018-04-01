@@ -16,7 +16,7 @@ struct Sponsor: Codable, BaseModel {
     let category: Category
     
     
-    enum Category: String, Codable {
+    enum Category: String, Codable, Localizable {
         case sponsor = "sponsor"
         case supportingCompany = "supporting_company"
         case media = "media"
@@ -24,6 +24,10 @@ struct Sponsor: Codable, BaseModel {
         case sponsorship = "sponsorship"
         
         static var allValues: [Category] = [sponsor, supportingCompany, media, organizer, sponsorship]
+        
+        var localizedTitle: String {
+            return NSLocalizedString(self.rawValue, comment: "")
+        }
     }
     
     init(name: String, title: String, description: String, imageUrl: String, category: Category) {

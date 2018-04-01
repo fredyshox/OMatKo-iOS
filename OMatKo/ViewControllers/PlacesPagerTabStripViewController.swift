@@ -16,7 +16,7 @@ class PlacesPagerTabStripViewController: ButtonBarPagerTabStripViewController, O
         var result: [PagerItem<Place.PlaceCategory>] = []
         
         for category in Place.PlaceCategory.allValues {
-            let item = PagerItem<Place.PlaceCategory>(title: category.rawValue, data: category)
+            let item = PagerItem<Place.PlaceCategory>(title: category.localizedTitle, data: category)
             result.append(item)
         }
         

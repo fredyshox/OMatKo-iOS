@@ -24,3 +24,19 @@
 "Are you sure you want to rate lecture %s for %d?" = "Are you sure you want to rate lecture %s for %d?";
 "Yes" = "Yes";
 "No" = "No";
+
+// Enum values
+"FRIDAY" = "Friday";
+"SATURDAY" = "Saturday";
+"SUNDAY" = "Sunday";
+
+"FOOD" = "Food";
+"SIGHTS" = "Sights";
+"SHOPPING_AND_STATIONS" = "Shopping and stations";
+"ENTERTAINMENT" = "Entertainment";
+
+"sponsor" = "Sponsors";
+"supporting_company" = "Supporting companies";
+"media" = "Media";
+"organizer" = "Organizers";
+"sponsorship" = "Sponsorships";
