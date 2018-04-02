@@ -13,14 +13,28 @@ class ContactTableViewCell: UITableViewCell {
     @IBOutlet weak var contactImageView: RoundImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var positionLabel: UILabel!
-    @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var phoneTextView: UITextView!
+    @IBOutlet weak var emailTextView: UITextView!
     @IBOutlet weak var descriptionLabel: UILabel!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        phoneTextView.removePadding()
+        phoneTextView.dataDetectorTypes = .phoneNumber
+        phoneTextView.isEditable = false
+        phoneTextView.tintColor = UIColor.omatkoPrimary
+        emailTextView.removePadding()
+        emailTextView.dataDetectorTypes = .all
+        emailTextView.isEditable = false
+        emailTextView.tintColor = UIColor.omatkoPrimary
     }
     
+}
+
+extension ContactTableViewCell: UITextFieldDelegate {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return false
+    }
 }

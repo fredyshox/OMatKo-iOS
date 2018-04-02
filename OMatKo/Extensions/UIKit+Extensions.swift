@@ -189,3 +189,10 @@ extension UIWindow {
     }
 }
 
+extension UITextView {
+    public func removePadding() {
+        self.textContainerInset = UIEdgeInsets.zero
+        self.textContainer.lineFragmentPadding = 0.0
+    }
+}
+

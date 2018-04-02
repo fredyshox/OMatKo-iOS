@@ -71,8 +71,8 @@ class ContactsTableViewController: OMKTableViewController {
         
         let contact = contacts[indexPath.row]
         cell.nameLabel.text = contact.name
-        cell.emailLabel.text = contact.email
-        cell.phoneLabel.text = contact.phoneNumber
+        cell.emailTextView.text = contact.email
+        cell.phoneTextView.text = contact.phoneNumber
         cell.positionLabel.text = contact.position
         cell.descriptionLabel.text = contact.description
         cell.contactImageView.image = UIImage(named: contact.imageUrl)
