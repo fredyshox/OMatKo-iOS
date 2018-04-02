@@ -33,8 +33,9 @@ class EditionViewController: OMKViewController {
     }
     
     func updateUI(with edition: Edition) {
-        self.yearLabel.text = "2XX4"
-        self.monthLabel.text = edition.title
+        let titleWords = edition.title.split(separator: " ")
+        self.yearLabel.text = String(titleWords.last ?? "20XX")
+        self.monthLabel.text = String(titleWords.first ?? "Month")
         self.descriptionLabel.text = edition.description
         if edition.imageUrl.isEmpty {
             self.imageView.isHidden = true
