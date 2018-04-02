@@ -24,6 +24,8 @@
 "Are you sure you want to rate lecture %s for %d?" = "Are you sure you want to rate lecture %s for %d?";
 "Yes" = "Yes";
 "No" = "No";
+"No permissions" = "No permissions";
+"Can't access caledar. Check your privacy settings." = "Can't access caledar. Check your privacy settings.";
 
 // Enum values
 "FRIDAY" = "Friday";

@@ -24,6 +24,8 @@
 "Are you sure you want to rate lecture %s for %d?" = "Czy napewno chcesz ocenić wykład %s oceną %d?";
 "Yes" = "Tak";
 "No" = "Nie";
+"No permissions" = "Brak uprawnień";
+"Can't access caledar. Check your privacy settings." = "Brak dostępu do kalendarza. Sprawdź ustawienia prywatności";
 
 // Enum values
 "FRIDAY" = "Piątek";

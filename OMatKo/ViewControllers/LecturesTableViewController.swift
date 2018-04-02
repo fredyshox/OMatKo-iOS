@@ -8,8 +8,16 @@
 
 import UIKit
 import XLPagerTabStrip
+import EventKit
+import EventKitUI
 
 class LecturesTableViewController: OMKTableViewController {
+    
+    // MARK: EventStore
+    
+    static let eventStore: EKEventStore = EKEventStore()
+    
+    // MARK: Properties
     
     // estimated row height
     static let scheduleDateFormatter: DateFormatter = {
@@ -63,6 +71,18 @@ class LecturesTableViewController: OMKTableViewController {
         str += " - \(LecturesTableViewController.scheduleDateFormatter.string(from: event.endDate))"
         
         return str
+    }
+    
+    func createCalendarEvent(_ lecture: Event, store: EKEventStore) -> EKEvent {
+        let event = EKEvent(eventStore: store)
+        event.title = lecture.title
+        event.startDate = lecture.beginDate
+        event.endDate = lecture.endDate
+        
+        event.location = lecture.place
+        event.notes = lecture.shortDescription
+        
+        return event
     }
 
     // MARK: - Table view data source
@@ -137,8 +157,38 @@ extension LecturesTableViewController: LectureTableViewCellDelegate {
         if let indexPath = self.tableView.indexPath(for: cell) {
             let lecture = self.lectures[indexPath.row]
             
-            // TODO open caledar
+            let store = LecturesTableViewController.eventStore
+            store.requestAccess(to: .event, completion: { (granted, error) in
+                if !granted {
+                    let title = NSLocalizedString("No permissions", comment: "")
+                    let message = NSLocalizedString("Can't access caledar. Check your privacy settings.", comment: "")
+                    let ok = NSLocalizedString("OK", comment: "")
+                    DispatchQueue.main.async {
+                        let alert = UIAlertController(title: title,
+                                                      message: message,
+                                                      preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: ok, style: .default, handler: nil))
+                        
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                } else {
+                    let eventVC = EKEventEditViewController()
+                    eventVC.eventStore = store
+                    eventVC.event = self.createCalendarEvent(lecture, store: store)
+                    eventVC.editViewDelegate = self
+
+                    DispatchQueue.main.async {
+                        self.present(eventVC, animated: true, completion: nil)
+                    }
+                }
+            })
         }
+    }
+}
+
+extension LecturesTableViewController: EKEventEditViewDelegate {
+    func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
