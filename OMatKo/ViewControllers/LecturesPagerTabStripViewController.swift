@@ -47,8 +47,9 @@ class LecturesPagerTabStripViewController: ButtonBarPagerTabStripViewController,
         settings.style.buttonBarItemBackgroundColor = UIColor.clear
         settings.style.selectedBarBackgroundColor = UIColor.omatkoIndicator
         settings.style.selectedBarHeight = 2.0
-        settings.style.buttonBarItemsShouldFillAvailableWidth = true
         settings.style.buttonBarItemFont = UIFont.systemFont(ofSize: 16.0, weight: .semibold)
+        settings.style.buttonBarItemsShouldFillAvailableWidth = true
+        
         
         setUpNavBar()
         view.backgroundColor = UIColor.omatkoLightBackground
@@ -56,8 +57,14 @@ class LecturesPagerTabStripViewController: ButtonBarPagerTabStripViewController,
         
         super.viewDidLoad()
         
-        self.reloadPagerTabStripView()
+        view.setNeedsLayout()
+        view.layoutIfNeeded()
         loadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
     }
     
     func setUpNavBar() {
