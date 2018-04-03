@@ -13,11 +13,7 @@ class ContactsTableViewController: OMKTableViewController {
     
     static let contactCellHeight: CGFloat = 320.0
     
-    var contacts: [Contact] = [] {
-        didSet {
-            self.tableView.reloadData()
-        }
-    }
+    var contacts: [Contact] = []
     
     let disposeBag: DisposeBag = DisposeBag()
     
@@ -25,7 +21,6 @@ class ContactsTableViewController: OMKTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUpTableView()
 
         localDataService
@@ -38,6 +33,7 @@ class ContactsTableViewController: OMKTableViewController {
                     log.error("Error: \(error.localizedDescription)")
                 case .completed:
                     log.info("Completed.")
+                    self.tableView.reloadData()
                 }
             })
             .disposed(by: disposeBag)

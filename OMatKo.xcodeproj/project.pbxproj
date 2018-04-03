@@ -10,7 +10,6 @@
 		0DA6C12775CFD665D0294B89 /* Pods_OMatKo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A809D78965D25906CFA1BCA8 /* Pods_OMatKo.framework */; };
 		E2092A792045EB910055EBFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2092A782045EB910055EBFA /* AppDelegate.swift */; };
 		E2092A7E2045EB910055EBFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2092A7C2045EB910055EBFA /* Main.storyboard */; };
-		E2092A812045EB910055EBFA /* OMatKo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2092A7F2045EB910055EBFA /* OMatKo.xcdatamodeld */; };
 		E2092A862045EB910055EBFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2092A842045EB910055EBFA /* LaunchScreen.storyboard */; };
 		E2092A8E2045EDCE0055EBFA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2092A8D2045EDCE0055EBFA /* GoogleService-Info.plist */; };
 		E2092A912045F0700055EBFA /* Foundation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2092A902045F0700055EBFA /* Foundation+Extensions.swift */; };
@@ -72,7 +71,6 @@
 		E2092A752045EB910055EBFA /* OMatKo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OMatKo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2092A782045EB910055EBFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2092A7D2045EB910055EBFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E2092A802045EB910055EBFA /* OMatKo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OMatKo.xcdatamodel; sourceTree = "<group>"; };
 		E2092A852045EB910055EBFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2092A872045EB910055EBFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2092A8D2045EDCE0055EBFA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -188,7 +186,6 @@
 				E2CC5289204DA7E200153B63 /* Assets.xcassets */,
 				E2092A842045EB910055EBFA /* LaunchScreen.storyboard */,
 				E2092A872045EB910055EBFA /* Info.plist */,
-				E2092A7F2045EB910055EBFA /* OMatKo.xcdatamodeld */,
 				E2092A8D2045EDCE0055EBFA /* GoogleService-Info.plist */,
 				E23A189F2070676800385A15 /* Localizable.strings */,
 			);
@@ -495,7 +492,6 @@
 				E2092A912045F0700055EBFA /* Foundation+Extensions.swift in Sources */,
 				E2092A962045F0FB0055EBFA /* RoundView.swift in Sources */,
 				E251E0F72048BB3F00B07DE9 /* SideMenuController.swift in Sources */,
-				E2092A812045EB910055EBFA /* OMatKo.xcdatamodeld in Sources */,
 				E251E0EE20487F2600B07DE9 /* FirebaseDataService.swift in Sources */,
 				E2ED7E5B2059E82400972BED /* OMKNavigationController.swift in Sources */,
 				E251E0FF2049640000B07DE9 /* SideMenuManager.swift in Sources */,
@@ -682,6 +678,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JE2494MFB5;
 				INFOPLIST_FILE = OMatKo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raczy.OMatKo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -698,6 +695,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JE2494MFB5;
 				INFOPLIST_FILE = OMatKo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raczy.OMatKo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -728,19 +726,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		E2092A7F2045EB910055EBFA /* OMatKo.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				E2092A802045EB910055EBFA /* OMatKo.xcdatamodel */,
-			);
-			currentVersion = E2092A802045EB910055EBFA /* OMatKo.xcdatamodel */;
-			path = OMatKo.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = E2092A6D2045EB910055EBFA /* Project object */;
 }

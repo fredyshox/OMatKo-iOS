@@ -29,27 +29,43 @@ class MenuViewController: UIViewController {
     @IBAction func openSnapchat(_ sender: UIButton) {
         let snapUrl = URL(string: "snapchat://add/omatkopwr")
         if snapUrl != nil && UIApplication.shared.canOpenURL(snapUrl!){
-            UIApplication.shared.open(snapUrl!)
+            openUrl(snapUrl!)
         } else if let url = URL(string: "https://snapchat.com/add/omatkopwr") {
-            UIApplication.shared.open(url)
+            openUrl(url)
         }
     }
     
     @IBAction func openFb(_ sender: UIButton) {
         let fbUrl = URL(string: "fb://page/269551433187258")
         if fbUrl != nil && UIApplication.shared.canOpenURL(fbUrl!) {
-            UIApplication.shared.open(fbUrl!)
+            openUrl(fbUrl!)
         } else if let url = URL(string: "https://www.facebook.com/omatkopwr"){
-            UIApplication.shared.open(url)
+            openUrl(url)
         }
     }
     
     @IBAction func openInstagram(_ sender: UIButton) {
         let instaUrl = URL(string: "instagram://user?username=USERNAME")
         if instaUrl != nil && UIApplication.shared.canOpenURL(instaUrl!) {
-            UIApplication.shared.open(instaUrl!)
+            openUrl(instaUrl!)
         } else if let url = URL(string: "https://instagram.com/_u/omatko.pwr") {
+            openUrl(url)
+        }
+    }
+    
+    private func openUrl(_ url: URL) {
+        if #available(iOS 10.0, *) {
             UIApplication.shared.open(url)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
+    }
+    
+    // MARK: VC Lifecycle
+    
+    override func viewDidLoad() {
+        if !menuItems.isEmpty {
+            tableView.selectRow(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: .none)
         }
     }
     
@@ -105,6 +121,17 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return MenuItemTableViewCell.defaultHeight
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = UIColor.clear
+        return view
     }
     
 }

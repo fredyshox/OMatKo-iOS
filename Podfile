@@ -1,5 +1,7 @@
 project 'OMatKo.xcodeproj'
 
+platform :ios, '9.0'
+
 target 'OMatKo' do
   use_frameworks!
 

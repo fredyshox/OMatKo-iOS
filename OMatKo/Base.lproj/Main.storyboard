@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,14 +16,30 @@
             <objects>
                 <viewController storyboardIdentifier="menuVC" id="mLK-Tg-KcZ" customClass="MenuViewController" customModule="OMatKo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="75o-85-5E5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Q49-nF-avh">
-                                <rect key="frame" x="0.0" y="190" width="375" height="477"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Q49-nF-avh">
+                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="AWV-ie-E7r">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="omatko" translatesAutoresizingMaskIntoConstraints="NO" id="LhV-kP-sOE">
+                                            <rect key="frame" x="12" y="0.0" width="351" height="170"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="LhV-kP-sOE" firstAttribute="top" secondItem="AWV-ie-E7r" secondAttribute="top" id="H7Q-pg-D3a"/>
+                                        <constraint firstAttribute="trailing" secondItem="LhV-kP-sOE" secondAttribute="trailing" constant="12" id="OSl-u9-6Qd"/>
+                                        <constraint firstItem="LhV-kP-sOE" firstAttribute="leading" secondItem="AWV-ie-E7r" secondAttribute="leading" constant="12" id="cn1-wZ-u0G"/>
+                                        <constraint firstAttribute="bottom" secondItem="LhV-kP-sOE" secondAttribute="bottom" id="ldd-pa-BPP"/>
+                                    </constraints>
+                                </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="7YD-2O-uAO">
-                                    <rect key="frame" x="0.0" y="117.5" width="375" height="85"/>
+                                    <rect key="frame" x="0.0" y="287.5" width="320" height="85"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZT-xn-PHq" customClass="RoundView" customModule="OMatKo" customModuleProvider="target">
@@ -101,50 +117,26 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="lTX-zc-Kh5">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="225.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lTX-zc-Kh5" id="htx-ds-UmD">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s8P-Eb-J51">
-                                <rect key="frame" x="0.0" y="20" width="375" height="170"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="omatko" translatesAutoresizingMaskIntoConstraints="NO" id="G9B-vb-3N8">
-                                        <rect key="frame" x="16" y="0.0" width="343" height="170"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="170" id="uTH-lz-tlH"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="G9B-vb-3N8" firstAttribute="leading" secondItem="s8P-Eb-J51" secondAttribute="leading" constant="16" id="Hoc-NC-16V"/>
-                                    <constraint firstAttribute="trailing" secondItem="G9B-vb-3N8" secondAttribute="trailing" constant="16" id="MyI-MN-rN5"/>
-                                    <constraint firstAttribute="height" constant="170" id="QdB-0A-waI"/>
-                                    <constraint firstItem="G9B-vb-3N8" firstAttribute="top" secondItem="s8P-Eb-J51" secondAttribute="top" id="WkE-HD-vUB"/>
-                                    <constraint firstAttribute="bottom" secondItem="G9B-vb-3N8" secondAttribute="bottom" id="kHO-dk-wjw"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Q49-nF-avh" firstAttribute="leading" secondItem="0XQ-1K-XIP" secondAttribute="leading" id="EfC-Vh-0Ra"/>
                             <constraint firstItem="0XQ-1K-XIP" firstAttribute="trailing" secondItem="Q49-nF-avh" secondAttribute="trailing" id="Fb2-J9-gmH"/>
-                            <constraint firstItem="Q49-nF-avh" firstAttribute="top" secondItem="s8P-Eb-J51" secondAttribute="bottom" id="Mqp-Jk-8JJ"/>
-                            <constraint firstItem="0XQ-1K-XIP" firstAttribute="trailing" secondItem="s8P-Eb-J51" secondAttribute="trailing" id="VsL-HZ-eYV"/>
-                            <constraint firstItem="s8P-Eb-J51" firstAttribute="top" secondItem="0XQ-1K-XIP" secondAttribute="top" id="adS-Ef-HMY"/>
+                            <constraint firstItem="Q49-nF-avh" firstAttribute="top" secondItem="0XQ-1K-XIP" secondAttribute="top" id="PTk-fE-I6w"/>
                             <constraint firstItem="0XQ-1K-XIP" firstAttribute="bottom" secondItem="Q49-nF-avh" secondAttribute="bottom" id="pCn-vW-COI"/>
-                            <constraint firstItem="s8P-Eb-J51" firstAttribute="leading" secondItem="0XQ-1K-XIP" secondAttribute="leading" id="yuG-3W-8JZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0XQ-1K-XIP"/>
                     </view>
                     <connections>
-                        <outlet property="logoImageView" destination="G9B-vb-3N8" id="nvJ-I9-Ri8"/>
                         <outlet property="tableView" destination="Q49-nF-avh" id="3pc-wm-6ph"/>
                     </connections>
                 </viewController>

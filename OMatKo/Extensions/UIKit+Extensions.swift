@@ -196,3 +196,12 @@ extension UITextView {
     }
 }
 
+extension UIApplication {
+    public func open(url: URL) {
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
+    }
+}

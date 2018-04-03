@@ -81,7 +81,7 @@ class PlacesTableViewController: OMKTableViewController {
         let place = self.places[indexPath.row]
         if let pinTitle = place.title.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
            let url = URL(string: "http://maps.apple.com/?q=\(pinTitle)&ll=\(place.latitude),\(place.longitude)") {
-            UIApplication.shared.open(url)
+            UIApplication.shared.open(url: url)
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
