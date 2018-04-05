@@ -38,6 +38,8 @@ class VoteViewController: OMKViewController {
         pickerTextField.inputView = pickerView
         pickerTextField.delegate = self
         voteButton.isEnabled = false
+        voteButton.setBackgroundImage(UIImage.from(color: UIColor.lightGray, size: CGSize(width: 33, height: 33)),
+                                         for: .disabled)
         
         self.navigationItem.hidesBackButton = true
         
@@ -45,13 +47,11 @@ class VoteViewController: OMKViewController {
     }
     
     func loadLectureCodes() {
-        AppDelegate.dataService.events
+        AppDelegate.dataService.votingOptions
             .asObservable()
-            .subscribe(onNext: { (events) in
+            .subscribe(onNext: { (eventKeys) in
                 self.pickerTextField.text?.removeAll()
-                self.lectureCodes = events.map({ (event) -> String in
-                    return event.id
-                })
+                self.lectureCodes = eventKeys
             })
             .disposed(by: disposeBag)
     }

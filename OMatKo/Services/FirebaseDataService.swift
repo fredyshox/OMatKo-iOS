@@ -12,11 +12,16 @@ import Firebase
 class FirebaseDataService: DataService {
     
     private var _events: Variable<[Event]> = Variable([])
+    private var _votingOptions: Variable<[String]> = Variable([])
     
     // MARK: DataService protocol
     
     var events: Variable<[Event]> {
         return _events
+    }
+    
+    var votingOptions: Variable<[String]> {
+        return _votingOptions
     }
     
     // MARK: Firebase database references
@@ -34,6 +39,11 @@ class FirebaseDataService: DataService {
         self.fetchEvents().subscribe(onNext: { newEvents in
             self._events.value.removeAll()
             self._events.value.append(contentsOf: newEvents)
+        }).disposed(by: disposeBag)
+        
+        self.fetchVotes().subscribe(onNext: { newOptions in
+            self._votingOptions.value.removeAll()
+            self._votingOptions.value.append(contentsOf: newOptions)
         }).disposed(by: disposeBag)
     }
     
@@ -70,11 +80,28 @@ class FirebaseDataService: DataService {
     /**
      Returns observable map [<eventId>:<mark>]
      */
-    func fetchVotes() -> Observable<[String: Int]> {
-        return Observable<[String: Int]>.create({ (observer) -> Disposable in
+    func fetchVotes() -> Observable<[String]> {
+        return Observable<[String]>.create({ (observer) -> Disposable in
+            let obs = self.votesRef.observe(.value, with: { (snapshot) in
+                guard let _ = snapshot.value else {
+                    return
+                }
+                
+                var keys: [String] = []
+                for childSnap in snapshot.children {
+                    if let snap = childSnap as? DataSnapshot {
+                        keys.append(snap.key)
+                    } else {
+                        observer.onError(DataServiceError.serialization)
+                    }
+                }
+                
+                observer.onNext(keys)
+            })
             
-            
-            return Disposables.create()
+            return Disposables.create {
+                self.votesRef.removeObserver(withHandle: obs)
+            }
         })
     }
     

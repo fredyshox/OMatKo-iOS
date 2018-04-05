@@ -11,6 +11,7 @@ import RxSwift
 
 protocol DataService {
     var events: Variable<[Event]> { get }
+    var votingOptions: Variable<[String]> { get }
     func vote(forEventWithId eventId: String, mark: Int) throws
 }
 
