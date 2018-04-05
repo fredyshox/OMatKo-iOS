@@ -60,7 +60,7 @@ class Event: Codable {
               let place = dict[CodingKeys.place.stringValue] as? String,
               let eventDescription = dict[CodingKeys.eventDescription.stringValue] as? String,
               let shortDescription = dict[CodingKeys.shortDescription.stringValue] as? String,
-              let beginDateVal = dict[CodingKeys.beginDate.stringValue] as? TimeInterval,
+              let beginDateVal = (dict[CodingKeys.beginDate.stringValue] as? TimeInterval),
               let endDateVal = dict[CodingKeys.endDate.stringValue] as? TimeInterval,
               let categoryVal = dict[CodingKeys.category.stringValue] as? String,
               let category = Event.Category(rawValue: categoryVal),
@@ -76,8 +76,8 @@ class Event: Codable {
         self.place = place
         self.eventDescription = eventDescription
         self.shortDescription = shortDescription
-        self.beginDate = Date(timeIntervalSince1970: beginDateVal)
-        self.endDate = Date(timeIntervalSince1970: endDateVal)
+        self.beginDate = Date(timeIntervalSince1970: beginDateVal / 1000.0)
+        self.endDate = Date(timeIntervalSince1970: endDateVal / 1000.0)
         self.category = category
         self.day = day
     }

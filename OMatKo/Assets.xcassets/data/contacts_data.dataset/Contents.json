@@ -6,7 +6,7 @@
   "data" : [
     {
       "idiom" : "universal",
-      "filename" : "contacts.xml",
+      "filename" : "contacts_data.xml",
       "universal-type-identifier" : "public.xml"
     }
   ]

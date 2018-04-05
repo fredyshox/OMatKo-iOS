@@ -10,8 +10,8 @@
 	
 	<sponsor 
 	    name = "Aviva"
-	    description = "Aviva należy do największych grup ubezpieczeniowych w Europie. Jest liderem na swoim macierzystym rynku brytyjskim, gdzie działa już ponad 320 lat. Aviva to blisko 30 tys. pracowników, którzy obsługują 33 miliony klientów w 16 krajach Europy i Azji oraz w Kanadzie. Działalność w Polsce rozpoczęła w 1992 roku. Od tego czasu firmie zaufało już ponad 3,5 mln osób. W tym roku będziecie mieli okazję spotkać Avivę na naszej konferencji i porozmawiać z przedstawicielami firmy, która wspiera nasze wydarzenie jako Sponsor." 
-	    title = "Sponsor"
+	    description = ""
+		title = "Sponsor"
 	    imageId = "img_aviva" />,
 	
 	<supporting_company 
@@ -35,6 +35,12 @@
 	<supporting_company 
 		name = "KRUK S.A."
 		imageId = "img_kruk" 
+		description = ""
+		title = "" />,
+		
+	<supporting_company 
+		name = "CASIO"
+		imageId = "img_casio" 
 		description = ""
 		title = "" />,
 		
@@ -93,7 +99,7 @@
 		
 	<sponsorship 
 		name = "Przewodniczący Sejmiku Województwa Dolnośląskiego"
-		imageId = "" 
+		imageId = "img_przewodniczacy" 
 		description = ""
 		title = "" />,
 		
@@ -110,20 +116,32 @@
 		title = "" />,
 		
 	<media 
+		name = "TVP 3 Katowice"
+		imageId = "img_tvp3" 
+		description = ""
+		title = "" />,
+		
+	<media 
+		name = "Semestr"
+		imageId = "img_semestr" 
+		description = ""
+		title = "" />,
+		
+	<media 
 		name = "DlaStudenta"
-		imageId = "" 
+		imageId = "img_dlastudenta" 
 		description = ""
 		title = "" />,
 	
 	<media 
 		name = "Żak"
-		imageId = "" 
+		imageId = "img_zak" 
 		description = ""
 		title = "" />,
 	
 	<media 
 		name = "TV Styk"
-		imageId = "" 
+		imageId = "img_styk" 
 		description = ""
 		title = "" />,
 	
@@ -171,7 +189,7 @@
 	
 	<organizer 
 		name = "Fundacja Manus"
-		imageId = "" 
+		imageId = "img_manus" 
 		description = ""
 		title = "" />
 </items>

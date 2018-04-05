@@ -143,16 +143,16 @@
 		
 	<place 
 		title ="Kampus PWr" 
-		description = "Mieści wszystkie budynki Politechniki, w tym budynek D20 z Centrum Kongresowym, czy budynek SKS (Strefa Kultury Studenckiej) ze stołówką i kawiarnią." 
+		description = "Mieści wszystkie budynki Politechniki, w tym budynek D20 z Centrum Kongresowym." 
 		latitude = "51.107402176013" 
 		longitude = "17.061960697174072" 
 		category = "OMatKo" />
 		
 	<place 
-		title ="Wędrówki Pub" 
-		description = "Pub niedaleko Rynku, miejsce piątkowej integracji!" 
-		latitude = "51.104161" 
-		longitude = "17.029952" 
+		title ="Pub Hex" 
+		description = "Najlepszy we Wrocławiu Pub z planszówkami, to tutaj spędzimy piątkowy wieczór! Do wyboru cała ściana gier oraz szeroki wachlarz ciekawych piw. Dojście do pubu nie jest takie oczywiste – lokal znajduje się na tyłach kamienicy, wejście od strony podwórza." 
+		latitude = "51.1183948" 
+		longitude = "17.028940499999976" 
 		category = "OMatKo" />
 		
 	<place 
@@ -189,6 +189,13 @@
 		latitude = "51.108414" 
 		longitude = "17.024182" 
 		category = "FOOD" />
+		
+	<place 
+		title ="Bazylia Bar" 
+		description = "Bazylia Bar to jedna z kilku stołówek studenckich Politechniki Wrocławskiej, znajduje się w budynku C-13, tzw. „serowcu”. To tutaj ma miejsce sobotni obiad! Ze względu na rozmiar pomieszczenia, obiad będzie wydawany w dwóch turach." 
+		latitude = "51.1073043" 
+		longitude = "17.059165500000063" 
+		category = "OMatKo" />
 		
 	<place 
 		title ="Masala GrillBarr: Najbardziej prestiżowe indyjskie jedzenie, drogie"

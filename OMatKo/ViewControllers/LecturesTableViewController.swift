@@ -86,6 +86,8 @@ class LecturesTableViewController: OMKTableViewController {
     }
 
     // MARK: - Table view data source
+    
+    var expandedIndexPaths: [IndexPath] = []
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -98,14 +100,16 @@ class LecturesTableViewController: OMKTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "lectureCell", for: indexPath) as! LectureTableViewCell
         
+        let isExpanded = self.expandedIndexPaths.contains(indexPath)
+        
         let lecture = self.lectures[indexPath.row]
-        cell.descriptionLabel.text = lecture.shortDescription
+        cell.descriptionLabel.text = isExpanded ? lecture.eventDescription : lecture.shortDescription
         cell.titleLabel.text = lecture.title
         cell.speakerLabel.text = lecture.presenter
         cell.scheduleLabel.text = formattedSchedule(for: lecture)
         cell.selectionStyle = .none
         
-        let image = cell.isSelected ? UIImage(named: "show_less") : UIImage(named: "show_more")
+        let image = isExpanded ? UIImage(named: "show_less") : UIImage(named: "show_more")
         cell.moreImageView.image = image
         
         cell.delegate = self
@@ -114,28 +118,26 @@ class LecturesTableViewController: OMKTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) as? LectureTableViewCell {
-            let lecture = self.lectures[indexPath.row]
-            cell.moreImageView.image = UIImage(named: "show_less")
-            cell.descriptionLabel.text = lecture.eventDescription
-        }
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        updateExpandedIndexPath(indexPath: indexPath)
     }
     
-    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        if let cell = tableView.cellForRow(at: indexPath) {
-            if cell.isSelected {
-                tableView.deselectRow(at: indexPath, animated: false)
-                return nil
-            } else {
-                return indexPath
-            }
+    func updateExpandedIndexPath(indexPath: IndexPath) {
+        let objectIndex = self.expandedIndexPaths.index(of: indexPath)
+        
+        if objectIndex != nil {
+            self.expandedIndexPaths.remove(at: objectIndex!)
+        } else {
+            self.expandedIndexPaths.append(indexPath)
         }
         
-        return nil
+        self.tableView.reloadRows(at: [indexPath], with: .fade)
     }
     
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) as? LectureTableViewCell {
+            log.info("Deselect : \(cell.isSelected)")
             let lecture = self.lectures[indexPath.row]
             cell.moreImageView.image = UIImage(named: "show_more")
             cell.descriptionLabel.text = lecture.shortDescription
