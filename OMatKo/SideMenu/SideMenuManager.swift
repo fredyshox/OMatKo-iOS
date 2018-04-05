@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ViewDeck
 
 class SideMenuManager: SideMenuControllerDataSource, MenuViewControllerDelegate {
     
