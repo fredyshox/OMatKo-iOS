@@ -104,7 +104,7 @@ class LecturesPagerTabStripViewController: ButtonBarPagerTabStripViewController,
     override var viewControllers: [UIViewController] {
         return _viewControllers
     }
-    
+
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         return viewControllers
     }

@@ -35,14 +35,23 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Uz-ms-gLX" userLabel="panPreventionSpace">
+                                <rect key="frame" x="0.0" y="64" width="20" height="603"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="zGP-sJ-VaV"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="QAu-Qf-hQg" firstAttribute="trailing" secondItem="Mp1-NU-43z" secondAttribute="trailing" id="AdG-aa-KUn"/>
+                            <constraint firstItem="0Uz-ms-gLX" firstAttribute="top" secondItem="QAu-Qf-hQg" secondAttribute="top" id="M3C-R4-ASr"/>
                             <constraint firstItem="QAu-Qf-hQg" firstAttribute="trailing" secondItem="Wym-Ms-bhf" secondAttribute="trailing" id="QjC-I4-AT7"/>
                             <constraint firstItem="Mp1-NU-43z" firstAttribute="top" secondItem="Wym-Ms-bhf" secondAttribute="bottom" id="Vju-DF-ZtU"/>
                             <constraint firstItem="Wym-Ms-bhf" firstAttribute="top" secondItem="QAu-Qf-hQg" secondAttribute="top" id="XuQ-Lf-HQZ"/>
+                            <constraint firstItem="0Uz-ms-gLX" firstAttribute="leading" secondItem="QAu-Qf-hQg" secondAttribute="leading" id="d5k-bp-XG9"/>
                             <constraint firstItem="Wym-Ms-bhf" firstAttribute="leading" secondItem="QAu-Qf-hQg" secondAttribute="leading" id="k2X-VI-xdt"/>
+                            <constraint firstItem="QAu-Qf-hQg" firstAttribute="bottom" secondItem="0Uz-ms-gLX" secondAttribute="bottom" id="kzP-jZ-cmq"/>
                             <constraint firstItem="QAu-Qf-hQg" firstAttribute="bottom" secondItem="Mp1-NU-43z" secondAttribute="bottom" id="rX4-2b-xtZ"/>
                             <constraint firstItem="Mp1-NU-43z" firstAttribute="leading" secondItem="QAu-Qf-hQg" secondAttribute="leading" id="sX6-p7-tDz"/>
                         </constraints>

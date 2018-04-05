@@ -45,7 +45,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPc-ew-HOo">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPc-ew-HOo">
                                 <rect key="frame" x="0.0" y="114" width="375" height="553"/>
                             </scrollView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Tsw-yU-Zel" customClass="ButtonBarView" customModule="XLPagerTabStrip">
@@ -62,15 +62,24 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zby-r8-ZJO" userLabel="panPreventionSpace">
+                                <rect key="frame" x="0.0" y="64" width="20" height="603"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="MFO-cz-jFw"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="h3s-fP-9be" firstAttribute="trailing" secondItem="Tsw-yU-Zel" secondAttribute="trailing" id="2jg-PG-lxS"/>
                             <constraint firstItem="h3s-fP-9be" firstAttribute="trailing" secondItem="YPc-ew-HOo" secondAttribute="trailing" id="3fQ-QW-mEo"/>
                             <constraint firstItem="Tsw-yU-Zel" firstAttribute="leading" secondItem="h3s-fP-9be" secondAttribute="leading" id="4tM-kz-3eL"/>
+                            <constraint firstItem="h3s-fP-9be" firstAttribute="bottom" secondItem="Zby-r8-ZJO" secondAttribute="bottom" id="6w5-Z8-oTK"/>
+                            <constraint firstItem="Zby-r8-ZJO" firstAttribute="top" secondItem="h3s-fP-9be" secondAttribute="top" id="CEG-su-QZo"/>
                             <constraint firstItem="h3s-fP-9be" firstAttribute="bottom" secondItem="YPc-ew-HOo" secondAttribute="bottom" id="EEN-A3-NRV"/>
                             <constraint firstItem="YPc-ew-HOo" firstAttribute="leading" secondItem="h3s-fP-9be" secondAttribute="leading" id="R3E-43-AKZ"/>
                             <constraint firstItem="YPc-ew-HOo" firstAttribute="top" secondItem="Tsw-yU-Zel" secondAttribute="bottom" id="i2g-nY-zp6"/>
+                            <constraint firstItem="Zby-r8-ZJO" firstAttribute="leading" secondItem="h3s-fP-9be" secondAttribute="leading" id="nEO-bH-cX0"/>
                             <constraint firstItem="Tsw-yU-Zel" firstAttribute="top" secondItem="h3s-fP-9be" secondAttribute="top" id="pJF-Hx-gmB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h3s-fP-9be"/>

@@ -183,7 +183,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyy-Tf-vh2">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyy-Tf-vh2">
                                 <rect key="frame" x="0.0" y="114" width="375" height="553"/>
                             </scrollView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zpV-g5-t9H" customClass="ButtonBarView" customModule="XLPagerTabStrip">
@@ -200,14 +200,23 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUe-Ck-F7t" userLabel="panPreventionSpace">
+                                <rect key="frame" x="0.0" y="64" width="20" height="603"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="1La-Hz-wMz"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZUe-Ck-F7t" firstAttribute="top" secondItem="s9K-Xp-CDo" secondAttribute="top" id="1TA-2l-lIG"/>
                             <constraint firstItem="s9K-Xp-CDo" firstAttribute="trailing" secondItem="zpV-g5-t9H" secondAttribute="trailing" id="4Wx-s3-Qod"/>
+                            <constraint firstItem="ZUe-Ck-F7t" firstAttribute="leading" secondItem="s9K-Xp-CDo" secondAttribute="leading" id="BqH-Ad-3r7"/>
                             <constraint firstItem="nyy-Tf-vh2" firstAttribute="top" secondItem="zpV-g5-t9H" secondAttribute="bottom" id="e0d-UK-KFU"/>
                             <constraint firstItem="nyy-Tf-vh2" firstAttribute="leading" secondItem="s9K-Xp-CDo" secondAttribute="leading" id="i86-yj-f5b"/>
                             <constraint firstItem="zpV-g5-t9H" firstAttribute="top" secondItem="s9K-Xp-CDo" secondAttribute="top" id="ocr-bF-HD7"/>
                             <constraint firstItem="s9K-Xp-CDo" firstAttribute="bottom" secondItem="nyy-Tf-vh2" secondAttribute="bottom" id="plr-7K-RTx"/>
+                            <constraint firstItem="s9K-Xp-CDo" firstAttribute="bottom" secondItem="ZUe-Ck-F7t" secondAttribute="bottom" id="utn-k1-abw"/>
                             <constraint firstItem="s9K-Xp-CDo" firstAttribute="trailing" secondItem="nyy-Tf-vh2" secondAttribute="trailing" id="w2q-tE-pMM"/>
                             <constraint firstItem="zpV-g5-t9H" firstAttribute="leading" secondItem="s9K-Xp-CDo" secondAttribute="leading" id="yMu-ZA-fng"/>
                         </constraints>
