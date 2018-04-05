@@ -84,9 +84,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setUpSideMenu()
         
         Theme.apply()
+        UIApplication.shared.isStatusBarHidden = false
         
         return true
     }
-
+    
 }
 
