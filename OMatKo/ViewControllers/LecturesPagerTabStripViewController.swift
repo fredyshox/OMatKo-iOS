@@ -86,6 +86,8 @@ class LecturesPagerTabStripViewController: ButtonBarPagerTabStripViewController,
             if let lvc = vc as? LecturesTableViewController {
                 lvc.lectures = events.filter({ (event) -> Bool in
                     return event.category == self.lectureCategory && event.day == lvc.conferenceDay
+                }).sorted(by: { (event1, event2) -> Bool in
+                    return event1.beginDate < event2.beginDate
                 })
             }
         }
