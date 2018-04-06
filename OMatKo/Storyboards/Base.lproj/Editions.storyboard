@@ -201,9 +201,9 @@
                                 <cells/>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUe-Ck-F7t" userLabel="panPreventionSpace">
-                                <rect key="frame" x="0.0" y="64" width="20" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="32" height="603"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="1La-Hz-wMz"/>
+                                    <constraint firstAttribute="width" constant="32" id="1La-Hz-wMz"/>
                                 </constraints>
                             </view>
                         </subviews>
