@@ -78,7 +78,7 @@ class VoteViewController: OMKViewController {
     @IBAction func vote(_ sender: Any) {
         let rating = rateSegmentedControl.selectedSegmentIndex + 1
         let code = pickerTextField.text ?? ""
-        let message = String(format: NSLocalizedString("Are you sure you want to rate lecture %s for %d?", comment: ""), code, rating)
+        let message = String(format: NSLocalizedString("Are you sure you want to rate lecture %@ for %d?", comment: ""), code, rating)
         
         let voteAlert = UIAlertController(title: NSLocalizedString("Confirmation", comment: ""),
                                             message: message,
