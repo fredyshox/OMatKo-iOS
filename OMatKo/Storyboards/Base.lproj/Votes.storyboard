@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Log In View Controller-->
+        <!--Log in-->
         <scene sceneID="jS4-gg-B89">
             <objects>
                 <viewController storyboardIdentifier="loginVC" id="Ofx-Iz-cuQ" customClass="LogInViewController" customModule="OMatKo" customModuleProvider="target" sceneMemberID="viewController">
@@ -134,6 +134,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vz7-tF-ysE"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Log in" id="a6Q-jf-E3d"/>
                     <connections>
                         <outlet property="emailTextField" destination="CIf-Af-ny1" id="M8g-LO-mv0"/>
                         <outlet property="passwordTextField" destination="zTK-QA-pMC" id="WhB-85-cCV"/>
@@ -144,7 +145,7 @@
             </objects>
             <point key="canvasLocation" x="-98" y="251"/>
         </scene>
-        <!--Vote View Controller-->
+        <!--Vote-->
         <scene sceneID="7US-kI-Yba">
             <objects>
                 <viewController storyboardIdentifier="votesVC" id="2Ts-4d-nus" customClass="VoteViewController" customModule="OMatKo" customModuleProvider="target" sceneMemberID="viewController">
@@ -241,7 +242,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0e7-r8-gek"/>
                     </view>
-                    <navigationItem key="navigationItem" id="bEX-cI-f8a">
+                    <navigationItem key="navigationItem" title="Vote" id="bEX-cI-f8a">
                         <barButtonItem key="rightBarButtonItem" title="Log out" style="done" id="vWC-e8-TkR">
                             <connections>
                                 <action selector="logOut:" destination="2Ts-4d-nus" id="eBS-BE-5zr"/>

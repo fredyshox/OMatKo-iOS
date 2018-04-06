@@ -5,6 +5,12 @@
 /* Class = "UITextField"; placeholder = "email"; ObjectID = "CIf-Af-ny1"; */
 "CIf-Af-ny1.placeholder" = "email";
 
+/* Class = "UINavigationItem"; title = "Log in"; ObjectID = "a6Q-jf-E3d"; */
+"a6Q-jf-E3d.title" = "Zaloguj";
+
+/* Class = "UINavigationItem"; title = "Vote"; ObjectID = "bEX-cI-f8a"; */
+"bEX-cI-f8a.title" = "Zagłosuj";
+
 /* Class = "UITextField"; placeholder = "Lecture code"; ObjectID = "iqX-YT-dT3"; */
 "iqX-YT-dT3.placeholder" = "Kod wykładu";
 

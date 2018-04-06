@@ -22,6 +22,8 @@ class ContactsTableViewController: OMKTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
+        
+        self.title = NSLocalizedString("Contact", comment: "")
 
         localDataService
             .fetchContacts()

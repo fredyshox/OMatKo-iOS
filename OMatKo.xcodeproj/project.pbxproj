@@ -83,6 +83,7 @@
 		E2092A9F2045F8890055EBFA /* LectureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureTableViewCell.swift; sourceTree = "<group>"; };
 		E2092AA02045F8890055EBFA /* LectureTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LectureTableViewCell.xib; sourceTree = "<group>"; };
 		E2092AA42045FBD30055EBFA /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		E22A3DA52078117300B6AAF4 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Votes.strings; sourceTree = "<group>"; };
 		E23A1899207066CA00385A15 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
 		E23A189A207066CA00385A15 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E23A18A12070679900385A15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -90,7 +91,6 @@
 		E24433882070717F0093AC78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Votes.storyboard; sourceTree = "<group>"; };
 		E244338D207072390093AC78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Editions.storyboard; sourceTree = "<group>"; };
 		E24433902070723B0093AC78 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Editions.strings; sourceTree = "<group>"; };
-		E2443392207074580093AC78 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Votes.strings; sourceTree = "<group>"; };
 		E251E0E42048791400B07DE9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		E251E0E820487C1000B07DE9 /* LecturesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesTableViewController.swift; sourceTree = "<group>"; };
 		E251E0EB20487D6800B07DE9 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
@@ -544,7 +544,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E24433882070717F0093AC78 /* Base */,
-				E2443392207074580093AC78 /* pl */,
+				E22A3DA52078117300B6AAF4 /* pl */,
 			);
 			name = Votes.storyboard;
 			sourceTree = "<group>";
