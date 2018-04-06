@@ -190,6 +190,14 @@ extension LecturesTableViewController: LectureTableViewCellDelegate {
 
 extension LecturesTableViewController: EKEventEditViewDelegate {
     func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
+        if action == .saved {
+            if let event = controller.event {
+                let store = controller.eventStore
+                
+                try? store?.save(event, span: .thisEvent)
+            }
+        }
+        
         self.dismiss(animated: true, completion: nil)
     }
 }
