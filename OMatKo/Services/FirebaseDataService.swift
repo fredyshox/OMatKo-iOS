@@ -118,6 +118,12 @@ class FirebaseDataService: DataService {
     
     private func prepareEventDict(snap: DataSnapshot) -> [String: Any]? {
         if var dict = snap.value as? [String: Any] {
+            // Times received from server are +2 hours
+            if let beginDate = dict[Event.CodingKeys.beginDate.stringValue] as? TimeInterval,
+                let endDate = dict[Event.CodingKeys.endDate.stringValue] as? TimeInterval {
+                dict[Event.CodingKeys.beginDate.stringValue] = beginDate - 2 * 3_600_000
+                dict[Event.CodingKeys.endDate.stringValue] = endDate - 2 * 3_600_000
+            }
             dict[Event.CodingKeys.id.stringValue] = snap.key
             return dict
         }
