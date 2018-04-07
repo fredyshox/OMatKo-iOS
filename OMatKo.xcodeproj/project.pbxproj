@@ -53,6 +53,7 @@
 		E2CC5282204D875600153B63 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC5281204D875600153B63 /* Place.swift */; };
 		E2CC5284204D88C800153B63 /* XMLLocalDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC5283204D88C800153B63 /* XMLLocalDataService.swift */; };
 		E2CC528A204DA7E300153B63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2CC5289204DA7E200153B63 /* Assets.xcassets */; };
+		E2ECF50C20796DC3009CA978 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2ECF50B20796DC3009CA978 /* Settings.bundle */; };
 		E2ED7E592059E51600972BED /* OMKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED7E582059E51600972BED /* OMKViewController.swift */; };
 		E2ED7E5B2059E82400972BED /* OMKNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED7E5A2059E82400972BED /* OMKNavigationController.swift */; };
 		E2ED7E60205AF63A00972BED /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED7E5E205AF63A00972BED /* PlaceTableViewCell.swift */; };
@@ -121,6 +122,7 @@
 		E2CC5281204D875600153B63 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		E2CC5283204D88C800153B63 /* XMLLocalDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLLocalDataService.swift; sourceTree = "<group>"; };
 		E2CC5289204DA7E200153B63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2ECF50B20796DC3009CA978 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		E2ED7E582059E51600972BED /* OMKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMKViewController.swift; sourceTree = "<group>"; };
 		E2ED7E5A2059E82400972BED /* OMKNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMKNavigationController.swift; sourceTree = "<group>"; };
 		E2ED7E5E205AF63A00972BED /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				E2092A872045EB910055EBFA /* Info.plist */,
 				E2092A8D2045EDCE0055EBFA /* GoogleService-Info.plist */,
 				E23A189F2070676800385A15 /* Localizable.strings */,
+				E2ECF50B20796DC3009CA978 /* Settings.bundle */,
 			);
 			path = OMatKo;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				E251E0FB20495D3D00B07DE9 /* Map.storyboard in Resources */,
 				E2ED7E61205AF63A00972BED /* PlaceTableViewCell.xib in Resources */,
 				E2092AA22045F8890055EBFA /* LectureTableViewCell.xib in Resources */,
+				E2ECF50C20796DC3009CA978 /* Settings.bundle in Resources */,
 				E2092A8E2045EDCE0055EBFA /* GoogleService-Info.plist in Resources */,
 				E24433872070717F0093AC78 /* Votes.storyboard in Resources */,
 				E23A189D2070676800385A15 /* Localizable.strings in Resources */,
