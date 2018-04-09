@@ -52,7 +52,7 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func openFb(_ sender: UIButton) {
-        let fbUrl = URL(string: "fb://page/269551433187258")
+        let fbUrl = URL(string: "fb://page?id=269551433187258")
         if fbUrl != nil && UIApplication.shared.canOpenURL(fbUrl!) {
             openUrl(fbUrl!)
         } else if let url = URL(string: "https://www.facebook.com/omatkopwr"){
@@ -61,7 +61,7 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func openInstagram(_ sender: UIButton) {
-        let instaUrl = URL(string: "instagram://user?username=USERNAME")
+        let instaUrl = URL(string: "instagram://user?username=omatko.pwr")
         if instaUrl != nil && UIApplication.shared.canOpenURL(instaUrl!) {
             openUrl(instaUrl!)
         } else if let url = URL(string: "https://instagram.com/_u/omatko.pwr") {
