@@ -21,7 +21,7 @@
 "Invalid email" = "Invalid email";
 "Invalid password" = "Invalid password";
 "Confirmation" = "Confirmation";
-"Are you sure you want to rate lecture %s for %d?" = "Are you sure you want to rate lecture %s for %d?";
+"Are you sure you want to rate lecture %@ for %d?" = "Are you sure you want to rate lecture %@ for %d?";
 "Yes" = "Yes";
 "No" = "No";
 "No permissions" = "No permissions";

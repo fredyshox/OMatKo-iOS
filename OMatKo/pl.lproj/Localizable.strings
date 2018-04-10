@@ -21,7 +21,7 @@
 "Invalid email" = "Błędny adres email";
 "Invalid password" = "Błędne hasło";
 "Confirmation" = "Potwierdzenie";
-"Are you sure you want to rate lecture %s for %d?" = "Czy napewno chcesz ocenić wykład %s oceną %d?";
+"Are you sure you want to rate lecture %@ for %d?" = "Czy napewno chcesz ocenić wykład %@ oceną %d?";
 "Yes" = "Tak";
 "No" = "Nie";
 "No permissions" = "Brak uprawnień";
