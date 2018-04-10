@@ -25,7 +25,10 @@
 "Yes" = "Tak";
 "No" = "Nie";
 "No permissions" = "Brak uprawnień";
-"Can't access caledar. Check your privacy settings." = "Brak dostępu do kalendarza. Sprawdź ustawienia prywatności";
+"Can't access caledar. Check your privacy settings." = "Brak dostępu do kalendarza. Sprawdź ustawienia prywatności.";
+"Invalid code" = "Niepoprawny kod";
+"Provided lecture code is invalid." = "Podany kod wykładu jest niepoprawny.";
+"Try again" = "Sprobuj ponownie";
 
 // Enum values
 "FRIDAY" = "Piątek";
@@ -39,6 +42,6 @@
 
 "sponsor" = "Sponsorzy";
 "supporting_company" = "Firmy wspierające";
-"media" = "Media";
+"media" = "Patroni medialni";
 "organizer" = "Organizatorzy";
 "sponsorship" = "Patronat honorowy";

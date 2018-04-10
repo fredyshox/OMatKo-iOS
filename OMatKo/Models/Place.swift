@@ -26,7 +26,7 @@ struct Place: Codable, BaseModel {
         case conference = "OMatKo"
         
         static var allValues: [PlaceCategory] {
-            return [sights, shopping, entertainment, food, conference]
+            return [conference, entertainment, food, sights, shopping]
         }
         
         var localizedTitle: String {

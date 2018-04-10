@@ -26,6 +26,9 @@
 "No" = "No";
 "No permissions" = "No permissions";
 "Can't access caledar. Check your privacy settings." = "Can't access caledar. Check your privacy settings.";
+"Invalid code" = "Invalid code";
+"Provided lecture code is invalid." = "Provided lecture code is invalid.";
+"Try again" = "Try again";
 
 // Enum values
 "FRIDAY" = "Friday";

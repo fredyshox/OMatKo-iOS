@@ -23,7 +23,7 @@ struct Sponsor: Codable, BaseModel {
         case organizer = "organizer"
         case sponsorship = "sponsorship"
         
-        static var allValues: [Category] = [sponsor, supportingCompany, media, organizer, sponsorship]
+        static var allValues: [Category] = [sponsor, supportingCompany, sponsorship, media, organizer]
         
         var localizedTitle: String {
             return NSLocalizedString(self.rawValue, comment: "")

@@ -12,11 +12,7 @@ import RxSwift
 
 class VoteViewController: OMKViewController {
     
-    var lectureCodes: [String] = [] {
-        didSet {
-            pickerView.reloadAllComponents()
-        }
-    }
+    var lectureCodes: [String] = []
     
     let disposeBag: DisposeBag = DisposeBag()
     
@@ -24,19 +20,11 @@ class VoteViewController: OMKViewController {
     @IBOutlet weak var rateSegmentedControl: UISegmentedControl!
     @IBOutlet weak var voteButton: RoundButton!
     
-    lazy var pickerView: UIPickerView = {
-        let view = UIPickerView()
-        view.dataSource = self
-        view.delegate = self
-        
-        return view
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pickerTextField.inputView = pickerView
         pickerTextField.delegate = self
+        pickerTextField.autocorrectionType = .no
         voteButton.isEnabled = false
         voteButton.setBackgroundImage(UIImage.from(color: UIColor.lightGray, size: CGSize(width: 33, height: 33)),
                                          for: .disabled)
@@ -67,6 +55,17 @@ class VoteViewController: OMKViewController {
         return errorAlert
     }
     
+    func validationErrorAlert() -> UIAlertController {
+        let title = NSLocalizedString("Invalid code", comment: "")
+        let message = NSLocalizedString("Provided lecture code is invalid.", comment: "")
+        let tryAgain = NSLocalizedString("Try again", comment: "")
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: tryAgain, style: .default, handler: nil))
+        
+        return alert
+    }
+    
     @IBAction func logOut(_ sender: Any) {
         do {
             try Auth.auth().signOut()
@@ -75,27 +74,36 @@ class VoteViewController: OMKViewController {
         }
     }
     
+    func validateLectureCode(code: String) -> Bool {
+        return self.lectureCodes.contains(code)
+    }
+    
     @IBAction func vote(_ sender: Any) {
         let rating = rateSegmentedControl.selectedSegmentIndex + 1
         let code = pickerTextField.text ?? ""
-        let message = String(format: NSLocalizedString("Are you sure you want to rate lecture %@ for %d?", comment: ""), code, rating)
         
-        let voteAlert = UIAlertController(title: NSLocalizedString("Confirmation", comment: ""),
-                                            message: message,
-                                            preferredStyle: .alert)
-        voteAlert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: ""), style: .default, handler: { (_) in
-            log.info("Attempt to vote: \(code) mark: \(rating)")
+        if !validateLectureCode(code: code) {
+            present(validationErrorAlert(), animated: true, completion: nil)
+        } else {
+            let message = String(format: NSLocalizedString("Are you sure you want to rate lecture %@ for %d?", comment: ""), code, rating)
             
-            do {
-                try AppDelegate.dataService.vote(forEventWithId: code, mark: rating)
-            } catch let err {
-                log.error("Error: \(err.localizedDescription)")
-                self.present(self.errorAlert(), animated: true, completion: nil)
-            }
-        }))
-        voteAlert.addAction(UIAlertAction(title: NSLocalizedString("No", comment: ""), style: .cancel, handler: nil))
-        
-        self.present(voteAlert, animated: true, completion: nil)
+            let voteAlert = UIAlertController(title: NSLocalizedString("Confirmation", comment: ""),
+                                              message: message,
+                                              preferredStyle: .alert)
+            voteAlert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: ""), style: .default, handler: { (_) in
+                log.info("Attempt to vote: \(code) mark: \(rating)")
+                
+                do {
+                    try AppDelegate.dataService.vote(forEventWithId: code, mark: rating)
+                } catch let err {
+                    log.error("Error: \(err.localizedDescription)")
+                    self.present(self.errorAlert(), animated: true, completion: nil)
+                }
+            }))
+            voteAlert.addAction(UIAlertAction(title: NSLocalizedString("No", comment: ""), style: .cancel, handler: nil))
+            
+            self.present(voteAlert, animated: true, completion: nil)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -105,22 +113,7 @@ class VoteViewController: OMKViewController {
     
 }
 
-extension VoteViewController: UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.lectureCodes.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.lectureCodes[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.pickerTextField.text = lectureCodes[row]
-    }
+extension VoteViewController:  UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField.text == nil {
