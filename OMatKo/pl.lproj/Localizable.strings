@@ -28,7 +28,7 @@
 "Can't access caledar. Check your privacy settings." = "Brak dostępu do kalendarza. Sprawdź ustawienia prywatności.";
 "Invalid code" = "Niepoprawny kod";
 "Provided lecture code is invalid." = "Podany kod wykładu jest niepoprawny.";
-"Try again" = "Sprobuj ponownie";
+"Try again" = "Spróbuj ponownie";
 
 // Enum values
 "FRIDAY" = "Piątek";

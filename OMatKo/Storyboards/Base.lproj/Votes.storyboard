@@ -163,15 +163,6 @@
                                             <constraint firstAttribute="width" secondItem="zrn-fH-rJ1" secondAttribute="height" multiplier="1:1" id="keg-oq-fcw"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lecture code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iqX-YT-dT3">
-                                        <rect key="frame" x="20" y="149" width="303" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="Ig9-k7-yzh"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="r8q-kk-EAy">
                                         <rect key="frame" x="20" y="200" width="303" height="29"/>
                                         <segments>
@@ -202,6 +193,15 @@
                                             <action selector="vote:" destination="2Ts-4d-nus" eventType="touchUpInside" id="l6K-Fn-Yvq"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lecture code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iqX-YT-dT3">
+                                        <rect key="frame" x="20" y="148.5" width="303" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Ig9-k7-yzh"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -257,7 +257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dp1-B8-Kv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="676" y="250.52473763118442"/>
+            <point key="canvasLocation" x="798" y="251"/>
         </scene>
     </scenes>
     <resources>

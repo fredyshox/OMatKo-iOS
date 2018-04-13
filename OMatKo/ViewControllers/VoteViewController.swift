@@ -23,22 +23,20 @@ class VoteViewController: OMKViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pickerTextField.delegate = self
         pickerTextField.autocorrectionType = .no
-        voteButton.isEnabled = false
-        voteButton.setBackgroundImage(UIImage.from(color: UIColor.lightGray, size: CGSize(width: 33, height: 33)),
-                                         for: .disabled)
-        
         self.navigationItem.hidesBackButton = true
         
         loadLectureCodes()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
     func loadLectureCodes() {
         AppDelegate.dataService.votingOptions
             .asObservable()
             .subscribe(onNext: { (eventKeys) in
-                self.pickerTextField.text?.removeAll()
                 self.lectureCodes = eventKeys
             })
             .disposed(by: disposeBag)
@@ -95,6 +93,7 @@ class VoteViewController: OMKViewController {
                 
                 do {
                     try AppDelegate.dataService.vote(forEventWithId: code, mark: rating)
+                    self.pickerTextField.text?.removeAll()
                 } catch let err {
                     log.error("Error: \(err.localizedDescription)")
                     self.present(self.errorAlert(), animated: true, completion: nil)
@@ -109,23 +108,6 @@ class VoteViewController: OMKViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-}
-
-extension VoteViewController:  UITextFieldDelegate {
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField.text == nil {
-            self.voteButton.isEnabled = false
-            log.info("Vote button disabled")
-        } else if textField.text!.isEmpty {
-            self.voteButton.isEnabled = false
-            log.info("Vote button disabled")
-        } else {
-            self.voteButton.isEnabled = true
-            log.info("Vote button enabled")
-        }
     }
     
 }

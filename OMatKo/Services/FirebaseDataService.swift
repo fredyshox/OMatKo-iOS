@@ -42,8 +42,10 @@ class FirebaseDataService: DataService {
         }).disposed(by: disposeBag)
         
         self.fetchVotes().subscribe(onNext: { newOptions in
-            self._votingOptions.value.removeAll()
-            self._votingOptions.value.append(contentsOf: newOptions)
+            if newOptions != self._votingOptions.value  {
+                self._votingOptions.value.removeAll()
+                self._votingOptions.value.append(contentsOf: newOptions)
+            }
         }).disposed(by: disposeBag)
     }
     
